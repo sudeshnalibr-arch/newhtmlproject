@@ -1,0 +1,993 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-muted: #5c544e;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #FAF6F0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-40 {
+  width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+  border-bottom: 1px solid #f2ddcc;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 156px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+/*---BANNER SECTION STYLE----*/
+.hero {
+  font-family: var(--font-sans);
+  /* background: radial-gradient(circle at top right, #FFFBF7 0%, var(--color-bg) 100%); */
+  background-color: var(--color-bg);
+  position: relative;
+  color: var(--color-text-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw; /* Spans across the right half */
+  height: 60vh; /* Smooth vertical fade down past the navbar */
+
+  background: radial-gradient(
+    circle at top right,
+    rgba(212, 163, 73, 0.35) 0%,
+    rgba(212, 163, 73, 0.15) 25%,
+    rgba(250, 246, 240, 0.5) 50%,
+    transparent 80%
+  );
+
+  /* Keeps the background behind your text and images */
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero .container-fluid {
+  /* max-width: 1300px; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.hero .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Left Content Column */
+
+.subheading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.main-heading {
+  font-family: var(--font-serif);
+  font-size: 4.2rem;
+  line-height: 1.15;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.heading-italic {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 30px;
+}
+
+/* Call to actions buttons */
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1rem 2.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: 1px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: #551818;
+  border-color: #551818;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+/* Right Visual Column */
+.hero-image {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  /* max-width: 520px; */
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  /* aspect-ratio: 1 / 1;  */
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 0px 30px 60px rgba(43, 37, 32, 0.15);
+}
+
+/* Floating Badge */
+.floating-badge {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.25rem;
+  border-radius: 12px;
+  max-width: 300px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.badge-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.badge-icon {
+  display: inline-block;
+}
+
+.badge-text {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .main-heading {
+    font-size: 3.2rem;
+  }
+
+  .hero-container {
+    gap: 2rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .nav-links {
+    display: none; /* In a full project, you can toggle a mobile drawer here */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Structural transformation to stacked rows */
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    order: 2; /* Content goes down below image for organic mobile UX */
+  }
+
+  .hero-visual {
+    justify-content: center;
+    order: 1;
+  }
+
+  .image-wrapper {
+    max-width: 400px;
+  }
+
+  .main-heading {
+    font-size: 2.8rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .floating-badge {
+    left: 10px;
+    bottom: -15px;
+  }
+}
+
+
+/* ================ all essentials style =================== */
+/* --- CURATED ESSENTIALS CATALOG SECTION --- */
+.essentials-section {
+  width: 100%;
+  background-color: #fbf0e0; /* Clean, minimal luxury backdrop tone */
+  padding: 5rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+/* .essentials-container {
+  max-width: 1320px; 
+  margin: 0 auto;
+} */
+
+/* --- TOOLBAR / FILTERS INTERFACE PANEL --- */
+.essentials-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Standard baseline inactive filters state configuration */
+.filter-btn {
+  background-color: #FFFFFF; /* Requested background white rule */
+  color: #564240; /* Requested text link color token */
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(86, 66, 64, 0.15);
+  border-radius: 50px; /* High oval pill rounding setting */
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.filter-btn:hover {
+  border-color: #5B060C;
+  background-color: rgba(91, 6, 12, 0.02);
+}
+
+/* Explicit targeted active selection modifier state */
+.filter-btn.active {
+  background-color: #5B060C; /* Requested explicit active background color code */
+  color: #FFFFFF; /* Inverted contrast visibility token */
+  border-color: #5B060C;
+}
+
+/* Sort Selector Components */
+.sort-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.sort-label {
+  font-size: 0.88rem;
+  color: #564240;
+  opacity: 0.8;
+}
+
+.sort-select-custom {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.selected-option {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #5B060C; /* Accent color designation matches typography context look */
+}
+
+.sort-select-custom i {
+  font-size: 0.75rem;
+  color: #5B060C;
+}
+
+/* --- THE 4-COLUMN SYMMETRIC PRODUCT CATALOG GRID --- */
+.product-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default elegant 4-column viewport layout grid */
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.product-card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(86, 66, 64, 0.05);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(43, 37, 32, 0.06);
+}
+
+/* Card Visual Media Layer */
+.product-media-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.8 / 1; /* Retains editorial portrait dimensions look cleanly */
+  background-color: #F3ECE3;
+  overflow: hidden;
+}
+
+.product-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Badges overlay configurations */
+.product-badge {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
+  color: #FFFFFF;
+  z-index: 2;
+}
+
+.badge-top-rated { background-color: #FEB700; color: #6B4B00; }
+.badge-sustainable { background-color: #4A5D4E; }
+
+/* Interactive Floating Wishlist Heart Icon Action Button Layer */
+.wishlist-toggle-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5B060C;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.wishlist-toggle-btn:hover {
+  transform: scale(1.08);
+}
+
+/* Content Details Typography Interior Layers */
+.product-info-layer {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-family: 'Marcellus', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #5B060C;
+  margin-bottom: 0.5rem;
+}
+
+.product-snippet {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #564240;
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Interactive Footer Price Metrics Row */
+.product-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.product-price {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #7C5800; /* Sophisticated contrasting price label layout tone */
+}
+
+.product-price small {
+  font-size: 0.75rem;
+  color: #564240;
+  font-weight: 400;
+}
+
+/* Quick Add Basket Icon Unit Button */
+.add-to-cart-icon-btn {
+  width: 38px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #5B060C;
+  color: #FFFFFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.add-to-cart-icon-btn:hover {
+  background-color: #3D0307;
+  transform: scale(1.03);
+}
+
+/* --- BOTTOM GENERAL PAGINATION NAV BUTTON LINK --- */
+.essentials-pagination-action {
+  text-align: center;
+}
+
+.btn-global-collections {
+  display: inline-block;
+  background-color: transparent;
+  color: #5B060C;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border: 1px solid #5B060C;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-global-collections:hover {
+  background-color: #5B060C;
+  color: #FFFFFF;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES (SMALL & MID-SIZE VIEWPORTS) --- */
+
+/* Small Laptops & Medium Landscape Monitors Thresholds */
+@media (max-width: 1200px) {
+  .product-catalog-grid {
+    grid-template-columns: repeat(3, 1fr); /* Collapses horizontally into 3 columns */
+    gap: 1.25rem;
+  }
+}
+
+/* Tablets and Vertical Portrait Screen Sizes Viewport Adjustments */
+@media (max-width: 992px) {
+  .essentials-toolbar {
+    flex-direction: column; /* Realigns structural sorting tags to stacked layouts row profile blocks */
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .product-catalog-grid {
+    grid-template-columns: repeat(2, 1fr); /* Balances down evenly into a clean 2x2 grid system matrix */
+  }
+}
+
+/* Tiny Mobile Smartphones Adjustments */
+@media (max-width: 576px) {
+  .essentials-section {
+    padding: 3.5rem 1.15rem; /* Tighter safety padding clearance bounds on edge tracks */
+  }
+
+  .filter-group {
+    /* Enables clean responsive lateral kinetic finger swiping for overflow pill sets on tiny screens */
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100vw;
+    margin-left: -1.15rem;
+    padding-left: 1.15rem;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none; /* Hide messy standard default engine scrollbars */
+  }
+  
+  .filter-group::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    white-space: nowrap; /* Protects word labels text-wrapping inside swipe channels */
+    padding: 0.65rem 1.15rem;
+    font-size: 0.82rem;
+  }
+
+  .product-catalog-grid {
+    grid-template-columns: 1fr; /* Transforms the product list stack into a single uniform card column */
+    gap: 1.5rem;
+  }
+  
+  .product-title {
+    font-size: 1.15rem;
+  }
+  
+  .btn-global-collections {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+/* =========== Shipping Section style ============= */
+/* --- SHIPPING FEATURES CONTAINER SECTION --- */
+.shipping-features-section {
+  width: 100%;
+  background-color: #FAF6F0; /* Balanced warm luxury signature background base */
+  padding: 5rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.shipping-features-container {
+  max-width: 1320px; /* Target layout container definition profile constraint */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Clean uniform 3-column structural layout matrix */
+  gap: 2rem;
+}
+
+/* --- INDIVIDUAL FEATURE ELEMENT CARDS --- */
+.feature-card {
+  background-color: #F9F3EB; /* Soft organic card tone perfectly matching the section cards aesthetic */
+  border-radius: 16px;
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(91, 6, 12, 0.03); /* Subtle blend-edge constraint line */
+  transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px); /* Interactive lifting feedback decoration layer on hover tracking */
+}
+
+/* Vector Graphics Box Configurations */
+.feature-icon-box {
+  color: #5B060C; /* Explicitly requested custom branding icons color */
+  font-size: 2.2rem; /* Clean high-resolution visual scale sizing */
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+/* Main Cards Headers Typography */
+.feature-card-title {
+  font-family: 'Marcellus', serif; /* Editorial elegant typography family tracking standard */
+  color: #5B060C; /* Explicitly requested custom title typography text color */
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2px;
+}
+
+/* Paragraph Content Copywriting Layout */
+.feature-card-desc {
+  color: #564240; /* Explicitly requested custom content body paragraph text color */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+  max-width: 320px; /* Limits running line-lengths to maximize rapid block scannability */
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Medium screen adjustments for smaller laptops and tablets */
+@media (max-width: 992px) {
+  .shipping-features-container {
+    gap: 1.25rem; /* Compresses internal spacing gap elements tighter to optimize space */
+  }
+  
+  .feature-card {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .feature-card-title {
+    font-size: 1.15rem;
+  }
+}
+
+/* Small screen adjustments for responsive mobile devices */
+@media (max-width: 768px) {
+  .shipping-features-section {
+    padding: 4rem 1.25rem; /* Wider safety padding clearings for edge boundaries */
+  }
+
+  .shipping-features-container {
+    grid-template-columns: 1fr; /* Demotes horizontal array elements into a pure vertical linear stream stack */
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 3rem 2rem;
+    max-width: 480px; /* Prevents rows from stretching too wide on medium handheld phones */
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
+/* --- FOOTER SECTION STYLES --- */
+.site-footer {
+  width: 100%;
+  background-color: #E8E1DA; /* Custom requested footer background color */
+  padding: 5rem 2rem 2rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr 1.1fr; /* Proportional asymmetrical column system */
+  gap: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(86, 66, 64, 0.15); /* Soft baseline divider using muted paragraph tone */
+}
+
+/* --- COLUMN 1: BRAND PLATFORM --- */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  width: 130px;
+  height: 48px; /* Optional utility helps flat-rasterized white background logos melt smoothly */
+}
+
+.brand-description {
+  color: #564240; /* Custom specified paragraph text color */
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.footer-socials a {
+  color: #5B060C; /* Custom specified interactive brand icons color */
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+/* --- COLUMNS 2, 3 & 4: COMPONENT TITLES & NAV LINKS --- */
+.footer-col-title {
+  color: #5B060C; /* Custom specified column title identifier heading color */
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.footer-links-list a {
+  color: #564240; /* Custom specified nested column action item navigation text color */
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-links-list a:hover {
+  color: #5B060C; /* Shifts highlighting accents dynamically to primary branding crimson color */
+  padding-left: 4px;
+}
+
+/* Contact Column Content details */
+.footer-contact-info {
+  color: #564240; /* Custom text profile mapping specs */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-meta a {
+  color: #564240;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-meta a:hover {
+  color: #5B060C;
+}
+
+/* --- LOWER FOOTER BASEBAR PANEL --- */
+.footer-bottom-bar {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer-bottom-bar p {
+  color: #564240;
+  opacity: 0.75;
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALLER SCREENS --- */
+
+/* Tablets and Landscape View Breakpoint boundaries */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr); /* Splits seamlessly into a clean double row 2x2 grid */
+    gap: 3rem;
+  }
+}
+
+/* Mobile Screens Configurations Flow adjustments */
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 4rem 1.25rem 2rem 1.25rem; /* Roomier layout boundaries for narrow screens */
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* Drops structural arrays into a pure single vertical flow column */
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .footer-col-title {
+    margin-bottom: 1rem; /* Condenses excessive layout spacing heights across tiny devices */
+  }
+
+  .footer-links-list {
+    gap: 0.85rem;
+  }
+
+  .footer-bottom-bar {
+    padding-top: 1.5rem;
+  }
+  
+  .footer-bottom-bar p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}

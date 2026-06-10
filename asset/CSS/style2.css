@@ -1,0 +1,904 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-text-light: #564240;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-muted: #5c544e;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #fff8f1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-40 {
+  width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+  border-bottom: 1px solid #f2ddcc;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 156px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+  
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+
+/* --- MAIN BANNER DESIGN TRACKS --- */
+.timeline-banner-section {
+  width: 100%;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.timeline-banner-container {
+  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* --- TYPOGRAPHY INTERIORS --- */
+.timeline-title {
+  font-family: 'Playfair Display', serif; /* Custom requested font family */
+  font-size: 48px; /* Exact requested desktop typography scale */
+  font-weight: 600; /* Semibold weight matching layout rules */
+  color: var(--color-secondary); 
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.5px;
+}
+
+.timeline-description {
+  font-family: 'Hanken Grotesk', sans-serif; /* Custom requested text family layout */
+  font-size: 18px; /* Exact requested descriptive font dimensions */
+  font-weight: 400; /* Regular style weight setting specifications */
+  color: var(--color-text-light); /* Custom specified warm gray/brown color code */
+  line-height: 1.6;
+  margin: 0 auto 3rem auto;
+  max-width: 680px; /* Keeps the centered lines looking balanced and highly readable */
+}
+
+/* --- INTERACTIVE ACTIONS HUB LAYERS --- */
+.timeline-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+/* Progress Bar Tracking Engine Components */
+.timeline-progress-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 160px; /* Fixed functional structural width layout constraint */
+}
+
+.progress-track {
+  width: 100%;
+  height: 4px;
+  background-color: #EBE1DA; /* Custom specified secondary track lane base color */
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progress-fill {
+  width: 35%; /* Coordinates explicitly with your 35% marker label */
+  height: 100%;
+  background-color: #7C5800; /* Custom specified active progression indicator line color */
+}
+
+.progress-label {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #7C5800; /* Styled seamlessly with your secondary brand gold tint lines variables */
+}
+
+/* Main Action Element Controls */
+.btn-download-planner {
+  background-color: #FEB700; /* Precise requested bright gold background token color */
+  color: #6B4B00; /* Precise requested deep contrasting button font color */
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 20px; /* Precise requested layout metric size standards */
+  font-weight: 600; /* Semibold preference mapping values */
+  padding: 1.1rem 2.5rem;
+  border: none;
+  border-radius: 50px; /* Completely rounded premium fluid capsule border styling */
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 14px rgba(254, 183, 0, 0.15); /* Soft, glow-matched ambient backdrop shadow */
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s ease;
+}
+
+.btn-download-planner i {
+  font-size: 1.1rem; /* Balances with the custom 20px text block footprint elegantly */
+}
+
+.btn-download-planner:hover {
+  background-color: #E5A400; /* Smooth fallback depth transition shift on cursor interactions */
+  transform: translateY(-2px);
+}
+
+.btn-download-planner:active {
+  transform: translateY(0);
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALL MOBILE SCREENS --- */
+
+@media (max-width: 640px) {
+  .timeline-banner-section {
+    padding: 4rem 1.25rem; /* Roomier clearing margins protect layouts along small phone borders */
+  }
+
+  .timeline-title {
+    font-size: 32px; /* Smooth scale down from 48px to prevent severe word breaks on mobile devices */
+    margin-bottom: 1rem;
+  }
+
+  .timeline-description {
+    font-size: 15px; /* Proportional readability adjustment to match layout scales */
+    margin-bottom: 2.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .timeline-action-row {
+    flex-direction: column; /* Transforms horizontal track elements into a centered linear stack */
+    gap: 2rem;
+  }
+
+  .timeline-progress-block {
+    align-items: center; /* Harmonizes centered visual design systems */
+    width: 200px; /* Slightly wider track layout presence for smartphone screen configurations */
+  }
+
+  .btn-download-planner {
+    width: 100%;
+    max-width: 320px; /* Ensures accessibility remains high without creating full-bleed screen stretch layout breaks */
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 18px; /* Slightly refined text size to look crisp on compact displays */
+  }
+}
+
+/* --- FOUNDATIONAL STAGE SECTION --- */
+.foundational-stage-section {
+  width: 100%;
+  padding: 5rem 2rem;
+  box-sizing: border-box;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* .stage-container {
+  max-width: 1320px; 
+  margin: 0 auto;
+} */
+
+/* --- GRID SYSTEM CONFIGURATION --- */
+.stage-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Primary asymmetric split columns */
+  gap: 2rem;
+}
+
+.stage-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- UNIVERSAL CARD LAYER DESIGN --- */
+.stage-card {
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-sizing: border-box;
+}
+
+/* --- COLOR BLOCK VARIATIONS --- */
+.bg-white {
+  background-color: #ffffff;
+  box-shadow: 0 4px 24px rgba(30, 27, 23, 0.04);
+}
+
+.bg-burgundy {
+  background-color: var(--color-secondary); /* Primary branding burgundy block background */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative subtle background pattern mimicking the original card graphic */
+.bg-burgundy::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 100px;
+  height: 100px;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 2px, transparent 2px);
+  background-size: 12px 12px;
+  opacity: 0.7;
+}
+
+.bg-cream {
+  background-color: #f9f3eb; /* 1 Month Before background color token */
+}
+
+.bg-linen {
+  background-color: #ebe1da; /* The Wedding Day background color token */
+}
+
+/* Grid layout allocation adjustments */
+.card-large {
+  grid-column: 1 / 2;
+}
+
+.card-small {
+  grid-column: span 1;
+  min-height: 280px;
+}
+
+/* --- TYPOGRAPHY ENGINE --- */
+.stage-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--color-secondary); /* Requested heading color */
+  margin: 0 0 2rem 0;
+}
+
+
+.stage-heading.text-white {
+  color: #ffffff;
+}
+
+.spark-icon {
+  font-size: 1.2rem;
+  margin-right: 0.25rem;
+  vertical-align: middle;
+  opacity: 0.8;
+}
+
+/* --- CARD HEADER PARTS --- */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.card-header .stage-heading {
+  margin: 0;
+}
+
+.stage-badge {
+  background-color: #f3ece3;
+  color: var(--color-text-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+}
+
+/* --- MAIN INTERACTIVE CHECKLIST STYLE (BLOCK 1) --- */
+.checklist-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f3ece3;
+}
+
+.checklist-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.check-icon-wrapper {
+  font-size: 1.4rem;
+  color: var(--color-secondary); /* Unchecked circles and text defaults */
+  margin-top: 0.15rem;
+}
+
+.checklist-item.checked .check-icon-wrapper {
+  color: #7C5800; /* Distinct deep gold tone for completed check statuses */
+}
+
+.checklist-content {
+  flex-grow: 1;
+}
+
+.item-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1e1b17; /* High contrast primary body text color requested */
+  margin: 0 0 0.35rem 0;
+}
+
+.item-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text-light); /* Secondary descriptive running text color requested */
+  margin: 0;
+}
+
+.drag-handle {
+  color: #ebe1da;
+  font-size: 0.9rem;
+  cursor: grab;
+  padding-top: 0.25rem;
+  letter-spacing: -2px;
+}
+
+/* --- SIDEBAR LIST ENGINE (BLOCK 2) --- */
+.sidebar-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sidebar-checklist li {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sidebar-checklist li i {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* --- SUPPORT SIDEBAR COMPONENT --- */
+.support-widget {
+  background-color: #ffffff;
+  border: 1px solid #FEB700; /* Sophisticated golden boundary frame accent */
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.widget-icon {
+  width: 44px;
+  height: 44px;
+  background-color: #7C5800;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.widget-info h5 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e1b17;
+  margin: 0 0 0.2rem 0;
+}
+
+.widget-info p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* --- BOTTOM DOUBLE BLOCKS LISTS (BLOCK 3 & 4) --- */
+.simple-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.simple-checklist li {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e1b17;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.simple-checklist li i {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+  opacity: 0.6;
+}
+
+/* Muted visual treatments for specialized items matching the image context */
+.simple-checklist li.text-muted {
+  color: var(--color-text-light);
+  opacity: 0.5;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALL SCREENS --- */
+
+/* Tablet Optimization Layer Breakpoint */
+@media (max-width: 1024px) {
+  .stage-grid {
+    grid-template-columns: 1fr; /* Collapses dual arrays layout smoothly into single horizontal flows */
+  }
+  
+  .card-large {
+    grid-column: span 1;
+  }
+}
+
+/* Compact Mobile Mobile Screen Adjustments */
+@media (max-width: 600px) {
+  .foundational-stage-section {
+    padding: 3.5rem 1.15rem; /* Roomier clearing margins protect layouts along thin borders */
+  }
+  
+  .stage-card {
+    padding: 1.75rem 1.25rem; /* Consolidates excessive interior spacing blocks on tiny displays */
+  }
+  
+  .stage-heading {
+    font-size: 1.75rem; /* Scale headings context proportionally down */
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .item-title {
+    font-size: 1.05rem;
+  }
+  
+  .item-desc {
+    font-size: 0.88rem;
+  }
+  
+  .drag-handle {
+    display: none; /* Removes non-critical control details to optimize visual spatial balance */
+  }
+  
+  .sidebar-checklist li, .simple-checklist li {
+    font-size: 0.95rem;
+    align-items: flex-start;
+  }
+  
+  .sidebar-checklist li i, .simple-checklist li i {
+    margin-top: 0.1rem;
+  }
+}
+
+
+/* --- CORE SECTION BASE SETUP --- */
+.artisan-touch-section {
+  width: 100%;
+  padding: 6rem 0; /* Premium vertical padding blocks */
+  box-sizing: border-box;
+}
+
+/* .artisan-container {
+  max-width: 1320px; 
+  margin: 0 auto;
+  padding: 0 15px; 
+  box-sizing: border-box;
+} */
+
+/* --- PRE-DEFINED LAYOUT SCHEMATICS PROVIDED BY USER --- */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Vertical centering alignment utility for column content text layout mapping */
+.valigned-content {
+  display: flex;
+  align-items: center;
+}
+
+/* --- IMAGE COLUMN FRAMING CONFIGURATIONS --- */
+.artisan-image-frame {
+  width: 100%;
+  border-radius: 24px; /* Matches the soft premium container corner flow visible in image_42aded.png */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(86, 66, 64, 0.06); /* Ambient smooth shadow base layer */
+}
+
+.artisan-display-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.artisan-image-frame:hover .artisan-display-img {
+  transform: scale(1.02); /* Delicate premium organic zoom feature decoration */
+}
+
+/* --- BRAND CONTENT BLOCK TYPOGRAPHY --- */
+.artisan-text-block {
+  padding-left: 3rem; /* Creates comfortable asymmetry breathe space */
+}
+
+.artisan-title {
+  font-family: 'Playfair Display', serif; /* Consistent elegant structural typography choice */
+  color: var(--color-secondary); /* Reused master brand accent primary burgundy */
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.25;
+}
+
+.artisan-description {
+  font-family: 'Hanken Grotesk', sans-serif; /* Consistent high readability content typography choice */
+  color: var(--color-text-light); /* Reused master warm description charcoal tone */
+  font-size: 1.125rem;
+  line-height: 1.65;
+  font-weight: 400;
+  margin: 0 0 2rem 0;
+}
+
+/* DIRECTORY REDIRECT LINK INTERACTIONS */
+.artisan-link-cta {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #7C5800; /* Reused master accent secondary gold line color */
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.artisan-link-cta i {
+  font-size: 0.95rem;
+  transition: transform 0.2s ease;
+}
+
+.artisan-link-cta:hover {
+  color: var(--color-secondary); /* Inverts highlighting color schemes beautifully on cursor contact */
+}
+
+.artisan-link-cta:hover i {
+  transform: translateX(4px); /* Interactive visual micro-movement for direction vector arrows */
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALL PORTABLE SCREENS --- */
+
+/* Intermediate Tablet Breaks */
+@media (max-width: 992px) {
+  .artisan-text-block {
+    padding-left: 1rem; /* Condenses exaggerated structural spacer padding margins tight */
+  }
+  
+  .artisan-title {
+    font-size: 2rem;
+  }
+}
+
+/* Small Smartphone Display Systems Breakpoint rules */
+@media (max-width: 768px) {
+  .artisan-touch-section {
+    padding: 4rem 0; /* Tightens core edge gaps on modern mobile displays */
+  }
+
+  .col-50 {
+    width: 100%;
+    flex: 0 0 100%; /* Reconfigures row streams entirely into singular sequential columns elements stacks */
+  }
+  
+  /* Pushes content blocks lower to keep spacing identical below the graphic frames stack layout */
+  .valigned-content {
+    margin-top: 2.5rem;
+  }
+
+  .artisan-text-block {
+    padding-left: 0; /* Fully drops internal offset padding arrays layout structures */
+    text-align: left; /* Maintains editorial left-aligned visual text flow */
+  }
+  
+  .artisan-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .artisan-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
+/* --- FOOTER SECTION STYLES --- */
+/* --- CORE FOOTER BASE SETUP --- */
+.site-footer {
+  width: 100%;
+  background-color: #EBE1DA; /* Your project custom specified core line color/background token */
+  padding: 6rem 2rem 5rem 2rem;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1320px; /* Universally aligned across your system container tracks */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr 1.1fr; /* Proportional asymmetrical column layout matrix */
+  gap: 4rem;
+}
+
+/* --- BRAND COLUMN --- */
+.brand-description {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-light); /* Requested core charcoal brown body text tone */
+  margin-top: 50px;
+  max-width: 280px;
+}
+
+/* --- NAVIGATION COLUMNS --- */
+.footer-col-title {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color:var(--color-secondary); /* Requested core branding burgundy accent */
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.3px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-links-list a {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links-list a:hover {
+  color: var(--color-secondary); /* Dynamic highlight hover transition state */
+}
+
+/* --- RIGHT SIDE SPECIFIC META ALIGNMENTS --- */
+.content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 140px; /* Forces vertical distribution down to baseline alignment */
+}
+
+.footer-bottom-meta p {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  opacity: 0.75;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 2rem 0 0 0;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALL MOBILE VIEWS --- */
+
+/* Medium screen and tablet adjustments */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr; /* Drops nicely into a symmetrical 2-column block grid matrix */
+    gap: 3rem;
+  }
+  
+  .content-right {
+    justify-content: flex-start;
+    min-height: auto;
+  }
+}
+
+/* Small smartphone viewport adaptations */
+@media (max-width: 576px) {
+  .site-footer {
+    padding: 4rem 1.25rem 4rem 1.25rem; /* Roomier clearing margins along thin smartphone device borders */
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* Collapses rows down cleanly into a single vertical stack layout cascade */
+    gap: 2.5rem;
+  }
+
+  .brand-description {
+    max-width: 100%; /* Spans to container boundaries safely on small display panels */
+  }
+  
+  .footer-col-title {
+    margin-bottom: 1rem; /* Keeps layout items visually grouped compact on screens */
+  }
+  
+  .footer-bottom-meta p {
+    margin-top: 1.5rem; /* Resets alignment heights spacing appropriately for vertical reading blocks */
+  }
+}

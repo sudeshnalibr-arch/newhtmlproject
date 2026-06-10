@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+
+    <!-- swiper js link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- fontaswome-cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom-css -->
+    <link rel="stylesheet" href="./asset/CSS/style1.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#"><img src="./IMAGE/navlogo.png" alt="logo" /></a>
+          </div>
+          <div class="nav-menu">
+            <ul class="nav-link">
+              <li><a href="#">RITUAL GUIDE</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">ARTISTS</a></li>
+              <li><a href="#">GIFTS</a></li>
+              <li><a href="#">PLANNING</a></li>
+            </ul>
+          </div>
+          <div class="nav-icons">
+            <a href="#" aria-label="Shopping Bag">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Favorites">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Profile">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- =========Hero Section ========== -->
+      <section class="hero" id="#hero">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-40">
+              <div class="hero-content">
+                <span class="subheading">HANDCRAFTED TRADITION</span>
+                <h1 class="main-heading">Auspicious<br />Curations</h1>
+                <p class="hero-description">
+                  Elevate your sacred moments with our masterfully curated
+                  wedding essentials. Every piece is a testament to heritage,
+                  designed for the modern home.
+                </p>
+                <div class="hero-actions">
+                  <a href="#" class="btn btn-primary">Explore Kits</a>
+                  <a href="#" class="btn btn-secondary">View Artists</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-60">
+              <div class="hero-image">
+                <div class="image-wrapper">
+                  <img
+                    src="./IMAGE/SHOPPAGE/bannerimg.png"
+                    alt="Indian Puja Ritual Setup"
+                    class="hero-img"
+                  />
+
+                  <div class="floating-badge">
+                    <div class="badge-header">
+                      <!-- <svg
+                        class="badge-icon"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="#846226"
+                      >
+                        <path
+                          d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                        />
+                      </svg> -->
+                      <span>The Heritage Kit</span>
+                    </div>
+                    <p class="badge-text">
+                      Everything you need for a divine wedding ceremony in one
+                      box.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =========== All Essentials section ============ -->
+
+      <section class="essentials-section">
+        <div class="container essentials-container">
+          <div class="essentials-toolbar">
+            <div class="filter-group">
+              <button class="filter-btn active">All Essentials</button>
+              <button class="filter-btn">Samagri Kits</button>
+              <button class="filter-btn">Traditional Decor</button>
+              <button class="filter-btn">Artisan Gifts</button>
+              <button class="filter-btn">Bridal Jewelry</button>
+            </div>
+
+            <div class="sort-wrapper">
+              <span class="sort-label">Sort by:</span>
+              <div class="sort-select-custom">
+                <span class="selected-option">Featured</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-catalog-grid">
+            <article class="product-card">
+              <div class="product-media-wrapper">
+                <span class="product-badge badge-top-rated">TOP RATED</span>
+                <button
+                  class="wishlist-toggle-btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img
+                  src="./IMAGE//SHOPPAGE//allessentials1.png"
+                  alt="Diwali Puja Kit"
+                  class="product-thumbnail"
+                />
+              </div>
+              <div class="product-info-layer">
+                <h3 class="product-title">Diwali Puja Kit</h3>
+                <p class="product-snippet">
+                  A complete ensemble of 25+ essential items for a sacred home
+                  ritual.
+                </p>
+                <div class="product-footer-row">
+                  <span class="product-price">₹3,499</span>
+                  <button class="add-to-cart-icon-btn" aria-label="Add to cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media-wrapper">
+                <button
+                  class="wishlist-toggle-btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img
+                  src="./IMAGE/SHOPPAGE//allessentials2.png"
+                  alt="Artisan Brass Diyas"
+                  class="product-thumbnail"
+                />
+              </div>
+              <div class="product-info-layer">
+                <h3 class="product-title">Artisan Brass Diyas</h3>
+                <p class="product-snippet">
+                  Hand-cast pure brass lamps, set of 5. Perfect for wedding
+                  decor.
+                </p>
+                <div class="product-footer-row">
+                  <span class="product-price">₹1,850</span>
+                  <button class="add-to-cart-icon-btn" aria-label="Add to cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media-wrapper">
+                <button
+                  class="wishlist-toggle-btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img
+                  src="./IMAGE//SHOPPAGE/allessentials3.png"
+                  alt="Bespoke Invitations"
+                  class="product-thumbnail"
+                />
+              </div>
+              <div class="product-info-layer">
+                <h3 class="product-title">Bespoke Invitations</h3>
+                <p class="product-snippet">
+                  Premium handmade paper with hand-pressed gold foil detailing.
+                </p>
+                <div class="product-footer-row">
+                  <span class="product-price">₹120<small>/pc</small></span>
+                  <button class="add-to-cart-icon-btn" aria-label="Add to cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media-wrapper">
+                <span class="product-badge badge-sustainable">SUSTAINABLE</span>
+                <button
+                  class="wishlist-toggle-btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img
+                  src="./IMAGE/SHOPPAGE/allessentials4.png"
+                  alt="Return Gift Hamper"
+                  class="product-thumbnail"
+                />
+              </div>
+              <div class="product-info-layer">
+                <h3 class="product-title">Return Gift Hamper</h3>
+                <p class="product-snippet">
+                  Artisan-made sustainable gift box for your cherished guests.
+                </p>
+                <div class="product-footer-row">
+                  <span class="product-price">₹950</span>
+                  <button class="add-to-cart-icon-btn" aria-label="Add to cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="essentials-pagination-action">
+            <a href="#" class="btn-global-collections">View All Collections</a>
+          </div>
+        </div>
+      </section>
+      <!-- ============ shipping section ============= -->
+      <section class="shipping-features-section">
+        <div class="shipping-features-container">
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <h3 class="feature-card-title">Authentic Quality</h3>
+            <p class="feature-card-desc">
+              Every item is verified by ritual experts to ensure traditional
+              accuracy.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h3 class="feature-card-title">Global Shipping</h3>
+            <p class="feature-card-desc">
+              We deliver the soul of Indian traditions to over 40 countries
+              worldwide.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <h3 class="feature-card-title">Sustainable Packaging</h3>
+            <p class="feature-card-desc">
+              Premium unboxing experience using 100% recyclable and
+              earth-friendly materials.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <div class="footer-brand-col">
+          <a href="#hero"
+            ><img
+              src="./IMAGE/navlogo.png"
+              alt="Rituo Logo"
+              class="footer-logo"
+          /></a>
+
+          <p class="brand-description">
+            Redefining tradition for the modern soul. Every ritual, crafted with
+            care and elegance.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Global Network"
+              ><i class="fa-solid fa-globe"></i
+            ></a>
+            <a href="#" aria-label="Share"
+              ><i class="fa-solid fa-share-nodes"></i
+            ></a>
+            <a href="#" aria-label="Email Contact"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">COLLECTIONS</h3>
+          <ul class="footer-links-list">
+            <li><a href="#">Puja Kits</a></li>
+            <li><a href="#">Wedding Samagri</a></li>
+            <li><a href="#">Artisan Brass</a></li>
+            <li><a href="#">Sacred Textiles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">GUIDANCE</h3>
+          <ul class="footer-links-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Artisans</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">CONTACT</h3>
+          <div class="footer-contact-info">
+            <p>
+              Curated with love from Kolkata.<br />Global shipping available.
+            </p>
+            <p class="contact-meta">
+              <a href="mailto:care@rituo.com">care@rituo.com</a><br />
+              <a href="tel:+919876543210">+91 98765 43210</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Rituo. Every Ritual. Made Easy.</p>
+      </div>
+    </footer>
+  </body>
+</html>

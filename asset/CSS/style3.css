@@ -1,0 +1,1385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-bright: #7c5800;
+  --color-text-muted: #5c544e;
+
+  --bg-color: #e8e1da;          /* Updated background color */
+  
+  --text-dark: #687280;         
+  --btn-text: #ffffff;
+  --input-border: #a18a81;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #FAF6F0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-40 {
+  width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 156px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+
+/* --- UNIVERSAL PROJECT CONTAINER DEFINITIONS --- */
+/* .container {
+  max-width: 1320px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+} */
+
+/* --- BANNER MASTER WRAPPER CANVAS --- */
+.ritual-guide-banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Dynamic window tracking viewport scale layout height */
+  display: flex;
+  align-items: center;
+  
+  /* Background system loading your specific image pathway verbatim */
+  background-image: 
+    linear-gradient(to right, rgba(255, 248, 241, 0.92) 25%, rgba(255, 248, 241, 0.4) 60%, rgba(0, 0, 0, 0.15) 100%),
+    url('../../IMAGE/RITUALGUIDE/banner-bg.png');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding: 8rem 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Editorial content block styling profile constraints */
+.banner-inner-content {
+  max-width: 620px; /* Restricts the paragraph from bleeding over the image focal details */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* --- TYPOGRAPHY LAYER DESIGNS --- */
+
+/* First Heading Tagline Component */
+.banner-tagline {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-bright); /* Exact requested 1st heading color string */
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+/* Primary Hero Title Block */
+.banner-main-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary); /* Exact requested h1 color token */
+  font-size: 64px; /* Exact requested layout size dimensions */
+  font-weight: 700; /* Exact requested bold thickness metric */
+  line-height: 1.15;
+  margin: 0 0 1.75rem 0;
+  letter-spacing: -1px;
+}
+
+/* Captures the distinct classic serif styling flare used on the bottom line of image_28c088.jpg */
+.banner-main-title .italic-accent {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 600; /* Fluid organic weights adjustment to accentuate style depth */
+}
+
+/* Paragraph Content Elements */
+.banner-paragraph {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #564240; /* Exact requested running text charcoal hue */
+  font-size: 18px; /* Exact requested typography dimensions values */
+  font-weight: 400; /* Regular setup parameter flags */
+  line-height: 1.65;
+  margin: 0 0 2.5rem 0;
+  width: 80%;
+
+}
+
+/* --- ACTION UTILITIES BUTTON SETTINGS --- */
+.banner-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+/* Solid Accent Element */
+.btn-solid-burgundy {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 1rem 2.25rem;
+  border-radius: 8px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(91, 6, 12, 0.15);
+  border: 1 px solid var(--color-secondary);
+}
+
+.btn-solid-burgundy:hover {
+  background-color: var(--color-secondary);
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* Outline Secondary Accent Element */
+.btn-outline-gold {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: transparent;
+  color: var(--color-text-bright);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 1rem 2.25rem;
+  border: 1px solid var(--color-text-bright);
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--color-text-bright);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALL TOUCH PORTABLE SCREENS --- */
+
+/* Medium Laptop and Large Tablet Scales Optimization */
+@media (max-width: 1024px) {
+  .banner-main-title {
+    font-size: 52px; /* Smooth drop to prevent text overlapping across intermediate layout breakpoints */
+  }
+}
+
+/* Small Smartphone Screen Layout Rules Matrix */
+@media (max-width: 768px) {
+  .ritual-guide-banner {
+    /* Shifts gradient into vertical layers so typography reads perfectly over elements on mobile displays */
+    background-image: 
+      linear-gradient(to bottom, rgba(255, 248, 241, 0.96) 50%, rgba(255, 248, 241, 0.75) 80%, rgba(255, 248, 241, 0.4) 100%),
+      url('IMAGE/RITUALGUIDE/banner-bg.png');
+    background-position: center top; /* Pulls framing upward to maintain view of the model subject matter */
+    padding: 6rem 0 4rem 0;
+    min-height: auto;
+  }
+
+  .banner-inner-content {
+    max-width: 100%;
+    text-align: left; /* Preserves matching left editorial alignment rules smoothly */
+  }
+
+  .banner-tagline {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .banner-main-title {
+    font-size: 38px; /* Refined down scales to look clean and legible on narrow screens */
+    margin-bottom: 1.25rem;
+  }
+
+  .banner-paragraph {
+    font-size: 16px; /* Slightly lowered sizing profile maximizing readable spatial parameters */
+    margin-bottom: 2rem;
+  }
+
+  .banner-btn-group {
+    flex-direction: column; /* Stacks button tracks sequentially downward */
+    width: 100%;
+    gap: 0.85rem;
+  }
+
+  .btn-solid-burgundy, 
+  .btn-outline-gold {
+    width: 100%;
+    text-align: center; /* Expands interaction fields fully outwards maximizing accessibility targets */
+    box-sizing: border-box;
+    padding: 0.9rem 1.5rem;
+  }
+}
+
+
+/* --- SECTION HOUSING BASE --- */
+.sacred-chapters-section {
+  width: 100%;
+  padding: 6rem 0;
+  box-sizing: border-box;
+}
+
+/* Header Text Layout Settings */
+.sacred-header {
+  margin-bottom: 3.5rem;
+  text-align: left;
+}
+
+.sacred-main-title {
+  font-family: 'Playfair Display', serif;
+  color:  var(--color-secondary); /* Your custom requested H2 brand tone */
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.sacred-subtitle {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #564240; /* Your custom requested generic paragraph text color */
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* --- ASYMMETRIC GRID MASONRY LAYOUT BUILD --- */
+.sacred-mosaic-grid {
+  display: grid;
+  /* Configures a clean 3-column proportional alignment engine */
+  grid-template-columns: 1.1fr 0.9fr 1fr;
+  grid-auto-rows: minmax(260px, auto);
+  gap: 1.75rem;
+}
+
+/* --- SYSTEM GENERIC CARD ATTRIBUTES --- */
+.sacred-card {
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+}
+
+/* --- GRID POSITIONING MATRIX RULES --- */
+.card-wide {
+  grid-column: 1 / 3;
+  grid-row: span 2;
+  min-height: 480px;
+}
+
+.card-tall {
+  grid-column: 3 / 4;
+  grid-row: span 2;
+}
+
+.card-solid-cream {
+  grid-column: 1 / 2;
+  background-color: #eee7df; /* Requested Chapter 01 Background Color */
+  padding: 2.25rem;
+}
+
+.card-product-white {
+  grid-column: 2 / 3;
+  background-color: #ffffff;
+  border: 1px solid rgba(238, 231, 223, 0.5);
+  box-shadow: 0 10px 30px rgba(86, 66, 64, 0.03);
+  padding: 2.25rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-square {
+  grid-column: 3 / 5;
+  min-height: 320px;
+}
+
+/* --- CARD INNER ELEMENT TYPOGRAPHY & CONTENTS --- */
+
+/* Text Content Placement Containers Over Images */
+.card-image-content {
+  align-self: flex-end;
+  padding: 2.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chapter-meta {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #fedea8;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.chapter-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.85rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+}
+
+.chapter-title.text-white { color: #ffffff; }
+
+.chapter-desc {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  max-width: 480px;
+}
+
+.chapter-desc.text-light { color: #eee7df; opacity: 0.9; }
+
+/* Interactive Inline Anchor Hyperlinks */
+.explore-guide-link {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.explore-guide-link i {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.explore-guide-link:hover i {
+  transform: translateX(4px);
+}
+
+/* --- INTERIORS FOR SOLID BLOCK (CHAPTER 01) --- */
+.card-solid-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.chapter-meta-dark {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  letter-spacing: 1.5px;
+  margin-bottom: 1.25rem;
+}
+
+.chapter-title-dark {
+  font-family: 'Playfair Display', serif;
+  color: #1e1b17; /* Requested h2/heading tone standards */
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 1.25rem 0;
+}
+
+.chapter-desc-dark {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #564240; /* Requested basic copy color standard */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.card-footer-icon {
+  margin-top: auto;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  opacity: 0.8;
+  padding-top: 2rem;
+}
+
+/* --- INTERIORS FOR ACCESSORIES PRODUCT CARD --- */
+.product-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.product-icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: #f7f0e9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-secondary);
+  font-size: 1rem;
+}
+
+/* Requested Certified Tag Styles */
+.badge-artisan {
+  background-color: #7c5800; /* Requested artisan certified badge bg token */
+  color: #ffffff;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+}
+
+.product-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.product-desc {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #564240;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0 0 1.25rem 0;
+}
+
+.product-price {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.product-price::before {
+  content: '₹';
+  margin-right: 2px;
+}
+
+.btn-add-ritual {
+  width: 100%;
+  background-color: #7c5800;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn-add-ritual:hover {
+  opacity: 0.93;
+}
+
+/* --- CENTERED ALIGNMENT BOX CORES (BOR JATRI BLOCK) --- */
+.center-aligned {
+  align-self: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.chapter-title-center {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.procession-subtitle {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #ffffff;
+  opacity: 0.8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALL VIEWPORTS --- */
+
+/* Medium Tablet Screen Structural Reorganizing */
+@media (max-width: 992px) {
+  .sacred-mosaic-grid {
+    grid-template-columns: 1fr 1fr; /* Compresses layout elegantly into a clean 2-column pattern */
+  }
+
+  .card-wide {
+    grid-column: span 2;
+  }
+
+  .card-tall {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-height: 380px;
+  }
+}
+
+/* Smartphone Portable Screens Structural Normalizing */
+@media (max-width: 650px) {
+  .sacred-chapters-section {
+    padding: 4rem 0;
+  }
+
+  .sacred-header {
+    margin-bottom: 2rem;
+  }
+
+  .sacred-main-title {
+    font-size: 2rem;
+  }
+
+  .sacred-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .sacred-mosaic-grid {
+    grid-template-columns: 1fr; /* Completely normalizes everything down into linear blocks */
+    gap: 1.5rem;
+  }
+
+  .card-wide, .card-tall, .card-solid-cream, .card-product-white, .card-square {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-height: auto;
+  }
+
+  .card-wide {
+    min-height: 360px;
+  }
+
+  .card-image-content, .card-solid-cream, .card-product-white {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .chapter-title {
+    font-size: 1.5rem;
+  }
+
+  .chapter-title-dark {
+    font-size: 1.75rem;
+  }
+}
+
+
+/* --- ARTISAN GUIDE SECTION HOUSING BASE --- */
+.artisan-guide-section {
+  width: 100%;
+  background-color: #f9f3eb; /* Your requested custom background token */
+  padding: 7rem 0;
+  box-sizing: border-box;
+  overflow: hidden; /* Safely locks layout boundaries against any extreme image rotations */
+}
+
+
+/* Layout alignment utility tag */
+.valigned-center {
+  display: flex;
+  align-items: center;
+}
+
+/* --- IMAGE GALLERY WRAPPERS (LEFT SIDE) --- */
+.artisan-frame-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Replicates the gorgeous, premium tilt effect visible in image_27ba77.jpg */
+.artisan-tilted-img {
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  display: block;
+  border-radius: 50px; /* Fluid elegant rounded corners */
+  box-shadow: 0 15px 40px rgba(86, 66, 64, 0.12);
+  transform: rotate(-3deg); /* Replicates the layout visual drift */
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.artisan-frame-wrapper:hover .artisan-tilted-img {
+  transform: rotate(0deg) scale(1.02); /* Straightens on mouse hover interactions dynamically */
+}
+
+/* Decorative abstract subtle lines pattern matching image background circles background aesthetics */
+.artisan-frame-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba(97, 69, 0, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* --- TYPOGRAPHY AND CONTENT LAYERS (RIGHT SIDE) --- */
+.artisan-content-block {
+  padding-left: 3.5rem; /* Separates columns elegantly */
+}
+
+.artisan-section-tag {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #7c5800; /* Secondary accent line color */
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.artisan-main-heading {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary); /* Master heading burgundy tone */
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 1.75rem 0;
+}
+
+.artisan-main-heading .serif-italic {
+  font-style: italic;
+  font-weight: 600; /* Drops weight down for classic luxury script feel */
+}
+
+.artisan-body-text {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #564240; /* Master body charcoal tone */
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0 0 2.5rem 0;
+}
+
+/* --- STATISTICAL METRICS HUB --- */
+.artisan-metrics-row {
+  display: flex;
+  gap: 4rem;
+  border-top: 1px solid rgba(86, 66, 64, 0.1);
+  border-bottom: 1px solid rgba(86, 66, 64, 0.1);
+  padding: 1.75rem 0;
+  margin-bottom: 2.5rem;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-number {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary);
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.metric-label {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #564240;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* --- THE DIRECTORY REDIRECT ACTUATOR --- */
+.artisan-action-box {
+  display: block;
+}
+
+.btn-meet-artisans {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  transition: color 0.2s ease;
+}
+
+.arrow-circle {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Animations mapped exactly to match image assets */
+.btn-meet-artisans:hover {
+  color: #7c5800;
+}
+
+.btn-meet-artisans:hover .arrow-circle {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  border-color: var(--color-secondary);
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR COMPACT SMARTPHONE SCREENS --- */
+
+/* Intermediate Tablet Screen Scales */
+@media (max-width: 1024px) {
+  .artisan-content-block {
+    padding-left: 1.5rem;
+  }
+  
+  .artisan-main-heading {
+    font-size: 2.5rem;
+  }
+  
+  .artisan-metrics-row {
+    gap: 2.5rem;
+  }
+}
+
+/* Small Smartphone Screen Stack Systems */
+@media (max-width: 768px) {
+  .artisan-guide-section {
+    padding: 4rem 0; /* Snaps spatial padding tighter on mobile */
+  }
+
+  .col-50 {
+    width: 100%;
+    flex: 0 0 100%; /* Reconfigures dual items completely into unified single rows */
+  }
+
+  /* Moves text block second below the visual container image flow elements */
+  .col-50:last-child {
+    margin-top: 3.5rem;
+  }
+  
+  .artisan-frame-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .artisan-tilted-img {
+    transform: rotate(0deg); /* Normalizes tilt completely for smaller screens */
+    max-width: 100%;
+  }
+
+  .artisan-content-block {
+    padding-left: 0; /* Resets structural column margins completely */
+  }
+
+  .artisan-main-heading {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .artisan-body-text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .artisan-metrics-row {
+    flex-direction: row; /* Stays aligned horizontally side-by-side cleanly */
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+  
+  .metric-number {
+    font-size: 1.85rem;
+  }
+}
+
+
+/* --- CONTAINER STRUCTURE LIMITATION --- */
+
+/* .container-1320 {
+  max-width: 1320px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+} */
+
+/* --- HOUSING LAYER --- */
+.essential-collections-section {
+  width: 100%;
+  padding: 6rem 0;
+  box-sizing: border-box;
+  overflow: hidden; /* Stops horizontal screen scrollbars on the whole web page */
+}
+
+/* --- HEADER CONTROL COMPONENT BLOCK --- */
+.collections-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+}
+
+.collections-main-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.collections-subtitle {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #564240;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.collections-nav-arrows {
+  display: flex;
+  gap: 1rem;
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(86, 66, 64, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #564240;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+/* --- THE SECRET SOURCE: FULL-WIDTH OVERFLOW SWIPER ENGINE --- */
+
+.collections-swiper {
+  width: 100%;
+ 
+}
+
+.collection-card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  aspect-ratio: 1 / 1.05;
+}
+
+.collection-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.badge-best-seller {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #ffffff;
+  color: #564240;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.45rem 1rem;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.collection-item-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary);
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem 0;
+}
+
+.collection-item-desc {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #564240;
+  opacity: 0.85;
+  font-size: 0.95rem;
+  margin: 0 0 1.25rem 0;
+}
+
+.card-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collection-price {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #564240;
+}
+
+.collection-price::before {
+  content: '₹ ';
+}
+
+.add-to-cart-trigger {
+  background-color: transparent;
+  border: 1px solid rgba(86, 66, 64, 0.4);
+  color: #564240;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR MOBILES & VIEWPORTS BELOW CONTAINER MAX-WIDTH --- */
+
+/* When window screens are smaller than 1350px width, reset left-math fallback formulas safely */
+@media (max-width: 1350px) {
+  .collections-swiper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .essential-collections-section {
+    padding: 4rem 0;
+  }
+
+  .collections-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .collections-main-title {
+    font-size: 2rem;
+  }
+
+  .collections-nav-arrows {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+
+/* --- SERVICES SECTION HOUSING --- */
+.brand-services-section {
+  width: 100%;
+  background-color: #e8e1da; /* Your custom requested background color token */
+  padding: 5rem 0;
+  box-sizing: border-box;
+}
+
+/* --- GRID ENGINE LAYOUT --- */
+.services-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* --- INDIVIDUAL ITEM PROFILE --- */
+.service-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* --- ICON WRAPPER HOUSING --- */
+.service-icon-box {
+  font-size: 1.65rem; /* Precise editorial look matching design proportions */
+  color: var(--color-secondary); /* Master accent burgundy tone */
+  margin-bottom: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Micro-interaction on desktop hover */
+.service-item:hover .service-icon-box {
+  transform: translateY(-4px);
+}
+
+/* --- MINIMALIST COLUMN TYPOGRAPHY --- */
+.service-title {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #1a1a1a; /* Clean contrast char coal tone */
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 2px; /* Replicates wide tracked layout style seen in image_e0d35b.png */
+  text-transform: uppercase;
+  margin: 0;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALL VIEWPOTS --- */
+
+@media (max-width: 1024px) {
+  .brand-services-section {
+    padding: 4rem 0;
+  }
+  
+  .services-grid {
+    gap: 1rem;
+  }
+  
+  .service-title {
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* Tablet & Mobile Grid Restructuring */
+@media (max-width: 768px) {
+  .brand-services-section {
+    padding: 3.5rem 0;
+  }
+
+  /* Wrap items into two per row or simple stacked grid list profiles */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Clean side-by-side balanced distribution blocks */
+    row-gap: 3rem;
+    column-gap: 1.5rem;
+  }
+
+  /* Force the final 5th item to occupy full width centrally for absolute symmetry */
+  .service-item:last-child {
+    grid-column: span 2;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* On compact smartphone viewports, let everything stack cleanly downwards */
+  .services-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+  
+  .service-item:last-child {
+    grid-column: span 1;
+  }
+  
+  .service-icon-box {
+    margin-bottom: 0.75rem;
+  }
+}
+
+
+/* ======footer section style ========*/
+
+.site-footer {
+  background-color: var(--bg-color);
+  font-family: 'Hanken Grotesk', sans-serif; /* Updated font family */
+  color: var(--text-dark);
+  padding: 60px 40px 30px 40px;
+
+  border-top: 1px solid var(--input-border);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+}
+
+/* Brand & Typography */
+.footer-logo {
+  max-width: 100px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.brand-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Links Layout */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+  padding-left: 5px;
+}
+
+/* Newsletter Form */
+.newsletter-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: transparent;
+  border: 1px solid var(--input-border);
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.newsletter-form input::placeholder {
+  color: #8c7b72;
+}
+
+.newsletter-form button {
+  background-color: var(--color-secondary);
+  color: var(--btn-text);
+  border: none;
+  padding: 14px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  /* Dynamic overlay blend to darken on hover */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+}
+
+/* Footer Bottom / Copyright */
+.footer-bottom {
+  max-width:  100%;
+  width: 100%;
+  margin: 50px auto 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid rgba(88, 76, 67, 0.15); 
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: #7a6e65;
+  margin: 0;
+}
+
+/* --- Responsive Media Query for Small Screens --- */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 40px 20px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; 
+    gap: 35px;
+    text-align: left; 
+  }
+
+  .footer-heading {
+    margin-bottom: 15px;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+}

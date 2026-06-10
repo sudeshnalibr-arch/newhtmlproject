@@ -1,0 +1,2046 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-muted: #5c544e;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #FAF6F0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-40 {
+  width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 156px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+/*---BANNER SECTION STYLE----*/
+.hero {
+  font-family: var(--font-sans);
+  /* background: radial-gradient(circle at top right, #FFFBF7 0%, var(--color-bg) 100%); */
+  background-color: var(--color-bg);
+  position: relative;
+  color: var(--color-text-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw; /* Spans across the right half */
+  height: 60vh; /* Smooth vertical fade down past the navbar */
+
+  background: radial-gradient(
+    circle at top right,
+    rgba(212, 163, 73, 0.35) 0%,
+    rgba(212, 163, 73, 0.15) 25%,
+    rgba(250, 246, 240, 0.5) 50%,
+    transparent 80%
+  );
+
+  /* Keeps the background behind your text and images */
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero .container-fluid {
+  /* max-width: 1300px; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.hero .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Left Content Column */
+
+.subheading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.main-heading {
+  font-family: var(--font-serif);
+  font-size: 4.2rem;
+  line-height: 1.15;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.heading-italic {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 30px;
+}
+
+/* Call to actions buttons */
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1rem 2.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: 1px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: #551818;
+  border-color: #551818;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+/* Right Visual Column */
+.hero-image {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  /* max-width: 520px; */
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  /* aspect-ratio: 1 / 1;  */
+  object-fit: cover;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+  /* border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px; */
+  box-shadow: 0px 30px 60px rgba(43, 37, 32, 0.15);
+}
+
+/* Floating Badge */
+.floating-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.25rem;
+  border-radius: 12px;
+  max-width: 240px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.badge-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.badge-icon {
+  display: inline-block;
+}
+
+.badge-text {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .main-heading {
+    font-size: 3.2rem;
+  }
+
+  .hero-container {
+    gap: 2rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .nav-links {
+    display: none; /* In a full project, you can toggle a mobile drawer here */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Structural transformation to stacked rows */
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    order: 2; /* Content goes down below image for organic mobile UX */
+  }
+
+  .hero-visual {
+    justify-content: center;
+    order: 1;
+  }
+
+  .image-wrapper {
+    max-width: 400px;
+  }
+
+  .main-heading {
+    font-size: 2.8rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .floating-badge {
+    left: 10px;
+    bottom: -15px;
+  }
+}
+
+/*------ TRUST BANNER SECTION STYLE ------- */
+
+.trust-banner {
+  width: 100%;
+  
+  background-color: #4a0e0e; /* Deep maroon matching your brand palette */
+  color: #e2c999; /* Delicate muted gold color for typography/icons */
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow: hidden;
+  padding: 25px 0;
+  border-top: 1px solid rgba(226, 201, 153, 0.15);
+  border-bottom: 1px solid rgba(226, 201, 153, 0.15);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.trust-banner .container-fluid {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.trust-banner .container-fluid .row {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  white-space: nowrap;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.trust-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  stroke: #e2c999;
+}
+
+/* --- RESPONSIVE MEDIA QUERY FOR SMALLER SCREENS --- */
+@media (max-width: 992px) {
+  /* Transforms into a clean, smooth infinite sliding ticker banner */
+  .trust-banner {
+    padding: 1rem 0;
+  }
+
+  .trust-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4rem; /* Generous gap between items on slider mode */
+    width: max-content;
+    padding-left: 2rem;
+    animation: infiniteTicker 25s linear infinite;
+  }
+
+  /* Duplicate items or ensure adequate length to prevent structural gaps */
+  .trust-container:hover {
+    animation-play-state: paused; /* User interaction enhancement */
+  }
+}
+
+/* Linear infinite marquee movement translation */
+@keyframes infiniteTicker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+
+/* ---- ritual kit section ------- */
+
+.ritual-kits-section {
+  width: 100%;
+  background-color: #FAF6F0; /* Matching branding base ivory */
+  padding: 4rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --- HEADER REGION --- */
+.kits-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-family: 'Marcellus', serif;
+  font-size: 45px;
+  color: #4A0E0E; /* Deep brand maroon */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #5C544E;
+  font-size: 1rem;
+}
+
+.shop-all-link {
+  color: #9A7B3E; /* Muted corporate gold */
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.shop-all-link:hover {
+  color: #4A0E0E;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.shop-all-link:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* --- GRID INFRASTRUCTURE --- */
+.kits-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr; /* Matches proportion of main vs stacked column */
+  gap: 1.5rem;
+}
+
+/* Reusable structural Base Card settings */
+.kit-card {
+  position: relative;
+  border-radius: 20px; /* Smooth editorial organic curved corners */
+  overflow: hidden;
+  display: flex;
+  background-color: #2b2520;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.kit-card:hover .card-img {
+  transform: scale(1.04);
+}
+
+/* Layered depth overlays */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+}
+
+.card-overlay-subtle {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 60%);
+}
+
+/* Right Stacked Layout Column */
+.right-column-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- CARD LEVEL INTERIORS --- */
+
+/* Left Featured Layout Specifications */
+.card-featured {
+  min-height: 520px;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3rem;
+  color: #ffffff;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.badge-bestseller {
+  background-color: #9A7B3E;
+  color: #ffffff;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+
+.card-title-large {
+  font-family: 'Marcellus', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.card-desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.8rem;
+}
+
+.btn-shop-now {
+  background-color: #ffffff;
+  color: #4A0E0E;
+  padding: 0.85rem 2rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn-shop-now:hover {
+  background-color: #FAF6F0;
+}
+
+/* Right Stacked Cards Specifications */
+.card-small {
+  /* height: calc(260px - 0.75rem); Flawless math to perfectly match structural feature card height */
+  min-height: 250px;
+}
+
+.card-content-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.card-title-small {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.card-desc-small {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.85rem;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALLER SCREENS --- */
+
+/* Medium tablet breakout settings */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .kits-grid {
+    grid-template-columns: 1fr; /* Drops asymmetric columns to stacked standard vertical modules */
+  }
+  
+  .card-featured {
+    min-height: 460px;
+  }
+  
+  .card-small {
+    height: 280px; /* Fixes direct height allocation for fluid single-column presentation */
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 576px) {
+  .ritual-kits-section {
+    padding: 3rem 1.25rem;
+  }
+
+  .kits-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .card-title-large {
+    font-size: 1.6rem;
+  }
+
+  .card-content-bottom {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+
+/* =========  curated season section style  ========== */
+
+.curated-season-section {
+  width: 100%;
+  background-color: #FAF6F0; /* Warm background tint matching the image */
+  padding: 4.5rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --- HEADER ALIGNMENTS --- */
+.curated-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-family: 'Marcellus', serif;
+  font-size: 45px;
+  color: #4A0E0E; /* Editorial Deep Red Maroon */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #5C544E;
+  font-size: 0.95rem;
+}
+
+.view-all-link {
+  color: #9A7B3E; /* Muted corporate gold */
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.view-all-link:hover {
+  color: #4A0E0E;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.view-all-link:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* --- CARDS GRID ARRANGEMENT --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Columns on standard desktop screens */
+  gap: 1.5rem;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(74, 14, 14, 0.06);
+}
+
+.product-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Standard uniform square bounds */
+  overflow: hidden;
+  background-color: #f7f7f7;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.03);
+}
+
+/* --- CARD CONTENT --- */
+.product-info {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #4A0E0E; /* Deep crimson/maroon text link */
+  margin-bottom: 15px;
+}
+
+.product-desc {
+  font-size: 0.88rem;
+  color: #7A726C;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* Aligns data to the absolute card bottom row */
+}
+
+.product-price {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #846226; /* Dark golden tone matching user interface image values */
+}
+
+.add-to-cart-btn {
+  background: none;
+  border: none;
+  color: #4A0E0E;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  color: #9A7B3E;
+  transform: scale(1.08);
+}
+
+
+/* --- RESPONSIVE BREAKPOINTS (MEDIA QUERIES) --- */
+
+/* Tablets & Small Laptops */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Collapses smoothly to 2 columns */
+    gap: 1.25rem;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 576px) {
+  .curated-season-section {
+    padding: 3rem 1.25rem;
+  }
+
+  .curated-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 uniform stack list view optimized for touch screen scrolls */
+    gap: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .product-info {
+    padding: 1.25rem;
+  }
+}
+
+
+/* -============Shanti Samagri Section Style ================- */
+/* --- SECTION STYLES --- */
+.shanti-samagri-section {
+  width: 100%;
+  background-color: #FAF6F0; /* Premium ivory tint matching the visual layout context */
+  padding: 5rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.shanti-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 50/50 balanced grid splitting layout symmetry */
+  gap: 5.5rem;
+  align-items: center;
+}
+
+/* --- LEFT SIDE: IMAGERY & BADGE --- */
+.shanti-visual {
+  width: 100%;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.product-showcase-img {
+  width: 100%;
+  height: auto;
+  /* aspect-ratio: 1.05 / 1; Retains wide editorial proportions */
+  object-fit: cover;
+  border-radius: 24px; /* Organic smooth desktop curved mask edge */
+  box-shadow: 0px 20px 40px rgba(43, 37, 32, 0.1);
+}
+
+/* Luxury Curation Label Price Box Overlay */
+.curation-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -3%; /* Offsets offset look matching design files */
+  background-color: #846226; /* Raw antique dark gold tone */
+  color: #ffffff;
+  padding: 1.25rem 2.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  box-shadow: 0 10px 25px rgba(132, 98, 38, 0.25);
+}
+
+.badge-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+.badge-price {
+  font-family: 'Marcellus', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+/* --- RIGHT SIDE: CONTENT & TYPOGRAPHY --- */
+.shanti-content {
+  max-width: 540px;
+}
+
+.editorial-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #9A7B3E; /* Golden secondary hue marker */
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.product-headline {
+  font-family: 'Marcellus', serif;
+  font-size: 3.8rem;
+  line-height: 1.15;
+  color: var(--color-primary); /* Deep crimson luxury brand theme color */
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.product-description {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: #5C544E;
+  margin-bottom: 2.2rem;
+}
+
+/* Trust features points */
+.features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #4A3E3D;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+  color: #846226; /* Target golden brand tone icons color signature fill */
+  flex-shrink: 0;
+}
+
+/* Actions interactive area styles */
+.action-buttons-group {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.btn {
+  padding: 1.1rem 2.4rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.btn-cart {
+  background-color: var(--color-primary); /* Deep primary corporate wine */
+  color: #fff;
+  border: 1px solid var(--color-primary);
+}
+
+.btn-cart:hover {
+  background-color: #551818;
+  border-color: #551818;
+}
+
+.btn-details {
+  background-color: transparent;
+  color: #846226;
+  border: 2px solid #CBD1C6; /* Dynamic frame configuration borders */
+  min-width: 140px;
+}
+
+.btn-details:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALL SCREENS --- */
+
+/* Laptops / Tablets view boundaries breakpoint width adjustments */
+@media (max-width: 1024px) {
+  .shanti-container {
+    gap: 2.5rem;
+  }
+
+  .product-headline {
+    font-size: 2.8rem;
+  }
+}
+
+/* Mobile Devices presentation architecture transformation adjustments */
+@media (max-width: 768px) {
+  .shanti-samagri-section {
+    padding: 3.5rem 1.25rem 5rem 1.25rem;
+  }
+
+  .shanti-container {
+    grid-template-columns: 1fr; /* Drops into single column presentation mode */
+    gap: 4rem;
+  }
+
+  .shanti-content {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .curation-badge {
+    right: 50%;
+    transform: translateX(50%); /* Centers the badge box element directly matching phone screens layout standard specs */
+    bottom: -25px;
+    padding: 1rem 2rem;
+  }
+
+  .product-headline {
+    font-size: 2.4rem;
+  }
+
+  .action-buttons-group {
+    flex-direction: column; /* Stacks button actions vertically sequentially on tight width screens configurations */
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* ============  Our Artisan =============== */
+
+/* --- ARTISANS SECTION STYLES --- */
+.artisans-section {
+  width: 100%;
+  background-color: #FAF6F0; /* Soft warm ivory brand background */
+  padding: 5rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.artisans-container {
+  max-width: 1320px; /* Exact container width requested */
+  margin: 0 auto;
+}
+
+/* --- HEADER REGION --- */
+.artisans-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.support-subheading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #9A7B3E; /* Golden brand accent tone */
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.artisans-title {
+  font-family: 'Marcellus', serif;
+  font-size: 2.8rem;
+  color: #4A0E0E; /* Deep editorial brand maroon */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* --- GRID CONFIGURATION --- */
+.artisans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Balanced 3-column layout */
+  gap: 3rem;
+}
+
+.artisan-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Perfect Circular Image Masking */
+.artisan-image-wrapper {
+  width: 100%;
+  max-width: 340px; /* Restricts maximum expansion size */
+  aspect-ratio: 1 / 1; /* Locks container to a perfect square */
+  border-radius: 50%; /* Converts square bounds into a clean circle */
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(154, 123, 62, 0.15); /* Soft, subtle gold border ring */
+  background-color: #eaeaea; 
+}
+
+.artisan-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps imagery un-stretched while maintaining zoom profile */
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Interactive Hover Feedback */
+.artisan-card:hover .artisan-img {
+  transform: scale(1.05);
+}
+
+/* --- TYPOGRAPHY DETAILS --- */
+.artisan-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.artisan-name {
+  font-family: 'Marcellus', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #4A0E0E;
+}
+
+.artisan-craft {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #9A7B3E;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablets & Smaller Laptops */
+@media (max-width: 1024px) {
+  .artisans-grid {
+    gap: 1.5rem; /* Tightens whitespace gap between columns */
+  }
+  
+  .artisans-title {
+    font-size: 2.4rem;
+  }
+  
+  .artisan-name {
+    font-size: 1.05rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .artisans-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .artisans-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .artisans-title {
+    font-size: 2rem;
+  }
+
+  /* Rearranges the 3 columns into a neat vertical flow */
+  .artisans-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .artisan-image-wrapper {
+    max-width: 280px; /* Scales down circular dimension gracefully on phones */
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* ==============  Presence Section Style  ================ */
+
+/* --- PRESENCE SECTION STYLES --- */
+.presence-section {
+  width: 100%;
+  background-color: #FAF6F0; /* Soft luxury ivory base background color */
+  padding: 6rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow: hidden;
+}
+
+.presence-container {
+  
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr; /* Controls the horizontal balance */
+  gap: 5rem;
+  align-items: center;
+  background: #fff;
+  border-radius: 30px;
+  padding: 60px;
+  box-shadow: 2px 2px 2px 5px rgba(0,0,0,0.03);
+}
+
+/* --- LEFT SIDE: TYPOGRAPHY & FEATURES --- */
+.presence-content {
+  max-width: 540px;
+}
+
+.presence-heading {
+  font-family: 'Marcellus', serif;
+  font-size: 3.5rem;
+  line-height: 1.15;
+  color: var(--color-primary); /* Signature Deep Maroon Theme color */
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.presence-heading-dark {
+  color: #4A0E0E; /* Dark contrast charcoal emphasis accent row */
+}
+
+.presence-description {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #5C544E;
+  margin-bottom: 2.5rem;
+}
+
+/* Feature Item Rows Layout */
+.presence-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.feature-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  background-color: #F3ECE3; /* Soft, warm round container background token */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #846226; /* Deep gold accent icon color values */
+  flex-shrink: 0;
+}
+
+.feature-text h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #4A0E0E;
+  margin-bottom: 0.25rem;
+}
+
+.feature-text p {
+  font-size: 0.9rem;
+  color: #7A726C;
+}
+
+/* Button UI Action Layer */
+.btn-planning {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 1.1rem 2.5rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-planning:hover {
+  background-color: #4A0E0E;
+  transform: translateY(-1px);
+}
+
+/* --- RIGHT SIDE: RENDER IMAGERY & SHADOW LAYERS --- */
+.presence-visual {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+/* Replicates the stylized subtle counter-clockwise angular canvas rotation */
+.image-rotation-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  transform: rotate(-3deg); 
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.image-rotation-wrapper:hover {
+  transform: rotate(0deg) scale(1.01); /* Interactive smooth alignment lift transition */
+}
+
+.presence-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.05 / 1;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: -15px 25px 50px rgba(43, 37, 32, 0.18); /* Soft directional card perspective shadow dropping */
+}
+
+/* Gold circle sticker overlay */
+.member-badge {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 110px;
+  height: 110px;
+  background-color: #846226; /* Brand gold background value */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(132, 98, 38, 0.3);
+  border: 2px solid #FAF6F0; /* Clean separation line layer frame */
+  transform: rotate(3deg); /* Normalizes text rotation profile counter-balance styling */
+  z-index: 2;
+}
+
+.member-badge span {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALLER SCREENS --- */
+
+/* Tablets & Small Landscape Screen Breakpoints */
+@media (max-width: 1024px) {
+  .presence-container {
+    gap: 3rem;
+  }
+
+  .presence-heading {
+    font-size: 2.8rem;
+  }
+}
+
+/* Mobile Screen Breakpoints Flow Adjustment settings */
+@media (max-width: 768px) {
+  .presence-section {
+    padding: 4rem 1.25rem;
+  }
+
+  /* Converts asymmetric grid matrix columns directly to natural top-to-bottom sequence vertical layouts stack */
+  .presence-container {
+    grid-template-columns: 1fr;
+    gap: 4.5rem;
+  }
+
+  .presence-content {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .presence-visual {
+    justify-content: center;
+    order: 2;
+    padding: 0 2rem; /* Guarantees safe clear-zone margins for rotating overlay elements edge leaks */
+  }
+
+  .image-rotation-wrapper {
+    max-width: 420px;
+  }
+
+  .presence-heading {
+    font-size: 2.4rem;
+  }
+
+  .btn-planning {
+    width: 100%;
+    text-align: center;
+  }
+
+  .member-badge {
+    width: 95px;
+    height: 95px;
+    top: -20px;
+    right: -20px;
+  }
+  
+  .member-badge span {
+    font-size: 0.6rem;
+  }
+}
+
+/* ================  legacy section ================== */
+
+/* --- LEGACY SECTION CONFIGURATION --- */
+.legacy-section {
+  width: 100%;
+  background-color: #fdf0e7; /* Warm background tint matching the site's brand palette */
+  padding: 4.5rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  border-top: 1px solid rgba(154, 123, 62, 0.08); /* Extremely soft separation edge */
+}
+
+.legacy-container {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* --- SECTION HEADER --- */
+.legacy-header {
+  text-align: center;
+}
+
+.legacy-subheading {
+  font-size: 1.0rem;
+  font-weight: 500;
+  letter-spacing: 4px; /* Wide editorial space footprint */
+  color: #9A7B3E; /* Sophisticated muted brand gold */
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+/* --- LOGO DISPLAY ROW --- */
+.legacy-logos-grid {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; /* Distributes items evenly across the 1280px container */
+  align-items: center;
+  gap: 3rem;
+}
+
+.press-logo {
+  font-family: 'Marcellus', serif; /* Elegant serif typeface matching image sample */
+  font-size: 1.10rem;
+  letter-spacing: 1px;
+  color: #2B2520; /* Dark charcoal tone */
+  opacity: 0.45; /* Soft, non-intrusive press look matching the reference image */
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Interactive feedback layer */
+.press-logo:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALLER SCREENS --- */
+
+/* Tablets and Medium Display Interfaces */
+@media (max-width: 992px) {
+  .legacy-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Collapses into a balanced 2x2 grid */
+    gap: 2.5rem;
+    max-width: 600px; /* Keeps the grid tight and structured */
+  }
+
+  .press-logo {
+    font-size: 1.05rem;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  .legacy-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .legacy-container {
+    gap: 2rem;
+  }
+
+  .legacy-subheading {
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+  }
+
+  .legacy-logos-grid {
+    grid-template-columns: 1fr; /* Stacks logos into a single clean vertical line */
+    gap: 2rem;
+  }
+
+  .press-logo {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* ==============  Subscribe Section =============== */
+
+/* --- SUBSCRIBE SECTION STYLES --- */
+.subscribe-section {
+  width: 100%;
+  background-color: #5B060C; /* Exact deep crimson maroon requested */
+  padding: 6rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  text-align: center;
+}
+
+.subscribe-container {
+  max-width: 1320px; /* Exact container width requested */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- TYPOGRAPHY HEADER --- */
+.subscribe-header {
+  margin-bottom: 2.5rem;
+  max-width: 650px; /* Constrains the layout line-breaks exactly like the reference blueprint */
+}
+
+.subscribe-title {
+  font-family: 'Marcellus', serif;
+  font-size: 3.2rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+.subscribe-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* --- FORM ELEMENTS --- */
+.subscribe-form {
+  width: 100%;
+  max-width: 640px; /* Ensures balanced, elegant horizontal proportions */
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.subscribe-input {
+  flex-grow: 1;
+  background-color: rgba(255, 255, 255, 0.08); /* Clean dark-mode transparency input */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 1.1rem 1.5rem;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.subscribe-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.subscribe-input:focus {
+  outline: none;
+  border-color: #FEB700; /* Subtle active glow matches button accents */
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.subscribe-btn {
+  background-color: #FEB700; /* Custom active button color */
+  color: #6B4B00; /* Custom target typography text contrast color */
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 1.1rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #E2A200; /* Subtle deep gold on hover states */
+}
+
+.subscribe-btn:active {
+  transform: scale(0.98);
+}
+
+/* --- LEGAL DISCLAIMER TEXT --- */
+.subscribe-footnote {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.3px;
+}
+
+.subscribe-footnote a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.subscribe-footnote a:hover {
+  color: #FEB700;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALLER SCREENS --- */
+
+/* Tablets and small laptops layout breakpoints */
+@media (max-width: 992px) {
+  .subscribe-title {
+    font-size: 2.6rem;
+  }
+}
+
+/* Mobile Smart Devices infrastructure structural adjustments */
+@media (max-width: 600px) {
+  .subscribe-section {
+    padding: 4rem 1.25rem; /* Roomier paddings for edge clearance */
+  }
+
+  .subscribe-title {
+    font-size: 2.1rem;
+  }
+
+  .subscribe-subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Stacks input and button into a unified vertical layout column sequence */
+  .input-group {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .subscribe-input {
+    padding: 1rem 1.25rem;
+    width: 100%;
+    text-align: center; /* Center placeholder for balanced aesthetic on tiny screens */
+  }
+
+  .subscribe-btn {
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  .subscribe-footnote {
+    line-height: 1.5;
+  }
+}
+
+
+/* ============= Reflection of Joy Section Style ============= */
+
+/* --- REFLECTIONS SECTION CONFIGURATION --- */
+.reflections-section {
+  width: 100%;
+  background-color: #FAF6F0; /* Soft luxury ivory base background */
+  padding: 6rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* .reflections-container {
+  max-width: 1320px; 
+  margin: 0 auto;
+} */
+
+/* --- HEADER DISPLAY REGION --- */
+.reflections-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.reflections-subheading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #7C5800; /* Custom specified first heading text color */
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.reflections-title {
+  font-family: 'Marcellus', serif;
+  font-size: 48px;
+  color: #5B060C; /* Custom specified secondary title text color */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* --- SWIPER / CARD INTERIOR CONFIGURATION --- */
+.reflections-swiper {
+  padding: 1rem 1rem 3rem 1rem !important; /* Extra bottom spacing protects pagination overlays */
+}
+
+.testimonial-card {
+  background-color: #f8eee1; /* Custom requested cards background color */
+  border-radius: 20px;
+  padding: 3.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto; /* Allow flexible height inside grid/flex swiper wrapper matrix matching layout track */
+  box-shadow: 0 4px 20px rgba(91, 6, 12, 0.02); /* Extremely faint custom shadow */
+  border: 1px solid rgba(124, 88, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* Star Array Configuration Styles */
+.star-rating {
+  color: #7C5800; /* Custom target stars rendering color assignment */
+  font-size: 1.1rem;
+  letter-spacing: 4px;
+  margin-bottom: 2rem;
+}
+
+/* Message block row setting variables */
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #564240; /* Custom specified paragraph text color */
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  flex-grow: 1; /* Pushes the identity signatures exactly aligned to the card row lower border edge */
+}
+
+/* Client profiles alignment configurations */
+.client-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.client-name {
+  font-family: 'Marcellus', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #5B060C; /* Custom specified customer layout text name accent label color */
+}
+
+.client-location {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #7C5800; /* Custom requested structural area label locator designation token */
+}
+
+/* Swiper custom structural dot accent formatting override layout layer */
+.reflections-swiper .swiper-pagination-bullet-active {
+  background: #5B060C !important;
+}
+
+
+/* --- RESPONSIVE BREAKPOINTS (MEDIA QUERIES) --- */
+
+/* Medium tablets view layout controls modifications */
+@media (max-width: 1024px) {
+  .reflections-title {
+    font-size: 2.5rem;
+  }
+  
+  .testimonial-card {
+    padding: 3rem 2rem;
+  }
+}
+
+/* Small mobile devices phone layout scaling modifiers */
+@media (max-width: 576px) {
+  .reflections-section {
+    padding: 4rem 1.25rem;
+  }
+
+  .reflections-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .reflections-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 2.5rem 1.5rem; /* Narrow margins for compact phone presentation layers */
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+  }
+}
+
+/* --- FOOTER SECTION STYLES --- */
+.site-footer {
+  width: 100%;
+  background-color: #E8E1DA; /* Custom requested footer background color */
+  padding: 5rem 2rem 2rem 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr 1.1fr; /* Proportional asymmetrical column system */
+  gap: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(86, 66, 64, 0.15); /* Soft baseline divider using muted paragraph tone */
+}
+
+/* --- COLUMN 1: BRAND PLATFORM --- */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  width: 130px;
+  height: 48px; /* Optional utility helps flat-rasterized white background logos melt smoothly */
+}
+
+.brand-description {
+  color: #564240; /* Custom specified paragraph text color */
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.footer-socials a {
+  color: #5B060C; /* Custom specified interactive brand icons color */
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+/* --- COLUMNS 2, 3 & 4: COMPONENT TITLES & NAV LINKS --- */
+.footer-col-title {
+  color: #5B060C; /* Custom specified column title identifier heading color */
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.footer-links-list a {
+  color: #564240; /* Custom specified nested column action item navigation text color */
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-links-list a:hover {
+  color: #5B060C; /* Shifts highlighting accents dynamically to primary branding crimson color */
+  padding-left: 4px;
+}
+
+/* Contact Column Content details */
+.footer-contact-info {
+  color: #564240; /* Custom text profile mapping specs */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-meta a {
+  color: #564240;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-meta a:hover {
+  color: #5B060C;
+}
+
+/* --- LOWER FOOTER BASEBAR PANEL --- */
+.footer-bottom-bar {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer-bottom-bar p {
+  color: #564240;
+  opacity: 0.75;
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR SMALLER SCREENS --- */
+
+/* Tablets and Landscape View Breakpoint boundaries */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr); /* Splits seamlessly into a clean double row 2x2 grid */
+    gap: 3rem;
+  }
+}
+
+/* Mobile Screens Configurations Flow adjustments */
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 4rem 1.25rem 2rem 1.25rem; /* Roomier layout boundaries for narrow screens */
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* Drops structural arrays into a pure single vertical flow column */
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .footer-col-title {
+    margin-bottom: 1rem; /* Condenses excessive layout spacing heights across tiny devices */
+  }
+
+  .footer-links-list {
+    gap: 0.85rem;
+  }
+
+  .footer-bottom-bar {
+    padding-top: 1.5rem;
+  }
+  
+  .footer-bottom-bar p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}

@@ -1,0 +1,999 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <!-- swiper js link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- fontaswome-cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom-css -->
+    <link rel="stylesheet" href="./asset/CSS/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#"><img src="./IMAGE/navlogo.png" alt="logo" /></a>
+          </div>
+          <div class="nav-menu">
+            <ul class="nav-link">
+              <li><a href="#">RITUAL GUIDE</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">ARTISTS</a></li>
+              <li><a href="#">GIFTS</a></li>
+              <li><a href="#">PLANNING</a></li>
+            </ul>
+          </div>
+          <div class="nav-icons">
+            <a href="#" aria-label="Shopping Bag">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Favorites">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Profile">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- =========Hero Section ========== -->
+      <section class="hero" id="#hero">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-33">
+              <div class="hero-content">
+                <span class="subheading">AUSPICIOUS LUXURY</span>
+                <h1 class="main-heading">
+                  Every Ritual.<br /><span class="heading-italic"
+                    >Made Easy.</span
+                  >
+                </h1>
+                <p class="hero-description">
+                  From sacred puja essentials to curated wedding samagri kits,
+                  we bring the soul of Indian traditions to your modern doorstep
+                  with editorial elegance.
+                </p>
+                <div class="hero-actions">
+                  <a href="#" class="btn btn-primary">Explore Kits</a>
+                  <a href="#" class="btn btn-secondary">View Artists</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-50">
+              <div class="hero-image">
+                <div class="image-wrapper">
+                  <img
+                    src="./IMAGE/heroimage.png"
+                    alt="Indian Puja Ritual Setup"
+                    class="hero-img"
+                  />
+
+                  <div class="floating-badge">
+                    <div class="badge-header">
+                      <svg
+                        class="badge-icon"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="#846226"
+                      >
+                        <path
+                          d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                        />
+                      </svg>
+                      <span>HANDCRAFTED SEAL</span>
+                    </div>
+                    <p class="badge-text">
+                      "Authentic items, curated by experts for your sacred
+                      journey."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======trust banner section====== -->
+      <section class="trust-banner">
+        <div class="container-fluid trust-container">
+          <div class="row">
+            <div class="col-25">
+              <div class="trust-item">
+                <svg
+                  class="trust-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon
+                    points="12 8 13.09 11.54 16.74 11.54 13.79 13.75 14.88 17.29 12 15.15 9.12 17.29 10.21 13.75 7.26 11.54 10.91 11.54 12 8"
+                  ></polygon>
+                </svg>
+                <span>TRUSTED BY 50,000+ FAMILIES</span>
+              </div>
+            </div>
+
+            <div class="col-25">
+              <div class="trust-item">
+                <svg
+                  class="trust-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+                <span>GLOBAL PREMIUM DELIVERY</span>
+              </div>
+            </div>
+
+            <div class="col-25">
+              <div class="trust-item">
+                <svg
+                  class="trust-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 11 2 2 4-4"></path>
+                </svg>
+                <span>ARTISAN VERIFIED QUALITY</span>
+              </div>
+            </div>
+
+            <div class="col-25">
+              <div class="trust-item">
+                <svg
+                  class="trust-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a7 7 0 0 1-9 10z"
+                  ></path>
+                  <path d="M9.8 6.1C7.5 12.2 9 14 11 20"></path>
+                </svg>
+                <span>ECO-FRIENDLY RITUAL PACKAGING</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== ritual kit container =========== -->
+
+      <section class="ritual-kits-section">
+        <div class="nav-container">
+          <div class="kits-header">
+            <div class="header-left">
+              <h2 class="section-title">The Ritual Kit</h2>
+              <p class="section-subtitle">
+                Perfectly curated essentials for every milestone.
+              </p>
+            </div>
+            <div class="header-right">
+              <a href="#" class="shop-all-link">
+                Shop All Kits
+                <svg
+                  class="arrow-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="kits-grid">
+            <div class="kit-card card-featured">
+              <img
+                src="./IMAGE/ritualimg3.png"
+                alt="Griha Pravesh Premium Kit"
+                class="card-img"
+              />
+              <div class="card-overlay"></div>
+
+              <div class="card-content">
+                <span class="badge-bestseller">Best Seller</span>
+                <h3 class="card-title-large">Griha Pravesh Premium Kit</h3>
+                <p class="card-desc">
+                  25+ essential items for your new beginning, delivered in
+                  ritual-ready packaging.
+                </p>
+                <a href="#" class="btn-shop-now">Shop Now</a>
+              </div>
+            </div>
+
+            <div class="right-column-stack">
+              <div class="kit-card card-small">
+                <img
+                  src="./IMAGE/ritualimg2.png"
+                  alt="Wedding Essentials"
+                  class="card-img"
+                />
+                <div class="card-overlay-subtle"></div>
+                <div class="card-content-bottom">
+                  <h4 class="card-title-small">Wedding Essentials</h4>
+                  <p class="card-desc-small">The complete Samagri curation.</p>
+                </div>
+              </div>
+
+              <div class="kit-card card-small">
+                <img
+                  src="./IMAGE/ritualimg1.png"
+                  alt="Annaprashan Kit"
+                  class="card-img"
+                />
+                <div class="card-overlay-subtle"></div>
+                <div class="card-content-bottom">
+                  <h4 class="card-title-small">Annaprashan Kit</h4>
+                  <p class="card-desc-small">
+                    Celebrate the first meal with tradition.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========= curated season section ================= -->
+      <section class="curated-season-section">
+        <div class="nav-container">
+          <div class="curated-header">
+            <div class="header-text">
+              <h2 class="section-title">Curated for the Season</h2>
+              <p class="section-subtitle">
+                Exquisite treasures for your home and rituals.
+              </p>
+            </div>
+            <div class="header-action">
+              <a href="#" class="view-all-link">
+                View All
+                <svg
+                  class="arrow-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-image-wrapper">
+                <img
+                  src="./IMAGE/curateimg1.png"
+                  alt="Gold-Plated Shanko"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Gold-Plated Shanko</h3>
+                <p class="product-desc">Sacred resonance.</p>
+                <div class="product-footer">
+                  <span class="product-price">&#8377;4,250</span>
+                  <button class="add-to-cart-btn" aria-label="Add to Cart">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="9" cy="21" r="1"></circle>
+                      <circle cx="20" cy="21" r="1"></circle>
+                      <path
+                        d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image-wrapper">
+                <img
+                  src="./IMAGE/curateimg2.png"
+                  alt="Hand-Painted Piri"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Hand-Painted Piri</h3>
+                <p class="product-desc">Alpana motifs.</p>
+                <div class="product-footer">
+                  <span class="product-price">&#8377;2,800</span>
+                  <button class="add-to-cart-btn" aria-label="Add to Cart">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="9" cy="21" r="1"></circle>
+                      <circle cx="20" cy="21" r="1"></circle>
+                      <path
+                        d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image-wrapper">
+                <img
+                  src="./IMAGE/curateimg3.png"
+                  alt="Silk Banarasi Potli"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Silk Banarasi Potli</h3>
+                <p class="product-desc">Heirloom weave.</p>
+                <div class="product-footer">
+                  <span class="product-price">&#8377;1,550</span>
+                  <button class="add-to-cart-btn" aria-label="Add to Cart">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="9" cy="21" r="1"></circle>
+                      <circle cx="20" cy="21" r="1"></circle>
+                      <path
+                        d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image-wrapper">
+                <img
+                  src="./IMAGE/curateimg4.png"
+                  alt="Heirloom Brass Kula"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Heirloom Brass Kula</h3>
+                <p class="product-desc">Timeless craftsmanship.</p>
+                <div class="product-footer">
+                  <span class="product-price">&#8377;5,900</span>
+                  <button class="add-to-cart-btn" aria-label="Add to Cart">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="9" cy="21" r="1"></circle>
+                      <circle cx="20" cy="21" r="1"></circle>
+                      <path
+                        d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Shanti Samagri Section ===========  -->
+
+      <section class="shanti-samagri-section">
+        <div class="container shanti-container">
+          <div class="shanti-visual">
+            <div class="image-container">
+              <img
+                src="./IMAGE/shantiImg1.png"
+                alt="The Shanti Samagri Set Showcase"
+                class="product-showcase-img"
+              />
+
+              <div class="curation-badge">
+                <span class="badge-title">AUTHENTIC CURATION</span>
+                <span class="badge-price">&#8377;8,999</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="shanti-content">
+            <span class="editorial-tag">EDITORIAL SELECT</span>
+            <h2 class="product-headline heading-italic">
+              The Shanti Samagri<br />Set
+            </h2>
+
+            <p class="product-description">
+              Elevate your sacred space with our signature collection. A
+              40-piece masterfully curated set featuring hand-poured camphor,
+              artisan-sourced kumkum, and heirloom-quality brass vessels.
+            </p>
+
+            <ul class="features-list">
+              <li class="feature-item">
+                <svg
+                  class="check-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>40+ Puja Essentials included</span>
+              </li>
+              <li class="feature-item">
+                <svg
+                  class="check-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Traditional silk-lined storage trunk</span>
+              </li>
+              <li class="feature-item">
+                <svg
+                  class="check-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Certified non-toxic, pure ingredients</span>
+              </li>
+            </ul>
+
+            <div class="action-buttons-group">
+              <button class="btn btn-cart">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path
+                    d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                  ></path>
+                </svg>
+                Add to Cart
+              </button>
+              <button class="btn btn-details">Details</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ============= Meet Our Artisan ============== -->
+
+      <section class="artisans-section">
+        <div class="artisans-container">
+          <div class="artisans-header">
+            <span class="support-subheading">SUPPORTING CRAFT</span>
+            <h2 class="artisans-title">Meet Our Artisans</h2>
+          </div>
+
+          <div class="artisans-grid">
+            <div class="artisan-card">
+              <div class="artisan-image-wrapper">
+                <img
+                  src="IMAGE/artisan1.png"
+                  alt="Manoj Bhaskar - Master Brass-Smith"
+                  class="artisan-img"
+                />
+              </div>
+              <div class="artisan-info">
+                <h3 class="artisan-name">Manoj Bhaskar</h3>
+                <p class="artisan-craft">MASTER BRASS-SMITH, UP</p>
+              </div>
+            </div>
+
+            <div class="artisan-card">
+              <div class="artisan-image-wrapper">
+                <img
+                  src="IMAGE/artisan2.png"
+                  alt="Ananya Sen - Heritage Weaver"
+                  class="artisan-img"
+                />
+              </div>
+              <div class="artisan-info">
+                <h3 class="artisan-name">Ananya Sen</h3>
+                <p class="artisan-craft">HERITAGE WEAVER, BENGAL</p>
+              </div>
+            </div>
+
+            <div class="artisan-card">
+              <div class="artisan-image-wrapper">
+                <img
+                  src="IMAGE/artisan3.png"
+                  alt="Rahul Das - Ceramics Designer"
+                  class="artisan-img"
+                />
+              </div>
+              <div class="artisan-info">
+                <h3 class="artisan-name">Rahul Das</h3>
+                <p class="artisan-craft">CERAMICS DESIGNER, RAJASTHAN</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ============ Presence Section =============== -->
+
+      <section class="presence-section">
+        <div class="container presence-container">
+          <div class="presence-content">
+            <h2 class="presence-heading heading-italic">
+              Not just products.<br />
+              <span class="presence-heading-dark">But presence.</span>
+            </h2>
+
+            <p class="presence-description">
+              Planning a wedding or a puja can be overwhelming. Our Ritual Guide
+              offers step-by-step checklists, historical context, and modern
+              adaptations to help you stay present in every sacred moment.
+            </p>
+
+            <div class="presence-features">
+              <div class="feature-row">
+                <div class="icon-wrapper">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <h3>Comprehensive Checklists</h3>
+                  <p>Every item you need, from Kalash to Kumkum.</p>
+                </div>
+              </div>
+
+              <div class="feature-row">
+                <div class="icon-wrapper">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <h3>Meaningful Stories</h3>
+                  <p>Learn the 'Why' behind every traditional gesture.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="presence-action">
+              <a href="#" class="btn-planning">Start Planning</a>
+            </div>
+          </div>
+
+          <div class="presence-visual">
+            <div class="image-rotation-wrapper">
+              <img
+                src="IMAGE/productsimg.png"
+                alt="Rituo Ritual Guide Book"
+                class="presence-img"
+              />
+
+              <div class="member-badge">
+                <span>MEMBER<br />EXCLUSIVE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==============  Legacy Section ============== -->
+      <section class="legacy-section">
+        <div class="nav-container legacy-container">
+          <div class="legacy-header">
+            <span class="legacy-subheading">A LEGACY CELEBRATED</span>
+          </div>
+
+          <div class="legacy-logos-grid">
+            <div class="press-logo">VOGUE INDIA</div>
+            <div class="press-logo">ARCHITECTURAL DIGEST</div>
+            <div class="press-logo">HARPER'S BAZAAR</div>
+            <div class="press-logo">ELLE DECOR</div>
+          </div>
+        </div>
+      </section>
+      <!-- ============Subscribe Section ============= -->
+      <section class="subscribe-section">
+        <div class="subscribe-container">
+          <div class="subscribe-header">
+            <h2 class="subscribe-title">Join the Ritual Circle</h2>
+            <p class="subscribe-subtitle">
+              Receive curation notes, artisan stories, and exclusive previews
+              directly in your inbox.
+            </p>
+          </div>
+
+          <form
+            class="subscribe-form"
+            action="#"
+            method="POST"
+            onsubmit="event.preventDefault()"
+          >
+            <div class="input-group">
+              <input
+                type="email"
+                class="subscribe-input"
+                placeholder="Your email address"
+                required
+                aria-label="Your email address"
+              />
+              <button type="submit" class="subscribe-btn">Subscribe</button>
+            </div>
+          </form>
+
+          <p class="subscribe-footnote">
+            By subscribing, you agree to our <a href="#">Privacy Policy</a> and
+            <a href="#">Terms of Service</a>.
+          </p>
+        </div>
+      </section>
+      <!-- ============= Reflection Joy ============= -->
+      <section class="reflections-section">
+        <div class="container reflections-container">
+          <div class="reflections-header">
+            <span class="reflections-subheading">KIND WORDS</span>
+            <h2 class="reflections-title">Reflections of Joy</h2>
+          </div>
+
+          <div class="swiper reflections-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide testimonial-card">
+                <div class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "The Shanti set brought such a sense of calm to our Griha
+                  Pravesh. The quality of the brass items is heirloom-grade.
+                  Truly exceptional."
+                </p>
+                <div class="client-info">
+                  <h3 class="client-name">Priya Sharma</h3>
+                  <span class="client-location">BANGALORE</span>
+                </div>
+              </div>
+
+              <div class="swiper-slide testimonial-card">
+                <div class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Finding a complete, authentic wedding samagri kit was such a
+                  relief. Rituo saved us weeks of stressful sourcing. Beautiful
+                  packaging too!"
+                </p>
+                <div class="client-info">
+                  <h3 class="client-name">Amitav Ghosh</h3>
+                  <span class="client-location">KOLKATA</span>
+                </div>
+              </div>
+
+              <div class="swiper-slide testimonial-card">
+                <div class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "The attention to detail in the Ritual Guide is incredible. It
+                  helped our family reconnect with traditions we had almost
+                  forgotten."
+                </p>
+                <div class="client-info">
+                  <h3 class="client-name">Meera Nair</h3>
+                  <span class="client-location">MUMBAI</span>
+                </div>
+              </div>
+
+              <div class="swiper-slide testimonial-card">
+                <div class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Finding a complete, authentic wedding samagri kit was such a
+                  relief. Rituo saved us weeks of stressful sourcing. Beautiful
+                  packaging too!"
+                </p>
+                <div class="client-info">
+                  <h3 class="client-name">Amitav Ghosh</h3>
+                  <span class="client-location">KOLKATA</span>
+                </div>
+              </div>
+
+              <div class="swiper-slide testimonial-card">
+                <div class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "The Shanti set brought such a sense of calm to our Griha
+                  Pravesh. The quality of the brass items is heirloom-grade.
+                  Truly exceptional."
+                </p>
+                <div class="client-info">
+                  <h3 class="client-name">Priya Sharma</h3>
+                  <span class="client-location">BANGALORE</span>
+                </div>
+              </div>
+
+              <div class="swiper-slide testimonial-card">
+                <div class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Finding a complete, authentic wedding samagri kit was such a
+                  relief. Rituo saved us weeks of stressful sourcing. Beautiful
+                  packaging too!"
+                </p>
+                <div class="client-info">
+                  <h3 class="client-name">Amitav Ghosh</h3>
+                  <span class="client-location">KOLKATA</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <div class="footer-brand-col">
+          <a href="#hero" ><img
+            src="./IMAGE/navlogo.png"
+            alt="Rituo Logo"
+            class="footer-logo"
+          /></a>
+          
+          <p class="brand-description">
+            Redefining tradition for the modern soul. Every ritual, crafted with
+            care and elegance.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Global Network"
+              ><i class="fa-solid fa-globe"></i
+            ></a>
+            <a href="#" aria-label="Share"
+              ><i class="fa-solid fa-share-nodes"></i
+            ></a>
+            <a href="#" aria-label="Email Contact"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">COLLECTIONS</h3>
+          <ul class="footer-links-list">
+            <li><a href="#">Puja Kits</a></li>
+            <li><a href="#">Wedding Samagri</a></li>
+            <li><a href="#">Artisan Brass</a></li>
+            <li><a href="#">Sacred Textiles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">GUIDANCE</h3>
+          <ul class="footer-links-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Artisans</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">CONTACT</h3>
+          <div class="footer-contact-info">
+            <p>
+              Curated with love from Kolkata.<br />Global shipping available.
+            </p>
+            <p class="contact-meta">
+              <a href="mailto:care@rituo.com">care@rituo.com</a><br />
+              <a href="tel:+919876543210">+91 98765 43210</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Rituo. Every Ritual. Made Easy.</p>
+      </div>
+    </footer>
+
+    <!-- swiper css -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- script js link -->
+    <script src="./asset/JS/script.js"></script>
+  </body>
+</html>
