@@ -1,0 +1,805 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-text-light: #564240;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-bright: #7c5800;
+  --color-text-muted: #5c544e;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #fff8f1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-40 {
+  width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+  border-bottom: 1px solid #f2ddcc;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 156px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+  
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+
+/* Banner Section Canvas Layout */
+.contact-banner-section {
+  background: linear-gradient(180deg, #fdf8f4 0%, #fcf6f0 100%); /* Elegant soft tint background matching the design */
+  padding: 100px 0 60px 0; /* Creates spatial elegance above downstream contact components */
+  text-align: center;
+  font-family: 'Hanken Grotesk', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Centered structural content layout wrapper */
+.banner-content-wrapper {
+  max-width: 720px; /* Restricts copy width to generate a balanced 2-line textual reading flow */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Primary Section Luxury Title Display */
+.banner-title {
+  color: var(--color-secondary); 
+  font-family: 'Playfair Display', serif; /* Signature serif font styling */
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0 ;
+  line-height: 1.8;
+}
+
+/* Secondary Narrative Description Copy */
+.banner-description {
+  color: var(--color-text-light); /* Warm organic descriptive text shade */
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  letter-spacing: 0.1px;
+}
+
+/* --- Media Query for Mobile and Small Viewport Screens --- */
+@media (max-width: 768px) {
+  .contact-banner-section {
+    padding: 65px 0 45px 0; /* Balanced padding optimization for shorter vertical heights */
+  }
+
+  .banner-content-wrapper {
+    padding: 0 24px; /* Enhanced gutter safety margins for pocket screen profiles */
+  }
+
+  .banner-title {
+    font-size: 2.35rem; /* Scales typography down smoothly to prevent awkward line drops */
+    margin-bottom: 16px;
+  }
+
+  .banner-description {
+    font-size: 0.95rem; /* Maximizes contrast reading crispness on smaller mobile viewports */
+    line-height: 1.5;
+  }
+}
+
+
+/* Section Canvas Layout Base */
+.wedding-inquiry-section {
+  /* background-color: #fdfaf6; */
+  padding: 60px 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  box-sizing: border-box;
+}
+
+/* 2-Column Desktop Grid Configuration */
+.inquiry-grid-layout {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 35px;
+  align-items: start;
+}
+
+/* --- LEFT COLUMN: Form Elements Styling --- */
+.inquiry-main-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 45px;
+  box-shadow: 0 4px 24px rgba(30, 27, 23, 0.02);
+}
+
+.section-main-title {
+  color: var(--color-secondary);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+.title-divider {
+  border: none;
+  border-top: 1px solid #ebdcd9;
+  margin: 0 0 35px 0;
+}
+
+.wedding-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.form-group input, 
+.form-group select,
+.form-group textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #1e1b17;
+  background-color: #fff4f4;
+  border: 1px solid #ebdcd9;
+  border-radius: 4px;
+  padding: 14px 16px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-secondary);
+  background-color: #ffffff;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Custom dropdown cross-browser tweak */
+.custom-select-wrapper select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23564240' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 14px;
+  padding-right: 40px;
+}
+
+/* Form Action Submission CTA button */
+.btn-submit-inquiry {
+  align-self: flex-start;
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 36px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-submit-inquiry:hover {
+  background-color: #420306;
+}
+
+
+/* --- RIGHT COLUMN: Sidebar Component Blocks --- */
+.inquiry-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.support-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 4px 24px rgba(30, 27, 23, 0.02);
+}
+
+.sidebar-title {
+  color: var(--color-secondary);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 25px 0;
+}
+
+.sidebar-title.font-alt {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.sidebar-title{
+    color: var(--color-secondary);
+    font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.support-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.support-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.support-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fdf3df;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.support-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.support-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #a09491;
+  letter-spacing: 0.5px;
+}
+
+.support-link {
+  color: #1e1b17;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.support-link:hover {
+  color: var(--color-secondary);
+}
+
+/* Call-to-action Whatsapp link block element */
+.btn-whatsapp-chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #feb700; /* Warm design theme callout gold tint */
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 14px;
+  border-radius: 25px;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.btn-whatsapp-chat:hover {
+  opacity: 0.95;
+}
+
+/* FAQ Accordion Component Layout Box */
+.faq-accordion-card {
+  background-color: #eee7df; /* Blends matching the design module fallback wrapper spacing */
+  background: rgba(235, 220, 217, 0.4);
+  border-radius: 12px;
+  padding: 35px;
+}
+
+.accordion-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ebdcd9;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e1b17;
+}
+
+.accordion-trigger i {
+  font-size: 0.8rem;
+  color: #1e1b17;
+  transition: transform 0.2s ease;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: max-height 0.3s ease-out;
+  transition: grid-template-rows 0.3s ease-out;
+
+}
+
+.accordion-content p {
+  margin: 0;
+  padding: 0 0 18px 0;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+/* Active State execution rule layout updates */
+.accordion-item.active .accordion-content {
+  max-height: 200px; /* Safe expanded limit overflow clearance height */
+  grid-template-rows: 1fr;
+}
+
+.accordion-trigger i {
+  font-size: 0.8rem;
+  color: #1e1b17;
+  transition: transform 0.2s ease, cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Media Query for Mobile and Tablets --- */
+@media (max-width: 992px) {
+  .wedding-inquiry-section {
+    padding: 40px 15px;
+  }
+
+  /* Master structure flips completely to vertical flowing grid lines */
+  .inquiry-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .inquiry-main-card {
+    padding: 30px 20px;
+  }
+
+  .form-row-2col {
+    grid-template-columns: 1fr; /* Inner parameters fold into single column rows */
+    gap: 20px;
+  }
+
+  .btn-submit-inquiry {
+    width: 100%; /* Expands full width for quick touchscreen ergonomics */
+    text-align: center;
+  }
+
+  .support-card, 
+  .faq-accordion-card {
+    padding: 30px 20px;
+  }
+}
+
+
+/* Master Heritage Structural Layout Block */
+.heritage-section {
+  background-color: #fdfaf6; /* Elegant background tone matching your palette context */
+  padding: 0 0 40px 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Split Grid balancing layout alignment */
+.heritage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Right-aligned container block positioning rules */
+.heritage-graphic-side {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+/* The Image Frame Container with Rounded Corners */
+.heritage-image-card {
+  position: relative;
+  width: 100%;
+  max-width: 480px; /* Maintains elegant proportions shown in image_c17844.png */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(30, 27, 23, 0.08);
+}
+
+/* Fluid responsive image rendering behavior */
+.heritage-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Absolute Position overlay panel layout settings */
+.heritage-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(99, 40, 48, 0.258) 0%, rgba(73, 1, 4, 0.526) 100%);
+  box-sizing: border-box;
+}
+
+/* Bottom-left aligned text caption typography */
+.overlay-caption {
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.heritage-text{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+/* --- Media Query for Mobile and Small Viewport Profiles --- */
+@media (max-width: 768px) {
+  .heritage-section {
+    padding: 30px 15px;
+  }
+
+  /* Structural grids drop into sequential rows */
+  .heritage-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .heritage-graphic-side {
+    justify-content: center; /* Center-aligns the visual asset cards elegantly */
+  }
+
+  .heritage-image-card {
+    border-radius: 12px; /* Subtle radius normalization for small screen footprints */
+  }
+
+  .heritage-text-overlay {
+    padding: 20px; /* Streamlined text spacing for tight screens */
+  }
+
+  .overlay-caption {
+    font-size: 1.1rem; /* Highly readable typography scaling target */
+  }
+}
+
+.alt-site-footer {
+  background-color: #ebe1da; /* Coordinated background tone matching image_b67419.png */
+  padding: 80px 0 40px 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);
+}
+
+/* Master row alignment split mapping out the 4 content zones */
+.footer-columns-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 0.9fr 1.3fr;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+/* Column Text Components */
+.philosophy-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  margin: 50px 0 0 0;
+  max-width: 260px; 
+}
+
+.column-title {
+  color: var(--color-secondary); 
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  letter-spacing: 0.2px;
+}
+
+/* List Nav Items Styling */
+.nav-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links-list li {
+  margin-bottom: 14px;
+}
+
+.nav-links-list a {
+  text-decoration: none;
+  color: #564240;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links-list a:hover {
+  opacity: 0.75;
+}
+
+/* Newsletter Area Layout elements */
+.newsletter-caption {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #564240;
+  margin: 0 0 16px 0;
+  max-width: 300px;
+}
+
+/* Inline Form Row Group */
+.newsletter-inline-form {
+  display: flex;
+  max-width: 320px;
+  width: 100%;
+}
+
+.newsletter-input {
+  flex: 1;
+  background-color: #fdfaf6; /* Very soft inner field tint */
+  border: 1px solid #5b060c;
+  border-right: none; /* Merges cleanly right up against adjacent arrow button block */
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #1e1b17;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.newsletter-input::placeholder {
+  color: #a09491;
+}
+
+.newsletter-submit-btn {
+  background-color: #5b060c;
+  color: #ffffff;
+  border: 1px solid #5b060c;
+  padding: 0 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.newsletter-submit-btn:hover {
+  background-color: #420306;
+  border-color: #420306;
+}
+
+/* Center aligned bottom footnote row */
+.footer-baseline {
+  border-top: 1px solid rgba(86, 66, 64, 0.1); /* Subtle hairline design divider */
+  padding-top: 30px;
+  text-align: center;
+}
+
+.center-copyright {
+  font-size: 0.88rem;
+  color: #564240;
+  margin: 0;
+}
+
+
+/* --- Media Query for Mobile and Small Screen Viewports --- */
+@media (max-width: 768px) {
+  .alt-site-footer {
+    padding: 50px 20px 30px 20px;
+  }
+
+  /* Grid breaks down into standard single stack row outputs */
+  .footer-columns-wrapper {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-bottom: 40px;
+  }
+
+  .column-title {
+    margin-bottom: 14px;
+  }
+
+  .nav-links-list li {
+    margin-bottom: 10px;
+  }
+
+  .philosophy-text,
+  .newsletter-caption {
+    max-width: 100%; /* Allows full width span fluidity on tight viewports */
+  }
+
+  .newsletter-inline-form {
+    max-width: 100%; /* Ensures touch target text fields stretch fully across screen width margins */
+  }
+
+  .footer-baseline {
+    padding-top: 25px;
+  }
+}

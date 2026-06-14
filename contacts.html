@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts</title>
+
+    <!-- swiper js link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- fontaswome-cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom-css -->
+    <link rel="stylesheet" href="./asset/CSS/style7.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#"><img src="./IMAGE/navlogo.png" alt="logo" /></a>
+          </div>
+          <div class="nav-menu">
+            <ul class="nav-link">
+              <li><a href="#">RITUAL GUIDE</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">ARTISTS</a></li>
+              <li><a href="#">GIFTS</a></li>
+              <li><a href="#">PLANNING</a></li>
+            </ul>
+          </div>
+          <div class="nav-icons">
+            <a href="#" aria-label="Shopping Bag">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Favorites">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Profile">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Banner Section -->
+
+      <section class="contact-banner-section">
+        <div class="container banner-content-wrapper">
+          <h1 class="banner-title">Connect With Us</h1>
+          <p class="banner-description">
+            Your journey toward a sacred union begins with a simple
+            conversation. Let us curate the details of your heritage.
+          </p>
+        </div>
+      </section>
+
+      <!-- Wedding Inquiry Section -->
+      <section class="wedding-inquiry-section">
+        <div class="container inquiry-grid-layout">
+          <!-- LEFT SIDE: Form Block -->
+          <div class="inquiry-main-card">
+            <h2 class="section-main-title">Wedding Inquiry</h2>
+            <hr class="title-divider" />
+
+            <form class="wedding-form">
+              <div class="form-row-2col">
+                <div class="form-group">
+                  <label for="full-name">Full Name</label>
+                  <input
+                    type="text"
+                    id="full-name"
+                    placeholder="Arjun Das"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="wedding-date">Wedding Date</label>
+                  <input type="date" id="wedding-date" required />
+                </div>
+              </div>
+
+              <div class="form-row-2col">
+                <div class="form-group">
+                  <label for="ceremony-location">Ceremony Location</label>
+                  <input
+                    type="text"
+                    id="ceremony-location"
+                    placeholder="Kolkata, India"
+                    required
+                  />
+                </div>
+                <div class="form-group custom-select-wrapper">
+                  <label for="services">Services Needed</label>
+                  <select id="services" required>
+                    <option value="full-curation" selected>
+                      Full Ritual Curation
+                    </option>
+                    <option value="partial-decor">
+                      Partial Decor &amp; Styling
+                    </option>
+                    <option value="consultation">Artisanal Consultation</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="message">Your Message</label>
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder="Tell us about your vision..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit-inquiry">
+                Send Inquiry
+              </button>
+            </form>
+          </div>
+
+          <!-- RIGHT SIDE: Support & Accordion Block -->
+          <div class="inquiry-sidebar">
+            <!-- Ritual Support Box -->
+            <div class="support-card">
+              <h3 class="sidebar-title">Ritual Support</h3>
+
+              <div class="support-channels">
+                <div class="support-item">
+                  <div class="support-icon-circle">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div class="support-details">
+                    <span class="support-label">CONCIERGE DESK</span>
+                    <a href="tel:+913340228100" class="support-link"
+                      >+91 (33) 4022-8100</a
+                    >
+                  </div>
+                </div>
+
+                <div class="support-item">
+                  <div class="support-icon-circle">
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                  <div class="support-details">
+                    <span class="support-label">EMAIL INQUIRY</span>
+                    <a href="mailto:concierge@rituo.luxury" class="support-link"
+                      >concierge@rituo.luxury</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="https://wa.me/#"
+                class="btn-whatsapp-chat"
+                target="_blank"
+              >
+                <i class="fa-brands fa-whatsapp"></i> WHATSAPP CHAT
+              </a>
+            </div>
+
+            <!-- FAQ Accordion Block -->
+            <div class="faq-accordion-card">
+              <h3 class="sidebar-title font-alt">Frequently Asked</h3>
+
+              <div class="accordion-group">
+                <!-- Accordion Item 1 (Active/Open State) -->
+                <div class="accordion-item active">
+                  <button type="button" class="accordion-trigger">
+                    <span>How far in advance should I book?</span>
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </button>
+                  <div class="accordion-content">
+                    <p>
+                      For complete ritual curation and custom artisan works, we
+                      recommend reaching out at least 6 months prior to your
+                      wedding date.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Accordion Item 2 -->
+                <div class="accordion-item">
+                  <button type="button" class="accordion-trigger">
+                    <span>Do you ship internationally?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <div class="accordion-content">
+                    <p>
+                      Yes, we specialize in delivering secure, luxury
+                      handcrafted packages globally with verified logistics
+                      partners.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Accordion Item 3 -->
+                <div class="accordion-item">
+                  <button type="button" class="accordion-trigger">
+                    <span>Can rituals be customized?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <div class="accordion-content">
+                    <p>
+                      Absolutely. Every aspect of our curation can be fine-tuned
+                      to honor your specific ancestral regional customs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Heritage Section -->
+      <section class="heritage-section">
+        <div class="container heritage-grid">
+          <div class="heritage-content-side"></div>
+
+          <div class="heritage-graphic-side">
+            <div class="heritage-image-card">
+              <img
+                src="IMAGE/CONTACT/heritage.png"
+                alt="Preserving Heritage Box"
+                class="heritage-main-img"
+              />
+              <div class="heritage-text-overlay">
+                <p class="overlay-caption"></p>
+              </div>
+
+              <p class="heritage-text">Preserving Heritage</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="alt-site-footer">
+      
+      <div class="container">
+        
+        <div class="footer-columns-wrapper">
+         
+          <div class="footer-info-col">
+            <p class="philosophy-text">
+              Preserving the soul of tradition through modern luxury.
+            </p>
+          </div>
+
+          <!-- Column 2: Discover Links -->
+          <div class="footer-links-col">
+            <h4 class="column-title">Discover</h4>
+            <ul class="nav-links-list">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Artisans</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Support Links -->
+          <div class="footer-links-col">
+            <h4 class="column-title">Support</h4>
+            <ul class="nav-links-list">
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Newsletter Legacy Subscription Form -->
+          <div class="footer-newsletter-col">
+            <h4 class="column-title">Legacy</h4>
+            <p class="newsletter-caption">
+              Subscribe to receive curation notes on sacred rituals.
+            </p>
+            <form
+              class="newsletter-inline-form"
+              onsubmit="event.preventDefault()"
+            >
+              <input
+                type="email"
+                placeholder="Email Address"
+                required
+                class="newsletter-input"
+              />
+              <button
+                type="submit"
+                class="newsletter-submit-btn"
+                aria-label="Subscribe"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom section: Centralized bottom copyright bar line -->
+        <div class="footer-baseline">
+          <p class="center-copyright">
+            &copy; 2024 Rituo. Every Ritual. Made Easy.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./asset/JS/script7.js"></script>
+  </body>
+</html>

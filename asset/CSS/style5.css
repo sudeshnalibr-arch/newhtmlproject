@@ -1,0 +1,678 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-text-light: #564240;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-bright: #7c5800;
+  --color-text-muted: #5c544e;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #fff8f1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-40 {
+  width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+  border-bottom: 1px solid #f2ddcc;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 156px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+  
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+
+/* Tracking Banner Section Styling */
+.tracking-banner {
+  background-color: #fcf9f5; /* Off-white canvas fallback to highlight the card */
+  padding: 60px 0;
+  border-bottom: 1px solid rgba(86, 66, 64, 0.1);
+}
+
+/* Flex layout inside your 1320px container */
+.tracking-banner-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Left Column: Info Text --- */
+.tracking-sub {
+  color: var(--color-text-bright); /* Requested tracking label color */
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.tracking-title {
+  color: var(--color-secondary); /* Requested header color */
+  font-family: 'Playfair Display', serif; /* Elegant title pairing */
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.tracking-order-id {
+  color: var(--color-text-light); /* Requested body text color */
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.tracking-order-id span {
+  color: #1e1b17; /* Darkest requested color for code emphasis */
+  font-weight: 600;
+}
+
+/* --- Right Column: Delivery Card --- */
+.delivery-card {
+  background-color: #eee7df; /* Perfectly blends into the soft tone */
+  border-radius: 12px;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(30, 27, 23, 0.03);
+}
+
+.delivery-icon-wrapper {
+  background-color: #feb700; /* Requested yellow/gold accent color */
+  color: #6b4b00; 
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.delivery-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.delivery-label {
+  color: var(--color-text-light); /* Requested secondary color */
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.delivery-date {
+  color: var(--color-secondary); /* Requested burgundy text color */
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+/* Package Details Section Base Styles */
+.packagedetails {
+    padding: 60px 0;
+    background-color: #fdfaf7;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.package-flex-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.package-left { flex: 2; }
+.package-right { flex: 1; display: flex; flex-direction: column; gap: 30px; }
+
+/* Status Card & Progress Bar */
+.status-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 5%;
+    width: 90%;
+    height: 2px;
+    background: #e8e1da;
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 20%;
+}
+
+.step .icon {
+    width: 50px;
+    height: 50px;
+    background: #f4f1ee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: #a59692;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.step.completed .icon { background: var(--color-secondary); 
+                        color: #fff; }
+.step.active .icon { background: var(--color-text-bright); 
+                    color: #fff; 
+                    transform: scale(1.1); 
+                    box-shadow: 0 0 0 5px #fff, 0 0 0 7px #7c5800; }
+
+.step p { font-weight: 700; 
+    font-size: 14px; 
+    margin: 0; 
+    color: #1e1b17; }
+.step span { font-size: 11px; 
+    color: var(--color-text-light); }
+
+.latest-update {
+    background: #f9f3f1;
+    border-left: 4px solid var(--color-secondary);
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    border-radius: 4px;
+}
+
+.latest-update i { color: var(--color-secondary); 
+    font-size: 20px; }
+.latest-update p { margin: 5px 0 0; 
+    font-size: 14px; 
+    color: var(--color-text-light); 
+    line-height: 1.6; }
+
+/* Map Card */
+.map-card {
+    height: 400px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.carrier-info-box {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: #fdfaf7;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.carrier-header { display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 15px; }
+.carrier-header .label { font-size: 12px; 
+    font-weight: 700; 
+    color: var(--color-secondary); 
+    letter-spacing: 1px; }
+.carrier-header .tag { background: #f1eae2; 
+            padding: 2px 10px; 
+            border-radius: 4px; 
+            font-size: 11px; 
+            color: var(--color-text-bright); }
+
+.carrier-details { display: flex; 
+            gap: 15px; 
+            margin-bottom: 20px; }
+.carrier-logo { width: 50px; 
+                height: 50px; 
+                background: #fff; 
+                border-radius: 8px; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                font-size: 20px; 
+                color: var(--color-text-bright); 
+                box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.carrier-details h3 { margin: 0; 
+                    font-size: 16px; 
+                    color: #1e1b17; }
+.carrier-details p { margin: 2px 0 0; 
+                    font-size: 13px; 
+                    color: var(--color-text-light); }
+
+.carrier-btn {
+    display: block;
+    background: var(--color-secondary);
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+/* Right Side - Order Summary */
+.order-summary-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.order-summary-card h2 { color: var(--color-secondary); 
+                        font-size: 32px; 
+                        font-weight: 500;
+                        margin-bottom: 35px; }
+
+.item { display: flex; 
+        gap: 15px; 
+        margin-bottom: 30px; }
+.item img { width: 80px; 
+            height: 100px; 
+            border-radius: 8px; 
+            object-fit: cover; }
+.item h3 { font-size: 15px; 
+            margin: 0; 
+            color: #1e1b17; }
+.item p { font-size: 13px; 
+        color: var(--color-text-light); 
+        margin: 5px 0; }
+.item .price { font-weight: 700; 
+                color: var(--color-text-bright); }
+
+.total-breakdown { border-top: 1px dashed #e8e1da; 
+                padding-top: 20px; }
+
+.row { display: flex; 
+        justify-content: space-between; 
+        margin-bottom: 12px; 
+        font-size: 15px; 
+        color: var(--color-text-light); }
+
+.row.total { border-top: 1px solid #e8e1da; 
+            padding-top: 15px; 
+            margin-top: 10px; 
+            font-weight: 700; 
+            font-size: 22px; 
+            color: var(--color-secondary); }
+
+.row .free { color: var(--color-text-bright); 
+    font-weight: 700; }
+
+/* Assistance Card */
+.assistance-card {
+    background: var(--color-secondary);
+    color: #fff;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.assistance-card h3 { margin-bottom: 15px; 
+                    font-size: 22px; }
+
+.assistance-card p { font-size: 14px; 
+                    opacity: 0.9; line-height: 1.6; 
+                    margin-bottom: 25px; }
+
+.contact-links { display: flex; 
+                flex-direction: column; 
+                gap: 15px; }
+
+.contact-links a { color: #fff; 
+                    text-decoration: none; 
+                    font-size: 14px; 
+                    font-weight: 600; 
+                    display: flex; 
+                    align-items: center; 
+                    gap: 10px; }
+
+@media (max-width: 1024px) {
+    .package-flex-layout { flex-direction: column; }
+    .package-left, .package-right { width: 100%; }
+    .progress-bar::before { width: 85%; }
+}
+
+@media (max-width: 768px) {
+    .progress-bar { flex-wrap: wrap; gap: 20px; }
+    .progress-bar::before { display: none; }
+    .step { width: 45%; }
+    
+    .status-card { padding: 25px; }
+    .map-card { height: 500px; }
+    .carrier-info-box { width: calc(100% - 60px); left: 30px; }
+    
+    .order-summary-card h2 { font-size: 22px; }
+}
+
+
+/* Footer Global Canvas */
+.site-footer {
+  background-color: #e8e1da; /* Requested background */
+  font-family: 'Hanken Grotesk', sans-serif;
+  padding: 70px 0 35px 0;
+  color: var(--color-text-light);
+}
+
+/* 4-Column Grid layout using the 1320px container */
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 0.9fr 1.3fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Brand styling */
+.footer-logo {
+  max-width: 110px;
+  height: auto;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.brand-desc, 
+.newsletter-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  margin: 0 0 20px 0;
+}
+
+/* Headings */
+.footer-title {
+  color: var(--color-secondary);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0 0 25px 0;
+}
+
+/* Navigation Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+/* Compact Inline Newsletter Form */
+.footer-subscribe-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 320px;
+}
+
+.footer-subscribe-form input {
+  flex: 1;
+  background-color: #fdfbf9; /* Soft clean background contrast for visibility */
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #1e1b17;
+  outline: none;
+}
+
+.footer-subscribe-form input::placeholder {
+  color: #a09491;
+}
+
+.footer-subscribe-form button {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.footer-subscribe-form button:hover {
+  background-color: #420307;
+}
+
+/* Footer Bottom Strip Layout */
+.footer-bottom-strip {
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(86, 66, 64, 0.1);
+}
+
+.footer-bottom-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright-text {
+  font-size: 0.85rem;
+  color: #8a7c79;
+  margin: 0;
+}
+
+/* Right Aligned Social Icons */
+.footer-social-icons {
+  display: flex;
+  gap: 22px;
+}
+
+.footer-social-icons a {
+  color: var(--color-text-light);
+  font-size: 1.15rem;
+  transition: color 0.2s ease;
+}
+
+.footer-social-icons a:hover {
+  color: var(--color-secondary);
+}
+
+/* --- Media Query for Mobile/Small Screens --- */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 50px 20px 25px 20px;
+  }
+
+  /* Collapse columns into a simple vertical sequence */
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-title {
+    margin-bottom: 15px;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+
+  .footer-subscribe-form {
+    max-width: 100%; /* Forms snap to full screen width on phones */
+  }
+
+  /* Structural rearrange for the footer base elements */
+  .footer-bottom-strip {
+    margin-top: 40px;
+  }
+
+  .footer-bottom-flex {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,820 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-text-light: #564240;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-bright: #7c5800;
+  --color-text-muted: #5c544e;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #fff8f1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-40 {
+  width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+  border-bottom: 1px solid #f2ddcc;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 156px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+  
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+
+/* Section checkout style */
+.checkout-section {
+  background-color: #fdfaf6; /* Soft natural cream fallback hue */
+  padding: 60px 0 10px 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Master Grid joining Left Forms and Right Sidebar inside 1320px */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Common Card Panel Styling */
+.checkout-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(30, 27, 23, 0.02);
+  margin-bottom: 50px;
+}
+
+/* --- LEFT COLUMN STYLING --- */
+
+/* Timeline Process Progress Row */
+.checkout-timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 20px auto 50px auto;
+  max-width: 90%;
+}
+
+.checkout-timeline::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ebdcd9;
+  z-index: 1;
+}
+
+.timeline-step {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fdfaf6;
+  padding: 0 10px;
+}
+
+.step-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ebdcd9;
+  margin-bottom: 10px;
+}
+
+.timeline-step.active .step-dot {
+  background-color: var(--color-secondary);
+  box-shadow: 0 0 0 4px #ffffff, 0 0 0 5px var(--color-secondary);
+}
+
+.step-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #a09491;
+}
+
+.timeline-step.active .step-label {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+/* Shipping Input Elements Layout */
+.card-title {
+  color: var(--color-secondary);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 35px 0;
+}
+
+.shipping-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.form-group input, 
+.form-group select {
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #1e1b17;
+  padding: 12px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ebdcd9;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-bottom-color: var(--color-secondary);
+}
+
+/* Locked Review Component using background color #f9f3eb */
+.review-placeholder-card {
+  background-color: #f9f3eb;
+  padding: 32px 40px;
+  border-radius: 14px;
+}
+
+.placeholder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.placeholder-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #a09491;
+  margin: 0 0 6px 0;
+}
+
+.lock-icon {
+  color: #a09491;
+  font-size: 1.1rem;
+}
+
+.placeholder-text {
+  font-size: 01rem;
+  color: #8a7c79;
+  margin: 0;
+}
+
+
+/* --- RIGHT COLUMN STYLING (SIDEBAR) --- */
+.order-summary-sidebar {
+  width: 100%;
+}
+
+.summary-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 10px 35px rgba(30, 27, 23, 0.03);
+}
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.summary-icon {
+  color: var(--color-secondary);
+  font-size: 1.3rem;
+}
+
+.summary-header h2 {
+  color: var(--color-secondary);
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.summary-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.summary-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.item-img-frame {
+  width: 80px;
+  height: 90px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fdfbf9;
+  flex-shrink: 0;
+}
+
+.item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name {
+  color: #1e1b17;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 4px 0;
+}
+
+.item-meta {
+  color: var(--color-text-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0 0 8px 0;
+}
+
+.item-price {
+  color: var(--color-secondary);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.summary-calculations {
+  border-top: 1px solid rgba(86, 66, 64, 0.1);
+  padding-top: 25px;
+  margin-bottom: 25px;
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  margin-bottom: 14px;
+}
+
+.calc-val {
+  font-weight: 500;
+  color: #1e1b17;
+}
+
+.shipping-free {
+  color: var(--color-text-bright);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.total-row {
+  border-top: 1px dashed rgba(86, 66, 64, 0.2);
+  margin-top: 20px;
+  padding-top: 20px;
+  margin-bottom: 0;
+}
+
+.total-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.total-price {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.artisan-badge {
+  background-color: #f9f3eb;
+  border-radius: 8px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.badge-icon-wrapper {
+  background-color: #feb700;
+  color: var(--color-secondary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.badge-text {
+  color: var(--color-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.btn-complete-purchase {
+  width: 100%;
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 16px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-complete-purchase:hover {
+  background-color: #420306;
+}
+
+.terms-notice {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  margin: 15px 0 0 0;
+}
+
+.terms-notice a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* --- Media Query for Mobile and Tablets --- */
+@media (max-width: 992px) {
+  .checkout-section {
+    padding: 40px 15px;
+  }
+
+  /* Structural Shift: 2 columns collapse into single layout vertical flow stack */
+  .checkout-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .checkout-card {
+    padding: 30px 20px;
+  }
+
+  .form-row-2col {
+    grid-template-columns: 1fr; /* Form fields align strictly vertical on narrow devices */
+    gap: 25px;
+  }
+
+  .order-summary-sidebar {
+    margin-top: 15px;
+  }
+}
+
+
+/* Payment Section Core Styling */
+.payment-section {
+  background-color: #fdfaf6; /* Soft cream background styling context */
+  padding-bottom: 40px;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Master Inner Wrapper matching your left-aligned layout card */
+.payment-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 40px;
+  max-width: 800px; /* Limits scale matching desktop form ratios */
+  box-shadow: 0 4px 24px rgba(30, 27, 23, 0.02);
+}
+
+.payment-title {
+  color: var(--color-secondary); /* Primary header tint request */
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 40px 0;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Custom Interactive List Option Container Row */
+.payment-option-row {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ebdcd9;
+  border-radius: 8px;
+  padding: 18px 24px;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hiding default input radio box natively */
+.payment-option-row input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Custom Uniform Radio Indicator Circle */
+.custom-radio {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--color-text-light);
+  border-radius: 50%;
+  margin-right: 20px;
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease;
+}
+
+/* Active State selection border change highlights */
+.payment-option-row input[type="radio"]:checked ~ .custom-radio {
+  border-color: var(--color-secondary);
+}
+
+/* Central interior dot filling configuration */
+.payment-option-row input[type="radio"]:checked ~ .custom-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+}
+
+/* Inner Text Details Panel */
+.option-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.option-name {
+  color: #1e1b17; /* High emphasis label color */
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.option-sub {
+  color: var(--color-text-light); /* Lower primary subtitle metadata color */
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Semantic Right Aligned Graphic Icon styling */
+.option-icon {
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Highlight border subtle glow surrounding active card selections */
+.payment-option-row:hover,
+.payment-option-row:has(input[type="radio"]:checked) {
+  border-color: var(--color-secondary);
+  background-color: rgba(91, 6, 12, 0.01);
+}
+
+
+/* --- Media Query for Mobile and Small Screen Viewports --- */
+@media (max-width: 768px) {
+  .payment-card {
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+
+  .payment-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .payment-option-row {
+    padding: 14px 16px;
+    gap: 0;
+  }
+
+  .custom-radio {
+    margin-right: 14px;
+  }
+
+  .option-name {
+    font-size: 0.95rem;
+  }
+
+  .option-sub {
+    font-size: 0.7rem;
+  }
+
+  .option-icon {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* Master Footer Structural Canvas */
+.site-footer {
+  background-color: #ebe1da; /* Requested ebe1da background tone */
+  font-family: 'Hanken Grotesk', sans-serif;
+  padding: 60px 0;
+  color: var(--color-text-light);
+}
+
+/* 4-Column Grid alignment within the standard container */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Brand Area Setup */
+.footer-logo {
+  max-width: 115px;
+  height: auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.brand-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  margin: 0;
+  width: 80%;
+}
+
+/* Column Headings styling */
+.footer-heading {
+  color: var(--color-secondary); /* Primary accent headers */
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+/* Link Lists Elements */
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 12px;
+}
+
+.footer-links-list a {
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+}
+
+.footer-links-list a:hover {
+  opacity: 0.75;
+}
+
+/* Connect Column Context layout elements */
+.footer-socials {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.footer-socials a {
+  color: #1e1b17; /* High contrast icon text shade */
+  font-size: 1.15rem;
+  transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--color-secondary);
+}
+
+/* Base Level Copyright Stamp Block */
+.copyright-notice {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin: 50px 0 0 0;
+  white-space: nowrap;
+}
+
+
+/* --- Media Query for Mobile and Small Screen Viewports --- */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 40px 20px;
+  }
+
+  /* Drop 4 columns down into a simple grid flow sequence */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-heading {
+    margin-bottom: 12px;
+  }
+
+  .footer-links-list li {
+    margin-bottom: 10px;
+  }
+
+  /* Shifts alignment sequence naturally on extra small devices */
+  .connect-column {
+    margin-top: 5px;
+  }
+
+  .copyright-notice {
+    white-space: normal; /* Permits wrapping text block elements cleanly on small view lines */
+    line-height: 1.4;
+  }
+}
