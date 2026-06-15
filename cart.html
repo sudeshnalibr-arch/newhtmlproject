@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <!-- swiper js link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- fontaswome-cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom-css -->
+    <link rel="stylesheet" href="./asset/CSS/style10.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#"><img src="./IMAGE/navlogo.png" alt="logo" /></a>
+          </div>
+          <div class="nav-menu">
+            <ul class="nav-link">
+              <li><a href="#">RITUAL GUIDE</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">ARTISTS</a></li>
+              <li><a href="#">GIFTS</a></li>
+              <li><a href="#">PLANNING</a></li>
+            </ul>
+          </div>
+          <div class="nav-icons">
+            <a href="#" aria-label="Shopping Bag">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Favorites">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Profile">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- CART PAGE BANNER SECTION -->
+      <section class="cart-banner-section">
+        <div class="container">
+          <div class="cart-banner-content">
+            <h1 class="cart-banner-title">Your Shopping Bag</h1>
+            <p class="cart-banner-subtitle">
+              A curation of heritage and ritual essentials for your special day.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN ORDER CONTENT SECTION -->
+      <section class="order-management-section">
+        <div class="container">
+          <div class="order-layout-grid">
+            <!-- LEFT COLUMN: SHOPPING BAG ITEMS LIST -->
+            <div class="order-items-stack">
+              <!-- Item 1 Card -->
+              <div class="order-item-card">
+                <button class="btn-remove-item" aria-label="Remove Item">
+                  &times;
+                </button>
+                <div class="item-thumbnail-box">
+                  <img
+                    src="IMAGE/CART/shopping1.png"
+                    alt="Classic Zardosi Silk Dupatta"
+                  />
+                </div>
+                <div class="item-details-box">
+                  <div class="item-meta">
+                    <h3 class="item-title">Classic Zardosi Silk Dupatta</h3>
+                    <p class="item-subtitle">
+                      Heritage Maroon / Pure Mulberry Silk
+                    </p>
+                  </div>
+                  <div class="item-interactive-row">
+                    <div class="quantity-picker">
+                      <button type="button" class="qty-btn">-</button>
+                      <span class="qty-val">1</span>
+                      <button type="button" class="qty-btn">+</button>
+                    </div>
+                    <div class="item-price-tag">
+                      <span class="currency-symbol">₹</span> 18,500
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 Card -->
+              <div class="order-item-card">
+                <button class="btn-remove-item" aria-label="Remove Item">
+                  &times;
+                </button>
+                <div class="item-thumbnail-box">
+                  <img
+                    src="IMAGE/CART/shopping2.png"
+                    alt="Engraved Brass Ritual Plate"
+                  />
+                </div>
+                <div class="item-details-box">
+                  <div class="item-meta">
+                    <h3 class="item-title">Engraved Brass Ritual Plate</h3>
+                    <p class="item-subtitle">
+                      Artisanal Hand-Cast / Eternal Collection
+                    </p>
+                  </div>
+                  <div class="item-interactive-row">
+                    <div class="quantity-picker">
+                      <button type="button" class="qty-btn">-</button>
+                      <span class="qty-val">1</span>
+                      <button type="button" class="qty-btn">+</button>
+                    </div>
+                    <div class="item-price-tag">
+                      <span class="currency-symbol">₹</span> 4,200
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: ORDER SUMMARY SIDEBAR CARD -->
+            <aside class="order-summary-sidebar">
+              <div class="summary-card-sticky-wrapper">
+                <h2 class="summary-card-title">Order Summary</h2>
+
+                <!-- Pricing Line Items Breakdown Matrix -->
+                <div class="summary-breakdown-table">
+                  <div class="summary-row">
+                    <span class="label">Subtotal</span>
+                    <span class="val"
+                      ><span class="currency-symbol">₹</span> 22,700</span
+                    >
+                  </div>
+                  <div class="summary-row">
+                    <span class="label">Heritage Packaging</span>
+                    <span class="val"
+                      ><span class="currency-symbol">₹</span> 450</span
+                    >
+                  </div>
+                  <div class="summary-row">
+                    <span class="label">Standard Shipping</span>
+                    <span class="val status-complimentary">Complimentary</span>
+                  </div>
+                </div>
+
+                <!-- Total Due Segment Layout -->
+                <div class="summary-total-strip">
+                  <span class="total-label">TOTAL</span>
+                  <span class="total-price-tag">
+                    <span class="currency-symbol">₹</span> 23,150
+                  </span>
+                </div>
+
+                <!-- Action Interactive Primary Checkout Link Button -->
+                <a href="#" class="btn-proceed-checkout">
+                  PROCEED TO CHECKOUT
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+
+                <!-- Quality Safe Badge and Security Meta Footer -->
+                <div class="summary-security-footer">
+                  <div class="badge-header">
+                    <i class="fa-regular fa-circle-check"></i> ARTISAN VERIFIED
+                    QUALITY
+                  </div>
+                  <p class="security-text">
+                    Secure payment and insured delivery of your heritage
+                    essentials.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- THOUGHTFUL GIFTS SECTION -->
+      <section class="thoughtful-gifts-section">
+        <div class="container">
+          <!-- Section Header Row -->
+          <div class="gifts-section-header">
+            <div class="header-left">
+              <h2 class="gifts-main-title">You Might Also Like</h2>
+              <p class="gifts-subtitle">
+                <i>Thoughtful gifts and rituals to complete your collection.</i>
+              </p>
+            </div>
+            <div class="header-right">
+              <a href="#" class="btn-view-all-gifts">VIEW ALL GIFTS</a>
+            </div>
+          </div>
+
+          <!-- Product Grid Using Pre-defined Bootstrap/Common Grid Structure -->
+          <div class="row">
+            <!-- Gift Product 1 -->
+            <div class="col-25">
+              <div class="gift-item-card">
+                <div class="gift-image-wrapper">
+                  <img
+                    src="IMAGE/CART/gift1.png"
+                    alt="Terracotta Smoke Vessel"
+                  />
+                  <button
+                    class="gift-wishlist-btn"
+                    aria-label="Add to Wishlist"
+                  >
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+                <div class="gift-meta-info">
+                  <h3 class="gift-item-name">Terracotta Smoke Vessel</h3>
+                  <div class="gift-item-price">
+                    <span class="bdt-symbol">₹</span> 1,800
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gift Product 2 -->
+            <div class="col-25">
+              <div class="gift-item-card">
+                <div class="gift-image-wrapper">
+                  <img src="IMAGE/CART/gift2.png" alt="Silk Asana Cushion" />
+                  <button
+                    class="gift-wishlist-btn"
+                    aria-label="Add to Wishlist"
+                  >
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+                <div class="gift-meta-info">
+                  <h3 class="gift-item-name">Silk Asana Cushion</h3>
+                  <div class="gift-item-price">
+                    <span class="bdt-symbol">₹</span> 3,500
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gift Product 3 -->
+            <div class="col-25">
+              <div class="gift-item-card">
+                <div class="gift-image-wrapper">
+                  <img src="IMAGE/CART/gift3.png" alt="Jasmine Ritual Mist" />
+                  <button
+                    class="gift-wishlist-btn"
+                    aria-label="Add to Wishlist"
+                  >
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+                <div class="gift-meta-info">
+                  <h3 class="gift-item-name">Jasmine Ritual Mist</h3>
+                  <div class="gift-item-price">
+                    <span class="bdt-symbol">₹</span> 2,200
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gift Product 4 -->
+            <div class="col-25">
+              <div class="gift-item-card">
+                <div class="gift-image-wrapper">
+                  <img src="IMAGE/CART/gift4.png" alt="Wedding Vow Notebooks" />
+                  <button
+                    class="gift-wishlist-btn"
+                    aria-label="Add to Wishlist"
+                  >
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+                <div class="gift-meta-info">
+                  <h3 class="gift-item-name">Wedding Vow Notebooks</h3>
+                  <div class="gift-item-price">
+                    <span class="bdt-symbol">₹</span> 1,200
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- SITE BRAND FOOTER SYSTEM -->
+    <footer class="custom-brand-footer">
+      <div class="footer-grid-wrapper">
+        <!-- Column 1: Brand Logo & Introduction Description -->
+        <div class="footer-grid-item brand-identity-column">
+          <div class="footer-logo-container">
+            <img
+              src="IMAGE/navlogo.png"
+              alt="Rituo Logo"
+              class="footer-logo-img"
+            />
+          </div>
+          <p class="brand-intro-paragraph">
+            Elevating the traditions of Bengali weddings with modern luxury and
+            curated heritage.
+          </p>
+        </div>
+
+        <!-- Column 2: Company Navigation Links Stack -->
+        <div class="footer-grid-item navigation-links-column">
+          <h4 class="footer-links-title">COMPANY</h4>
+          <ul class="footer-links-stack">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Artisans</a></li>
+            <li><a href="#">Sustainability</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Customer Care Services Stack -->
+        <div class="footer-grid-item navigation-links-column">
+          <h4 class="footer-links-title">CUSTOMER CARE</h4>
+          <ul class="footer-links-stack">
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Ritual Concierge</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal Framework Links Stack -->
+        <div class="footer-grid-item navigation-links-column">
+          <h4 class="footer-links-title">LEGAL</h4>
+          <ul class="footer-links-stack">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Centered Copyright Metadata Ribbon -->
+      <div class="footer-copyright-ribbon">
+        <p class="copyright-metadata-text">
+          &copy; 2024 Rituo. Every Ritual. Made Easy.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

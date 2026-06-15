@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account</title>
+
+    <!-- swiper js link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- fontaswome-cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom-css -->
+    <link rel="stylesheet" href="./asset/CSS/style9.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#"><img src="./IMAGE/navlogo.png" alt="logo" /></a>
+          </div>
+          <div class="nav-menu">
+            <ul class="nav-link">
+              <li><a href="#">RITUAL GUIDE</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">ARTISTS</a></li>
+              <li><a href="#">GIFTS</a></li>
+              <li><a href="#">PLANNING</a></li>
+            </ul>
+          </div>
+          <div class="nav-icons">
+            <a href="#" aria-label="Shopping Bag">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Favorites">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Profile">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="account-dashboard-section">
+        <div class="container dashboard-grid">
+          <!-- LEFT SIDEBAR: Navigation Menu -->
+          <aside class="dashboard-sidebar-menu">
+            <nav class="sidebar-navigation">
+              <div class="nav-links-stack">
+                <a href="#" class="sidebar-menu-item active">
+                  <span class="menu-icon-frame"
+                    ><i class="fa-solid fa-table-cells-large"></i>
+                  </span>
+                  <span class="menu-label-text">Overview</span>
+                </a>
+
+                <a href="#" class="sidebar-menu-item">
+                  <span class="menu-icon-frame"
+                    ><i class="fa-regular fa-clipboard-list"></i
+                  ></span>
+                  <span class="menu-label-text">Orders</span>
+                </a>
+
+                <a href="#" class="sidebar-menu-item">
+                  <span class="menu-icon-frame"
+                    ><i class="fa-regular fa-heart"></i
+                  ></span>
+                  <span class="menu-label-text">Wishlist</span>
+                </a>
+
+                <a href="#" class="sidebar-menu-item">
+                  <span class="menu-icon-frame"
+                    ><i class="fa-solid fa-location-dot"></i
+                  ></span>
+                  <span class="menu-label-text">Addresses</span>
+                </a>
+
+                <a href="#" class="sidebar-menu-item">
+                  <span class="menu-icon-frame"
+                    ><i class="fa-solid fa-download"></i
+                  ></span>
+                  <span class="menu-label-text">Downloads</span>
+                </a>
+              </div>
+
+              <hr class="sidebar-menu-divider" />
+
+              <div class="nav-links-stack">
+                <a href="#" class="sidebar-menu-item">
+                  <span class="menu-icon-frame"
+                    ><i class="fa-solid fa-gear"></i
+                  ></span>
+                  <span class="menu-label-text">Settings</span>
+                </a>
+
+                <a href="#" class="sidebar-menu-item logout-action-trigger">
+                  <span class="menu-icon-frame"
+                    ><i class="fa-solid fa-right-from-bracket"></i
+                  ></span>
+                  <span class="menu-label-text">Logout</span>
+                </a>
+              </div>
+            </nav>
+          </aside>
+
+          <!-- Right part heading+content -->
+
+          <div class="dashboard-content">
+            <div class="overview-main-block">
+              <header class="overview-welcome-header">
+                <div class="welcome-text-container">
+                  <h1 class="welcome-title">Namaste, Aditi</h1>
+                  <p class="welcome-subtitle">
+                    Auspicious beginnings await. Here is your ritual overview.
+                  </p>
+                </div>
+                <a href="#" class="btn-new-plan">New Ritual Plan</a>
+              </header>
+
+              <div class="metrics-cards-grid">
+                <div class="metric-card card-loyalty">
+                  <div class="card-watermark-star">
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <div class="card-inner-content">
+                    <span class="metric-label">RITUAL LOYALTY</span>
+                    <strong class="metric-value">2,450</strong>
+                    <span class="metric-footer-note">Maroon Tier Member</span>
+                  </div>
+                </div>
+
+                <div class="metric-card card-planning">
+                  <div class="card-inner-content">
+                    <span class="metric-label">ACTIVE PLANNING</span>
+                    <strong class="metric-value">03</strong>
+                    <div class="metric-progress-wrapper">
+                      <div
+                        class="metric-progress-fill"
+                        style="width: 65%"
+                      ></div>
+                    </div>
+                    <span class="metric-footer-note text-italic"
+                      >65% of Haldi Ritual complete</span
+                    >
+                  </div>
+                </div>
+
+                <div class="metric-card card-treasures">
+                  <div class="card-inner-content">
+                    <span class="metric-label">SAVED TREASURES</span>
+                    <strong class="metric-value">12</strong>
+                    <a href="#" class="metric-action-link">
+                      View Wishlist <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RECENT ORDERS DASHBOARD WIDGET -->
+            <div class="recent-orders-section">
+              <!-- Section Header -->
+              <div class="orders-section-header">
+                <h2 class="orders-main-title">Recent Orders</h2>
+                <a href="#" class="view-all-link">View All</a>
+              </div>
+
+              <!-- Orders Stack List Container -->
+              <div class="orders-list-stack">
+                <!-- Order Item 1: Bangle Card -->
+                <div class="order-item-card">
+                  <div class="order-item-left">
+                    <div class="order-thumbnail-box">
+                      <img
+                        src="IMAGE/ACCOUNT/bangle.png"
+                        alt="Hand-Woven Benarasi Scarf"
+                      />
+                    </div>
+                    <div class="order-meta-info">
+                      <h3 class="product-item-title">
+                        Hand-Woven Benarasi Scarf
+                      </h3>
+                      <p class="order-id-date">
+                        Order #RIT-88291 &bull; Nov 12, 2024
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="order-item-right">
+                    <div class="order-status-price-block">
+                      <span class="status-badge status-shipped"
+                        >AUSPICIOUSLY SHIPPED</span
+                      >
+                      <span class="order-price">₹8,500.00</span>
+                    </div>
+                    <div class="order-action-arrow">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Order Item 2: Pot Card -->
+                <div class="order-item-card">
+                  <div class="order-item-left">
+                    <div class="order-thumbnail-box">
+                      <img
+                        src="IMAGE/ACCOUNT/pot.png"
+                        alt="Sacred Puja Thali Set"
+                      />
+                    </div>
+                    <div class="order-meta-info">
+                      <h3 class="product-item-title">Sacred Puja Thali Set</h3>
+                      <p class="order-id-date">
+                        Order #RIT-88104 &bull; Oct 28, 2024
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="order-item-right">
+                    <div class="order-status-price-block">
+                      <span class="status-badge status-delivered"
+                        >DELIVERED</span
+                      >
+                      <span class="order-price">₹4,200.00</span>
+                    </div>
+                    <div class="order-action-arrow">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- HERITAGE ORDER -->
+            <div class="heritage-concierge-banner-block">
+              <div class="concierge-profile-wrapper">
+                <div class="concierge-avatar-holder">
+                  <img src="IMAGE/ACCOUNT/lady.png" alt="Mira" />
+                </div>
+                <div class="concierge-content-details">
+                  <h3 class="concierge-header-title">
+                    Your Heritage Concierge
+                  </h3>
+                  <p class="concierge-body-description">
+                    Need help coordinating your ritual elements? Mira is
+                    available for a 1:1 consultation.
+                  </p>
+                </div>
+              </div>
+
+              <a href="#" class="btn-concierge-action">Book Session</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- REVISED SITE FOOTER -->
+    <footer class="site-luxury-footer">
+      <div class="container footer-grid-container">
+        <!-- Column 1: Brand Manifesto Statement -->
+        <div class="footer-grid-column brand-statement-col">
+          <p class="brand-manifesto-text">
+            Crafting auspicious beginnings through modern heritage and
+            handcrafted luxury.
+          </p>
+        </div>
+
+        <!-- Column 2: Heritage Navigation Links -->
+        <div class="footer-grid-column navigation-links-col">
+          <h4 class="footer-column-heading">HERITAGE</h4>
+          <ul class="footer-navigation-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Artisans</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Service Navigation Links -->
+        <div class="footer-grid-column navigation-links-col">
+          <h4 class="footer-column-heading">SERVICE</h4>
+          <ul class="footer-navigation-list">
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Connection Socials + Compact Copyright Metadata -->
+        <div class="footer-grid-column connect-metadata-col">
+          <h4 class="footer-column-heading">CONNECT</h4>
+
+          <!-- Minimalist SVG or FontAwesome line icons mapping image_2bee53.png -->
+          <div class="footer-minimal-icons-row">
+            <a href="#" aria-label="Global Website"
+              ><i class="fa-solid fa-globe"></i
+            ></a>
+            <a href="#" aria-label="Email Address"
+              ><i class="fa-regular fa-envelope"></i
+            ></a>
+            <a href="#" aria-label="Phone Hotline"
+              ><i class="fa-solid fa-phone"></i
+            ></a>
+          </div>
+
+          <p class="footer-embedded-copyright">
+            &copy; 2024 Rituo. Every Ritual. Made Easy.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

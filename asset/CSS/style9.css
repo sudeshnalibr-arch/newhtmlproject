@@ -1,0 +1,968 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-text-light: #564240;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-bright: #7c5800;
+  --color-text-muted: #5c544e;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #fff8f1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-40 {
+  width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+  border-bottom: 1px solid #f2ddcc;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 156px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+  
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+
+/* main body style */
+
+.account-dashboard-section {
+  background-color: #fdfaf6;
+  padding: 40px 0 80px 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  box-sizing: border-box;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* --- DASHBOARD SIDE NAVIGATION MENU BAR --- */
+.dashboard-sidebar-menu {
+  width: 100%;
+  max-width: 260px; /* Standard sidebar spatial proportion allocation */
+  background: transparent;
+  padding: 10px 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+.sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-links-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Master Menu Interactive Items */
+.sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  color: #564240; /* Muted brand luxury dark brown tone */
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-icon-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  font-size: 1.15rem;
+  opacity: 0.85;
+}
+
+.menu-label-text {
+  letter-spacing: 0.2px;
+}
+
+/* Hover Interactive Action State */
+.sidebar-menu-item:hover {
+  background-color: rgba(91, 6, 12, 0.04);
+  color: #1e1b17;
+}
+
+/* Primary Active State (Matches the dark maroon capsule look) */
+.sidebar-menu-item.active {
+  background-color: #7a1f1f; /* Master signature rich brand maroon */
+  color: #ff8b85;
+  font-weight: 600;
+}
+
+.sidebar-menu-item.active .menu-icon-frame i{
+  /* opacity: 1; */
+  color: #ff8b85;
+}
+
+/* Divider Line Settings */
+.sidebar-menu-divider {
+  border: none;
+  border-top: 1px solid rgba(86, 66, 64, 0.1);
+  margin: 12px 0;
+  width: 100%;
+}
+
+/* Specialized Logout Contrast Action Color */
+.sidebar-menu-item.logout-action-trigger {
+  color: #ba1a1a;
+}
+
+.sidebar-menu-item.logout-action-trigger:hover {
+  background-color: rgba(176, 42, 48, 0.05);
+}
+
+/* --- Media Query for Mobile and Small Viewports --- */
+@media (max-width: 992px) {
+  .dashboard-sidebar-menu {
+    max-width: 100%; /* Expands across full screen margins */
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid rgba(86, 66, 64, 0.08);
+  }
+
+  /* Flattens columns out into a touch-friendly fluid horizontal row layout */
+  .sidebar-navigation {
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 8px;
+    padding-bottom: 8px;
+    
+    /* Smooth native momentum scrolling dynamics for iOS/Android devices */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hides horizontal bars on modern browsers */
+  }
+
+  .sidebar-navigation::-webkit-scrollbar {
+    display: none; /* Conceals tracking scrolling bars on Safari/Chrome */
+  }
+
+  .nav-links-stack {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .sidebar-menu-item {
+    padding: 10px 18px;
+    font-size: 0.88rem;
+    gap: 10px;
+    background-color: rgba(86, 66, 64, 0.03); /* Gives unselected items a soft background tab look */
+  }
+
+  /* Hides vertical lines to keep the tabbed interface clean on small screens */
+  .sidebar-menu-divider {
+    display: none;
+  }
+}
+
+/* right side: content */
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: #ffff;
+}
+
+/* --- WELCOME BANNER HEADER BLOCK --- */
+.overview-main-block {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  font-family: 'Hanken Grotesk', sans-serif;
+  box-sizing: border-box;
+}
+
+.overview-welcome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.welcome-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary); /* Master signature rich brand maroon */
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.welcome-subtitle {
+  color: var(--color-text-light); /* Muted brand secondary dark tone */
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Elegant Capsule Call-To-Action Button */
+.btn-new-plan {
+  background-color: #7c5800; /* Traditional master deep gold tone */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 30px;
+  box-shadow: 0 4px 14px rgba(120, 90, 43, 0.15);
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-new-plan:hover {
+  background-color: #5f451f;
+  transform: translateY(-1px);
+}
+
+
+/* --- STATISTICS METRICS CARDS ROW --- */
+.metrics-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.metric-card {
+  background-color: #fff8f1;
+  border-radius: 14px;
+  padding: 28px 24px;
+  border: 1px solid rgba(86, 66, 64, 0.05);
+  box-shadow: 0 4px 20px rgba(30, 27, 23, 0.01);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 140px;
+}
+
+.card-inner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #7c5800; /* Styled gold heading tag line labels */
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+}
+
+.metric-value {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary);
+  font-size: 2.3rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.metric-footer-note {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.metric-footer-note.text-italic {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Background Watermark Token Accent for Loyalty Card */
+.card-watermark-star {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  font-size: 6.5rem;
+  color: rgba(120, 90, 43, 0.04);
+  pointer-events: none;
+  z-index: 1;
+  transform: rotate(15deg);
+}
+
+/* Progress Micro-Bar System for Card 2 */
+.metric-progress-wrapper {
+  background-color: #eee9e4;
+  height: 4px;
+  border-radius: 2px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.metric-progress-fill {
+  background-color: #785a2b;
+  height: 100%;
+  border-radius: 2px;
+}
+
+/* Action Hyperlink for Card 3 */
+.metric-action-link {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+}
+
+.metric-action-link i {
+  font-size: 0.75rem;
+}
+
+.metric-action-link:hover {
+  gap: 10px;
+}
+
+/* --- Media Query for Mobile and Small Screen UI Layouts --- */
+@media (max-width: 992px) {
+  /* Cards collapse down to a single grid-column display mapping stack */
+  .metrics-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .metric-card {
+    min-height: auto;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .overview-main-block {
+    gap: 24px;
+  }
+
+  /* Header aligns text stacked on top of the call-to-action block element */
+  .overview-welcome-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .welcome-title {
+    font-size: 2rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .btn-new-plan {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 12px;
+  }
+}
+
+/* second div: recent order div */
+
+.recent-orders-section {
+  width: 100%;
+  margin-top: 32px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header row layout styling alignment */
+.orders-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.orders-main-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary); /* Luxury brand maroon tone */
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.view-all-link {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.view-all-link:hover {
+  color: #785a2b;
+}
+
+/* Vertical items stack list container spacing grid */
+.orders-list-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Clean uniform card container layout box wrapper */
+.order-item-card {
+  background-color: #fff8f1; 
+  border: 1px solid rgba(86, 66, 64, 0.06);
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(91, 6, 12, 0.03);
+}
+
+/* Flex group alignment rules properties mapping structural blocks */
+.order-item-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.order-item-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Rounded luxury frame thumbnail display size box definitions */
+.order-thumbnail-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f5ece4;
+  flex-shrink: 0;
+}
+
+.order-thumbnail-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Meta texts block typography alignment configurations */
+.product-item-title {
+  color: var(--color-secondary);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+}
+
+.order-id-date {
+  color: var(--color-text-light);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.order-status-price-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+/* Premium micro-badge design settings variables */
+.status-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.status-badge.status-shipped {
+  background-color: #fedea8;
+  color: #271900; /* Subtle brand traditional deep gold values combo */
+}
+
+.status-badge.status-delivered {
+  background-color: #e8e1da;
+  color: var(--color-text-light); /* Soft neutral gray tint settings */
+}
+
+.order-price {
+  font-family: 'Hanken Grotesk', serif;
+  color: var(--color-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.order-action-arrow {
+  color: #9c8e8c;
+  font-size: 0.88rem;
+}
+
+/* --- RESPONSIVE MEDIA BREAKPOINT VIEWPORT VIEW --- */
+@media (max-width: 768px) {
+  .orders-main-title {
+    font-size: 1.5rem;
+  }
+  
+  .order-item-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+  }
+
+  .order-item-left {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .order-thumbnail-box {
+    width: 70px;
+    height: 70px;
+  }
+
+  .product-item-title {
+    font-size: 1rem;
+    padding-right: 24px; 
+  }
+
+  /* Shifts status badge to align cleanly beneath the left element group info */
+  .order-item-right {
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px dashed rgba(86, 66, 64, 0.1);
+    padding-top: 14px;
+  }
+
+  .order-status-price-block {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .order-status-price-block .order-price {
+    font-size: 1.1rem;
+  }
+
+  .order-action-arrow {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+  }
+}
+
+/* third div: Heritage div */
+
+.heritage-concierge-banner-block {
+ 
+  background: linear-gradient(to right, #7a1f1f 68%, #711b1b 100%);
+  border-radius: 16px;
+  padding: 24px 32px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 24px; /* Clean spacing separating it from the second block above it */
+  
+  /* Flexbox configuration directly on the block wrapper */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Inner profile and text group positioning */
+.concierge-profile-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 78%;
+}
+
+/* Circle profile frame containing lady.png */
+.concierge-avatar-holder {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 1.5px solid #feb700; /* Subtle gold accent ring matching button */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.concierge-avatar-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Stack Typography styling */
+.concierge-content-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.concierge-header-title {
+  font-family: 'Marcellus', serif;
+  color: #ffffff; /* Requested absolute white header color */
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+.concierge-body-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #ff8b85; /* Requested coral/salmon body text color */
+  font-size: 0.92rem;
+  line-height: 1.45;
+  margin: 0;
+  width: 85%;
+}
+
+/* Requested Action Button Properties */
+.btn-concierge-action {
+  background-color: #feb700; /* Requested background gold */
+  color: #6b4b00; /* Requested text dark brass */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 12px; /* Smooth rounded rectangle corner style matching image */
+  white-space: nowrap;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Micro interaction transitions */
+.btn-concierge-action:hover {
+  background-color: #e5a400;
+  transform: translateY(-1px);
+}
+
+/* --- SMALL SCREEN RESPONSIVE CONTEXT --- */
+@media (max-width: 768px) {
+  .heritage-concierge-banner-block {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 20px;
+    background: #7a1f1f; /* Simplified clean block fallback background for clean mobile rendering */
+  }
+
+  .concierge-profile-wrapper {
+    max-width: 100%;
+    gap: 16px;
+  }
+
+  .concierge-avatar-holder {
+    width: 64px;
+    height: 64px;
+  }
+
+  .concierge-header-title {
+    font-size: 1.08rem;
+  }
+
+  .concierge-body-description {
+    font-size: 0.88rem;
+  }
+
+  /* Expands button layout fluidly onto its own full-width block row for mobile interaction finger targets */
+  .btn-concierge-action {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 12px;
+  }
+}
+
+/* footer style */
+.site-luxury-footer {
+  background-color: #e8e1da; /* Requested sandstone background */
+  padding: 80px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Fluid 4-column balanced layout matching image structure spacing */
+.footer-grid-container {
+  
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.footer-grid-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Leftside Statement Styling */
+.brand-manifesto-text {
+  color: var(--color-text-light); /* Muted warm-slate secondary tone */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 50px;
+  width: 85%;
+}
+
+.footer-column-heading {
+  color: var(--color-secondary); /* Deep brand crimson/maroon accent */
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 24px 0;
+}
+
+/* Navigation Spacing Rules */
+.footer-navigation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-navigation-list li a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.footer-navigation-list li a:hover {
+  color: var(--color-secondary);
+  padding-left: 5px;
+}
+
+/* Minimalist Inline Icon Design Blocks */
+.footer-minimal-icons-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.footer-minimal-icons-row a {
+  color: var(--color-secondary); /* Clean solid crimson color matching the image icons */
+  font-size: 1.15rem;
+  text-decoration: none;
+  padding: 10px;
+   border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.footer-minimal-icons-row a:hover {
+  opacity: 0.7;
+  
+  background-color: #d2cdca;
+}
+
+/* Copyright Element Tucked Under Icons */
+.footer-embedded-copyright {
+  color: var(--color-text-light);
+  font-size: 0.88rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* --- RESPONSIVE MOBILE ADJUSTMENTS --- */
+@media (max-width: 900px) {
+  .footer-grid-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 32px;
+  }
+}
+
+@media (max-width: 550px) {
+  .site-luxury-footer {
+    padding: 60px 24px;
+  }
+
+  /* Drop to single vertical block arrangement */
+  .footer-grid-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .brand-manifesto-text {
+    max-width: 100%;
+  }
+
+  .footer-column-heading {
+    margin-bottom: 14px;
+  }
+
+  .footer-navigation-list {
+    gap: 12px;
+  }
+
+  .footer-minimal-icons-row {
+    margin-bottom: 16px;
+  }
+  
+  .footer-embedded-copyright {
+    white-space: normal;
+    line-height: 1.4;
+  }
+}

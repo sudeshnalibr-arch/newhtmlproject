@@ -1,0 +1,734 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-text-light: #564240;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-bright: #7c5800;
+  --color-text-muted: #5c544e;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #fff8f1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-40 {
+  width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 15px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+  border-bottom: 1px solid #f2ddcc;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo img {
+  max-width: 130px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Search Bar */
+.nav-search-wrapper {
+  flex: 1;
+  max-width: 280px;
+  margin-left: auto; 
+  margin-right: 15px;
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+}
+
+/* Inline glass positioning */
+.search-icon {
+  position: absolute;
+  left: 18px;
+  color: #564240;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+/* Custom Pill Input Box Frame details */
+.search-input {
+  width: 100%;
+  background-color: #f8f1e7;
+  border: 1px solid transparent;
+  border-radius: 30px; 
+  padding: 15px 5px 15px 50px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.9rem;
+  color: #1e1b17;
+  outline: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: #564240;
+  opacity: 0.65;
+}
+
+.search-input:focus {
+  background-color: #ffffff;
+  border-color: #ebdcd9;
+}
+
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+  
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+
+/* ===========Banner Style ============ */
+.settings-banner-section {
+  background-color: #fdfaf6; /* Matches the soft aesthetic of the brand */
+  padding: 80px 0;
+  text-align: left; /* Left-aligned as per the reference image */
+}
+
+/* Heading Styling */
+.settings-title {
+  color: var(--color-secondary); /* Primary brand maroon */
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+}
+
+/* Subtitle Styling */
+.settings-subtitle {
+  color: var(--color-text-light); /* Softer secondary text tone */
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .settings-banner-section {
+    padding: 50px 20px; /* Adds padding so text doesn't touch screen edges */
+  }
+
+  .settings-title {
+    font-size: 2.2rem; /* Scaled down for smaller device widths */
+  }
+
+  .settings-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* Core Section Workspace Wrapper */
+.account-dashboard-section {
+  background-color: #fdfaf6;
+  padding: 40px 0 80px 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Master Grid configuration distributing Sidebar vs Content spaces */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+
+/* --- LEFT SIDEBAR NAVIGATION --- */
+.dashboard-sidebar {
+  padding-top: 20px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link i {
+  font-size: 1.1rem;
+  width: 20px;
+  opacity: 0.8;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(86, 66, 64, 0.04);
+  color: #1e1b17;
+}
+
+/* Primary Active Menu State matching image_47293a.png dark maroon capsule */
+.sidebar-link.active {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid #ebdcd9;
+  margin: 15px 0;
+}
+
+.sidebar-link.logout-link {
+  color: #ba1a1a;
+}
+
+
+/* --- RIGHT MAIN PANEL STYLING --- */
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Base Master Cards */
+.content-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(30, 27, 23, 0.01);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.card-main-title {
+  color: var(--color-secondary);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.header-badge-icon {
+  color: #8c6d31; /* Subtle gold asset styling accent icon color from design */
+  font-size: 1.6rem;
+}
+
+/* Form Structures */
+.personal-info-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.form-group input {
+  font-family: inherit;
+  font-size: 1rem;
+  color: #1e1b17;
+  background-color: #f9f3eb;
+  border: 2px solid #ddc0bd;
+  border-radius: 4px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--color-secondary);
+  background-color: #ffffff;
+}
+
+/* Action Submission Button UI */
+.btn-update-profile {
+  align-self: flex-start;
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 32px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-update-profile:hover {
+  background-color: #420306;
+}
+
+
+/* --- BOTTOM SPLIT STATUS CARDS --- */
+.status-cards-row {
+  display: grid;
+  grid-template-columns: 1.0fr 1.0fr;
+  gap: 24px;
+}
+
+.status-card {
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(30, 27, 23, 0.01);
+}
+
+/* Milestone tracking dark maroon card wrapper details */
+.milestone-card {
+  background-color: #822524;
+  color: #ffffff;
+}
+
+.status-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: 0.4;
+}
+
+.milestone-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 8px 0 50px 0;
+}
+
+.progress-bar-container {
+  background-color: rgba(255, 255, 255, 0.12);
+  height: 4px;
+  border-radius: 2px;
+  width: 100%;
+  margin-top: 50px ;
+  margin-bottom: 15px;
+}
+
+.progress-bar-fill {
+  background-color: #feb700; /* Signature theme tracking indicator gold tint */
+  height: 100%;
+  border-radius: 2px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.completion-percent {
+  opacity: 0.35;
+}
+
+.expected-date {
+  font-weight: 400;
+  color: #ffdea8;
+}
+
+/* Tier access status card styling context box details */
+.tier-card {
+  background-color: #e8e1da;
+  background: rgba(235, 220, 217, 0.475);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tier-icon-circle {
+  width: 54px;
+  height: 54px;
+  background-color: #7c5800;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 20px;
+}
+
+.tier-title {
+  color: var(--color-secondary);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+}
+
+.tier-subtitle {
+  color: var(--color-text-light);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+/* --- Media Query for Mobile and Tablets --- */
+@media (max-width: 992px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr; /* Sidebar collapses to full stack layout flow */
+    gap: 30px;
+  }
+
+  /* Converts navigation links list view into horizontal fluid horizontal scrolling strip elements */
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    gap: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sidebar-link {
+    white-space: nowrap;
+    padding: 10px 16px;
+  }
+
+  .sidebar-divider {
+    display: none; /* Safely cleans layout bars from broken horizontal alignments */
+  }
+}
+
+@media (max-width: 768px) {
+  .account-dashboard-section {
+    padding: 20px 15px 40px 15px;
+  }
+
+  .content-card {
+    padding: 25px 20px;
+  }
+
+  .card-main-title {
+    font-size: 1.65rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr; /* Collapse two columns into distinct individual entry blocks */
+    gap: 20px;
+  }
+
+  .btn-update-profile {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Lower tracking section cards drop neatly to a 100% wide row structure stack */
+  .status-cards-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .status-card {
+    padding: 30px 20px;
+  }
+
+  .milestone-title {
+    font-size: 1.65rem;
+    margin-bottom: 25px;
+  }
+
+  .tier-title {
+    font-size: 1.45rem;
+  }
+}
+
+/* Master Outer Structural Canvas Wrapper */
+.site-main-footer {
+  background-color: #e8e1da; /* Requested background hue color context */
+  padding: 80px 0 40px 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light); /* Soft luxury dark brown palette option */
+  box-sizing: border-box;
+}
+
+/* Row alignment mapper allocating columns cleanly */
+.footer-layout-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 0.9fr 0.9fr;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+/* Left Brand Metadata Box details */
+.brand-footer-logo {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary); /* Deep brand maroon contrast accent coloring */
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 18px 0;
+}
+
+.brand-manifesto {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 280px; /* Constrains line wraps nicely */
+}
+
+/* Link Group Header Labels layout properties */
+.group-header-title {
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  letter-spacing: 0.4px;
+}
+
+/* Nav Item Stack rules */
+.group-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.group-links-list li {
+  margin-bottom: 14px;
+}
+
+.group-links-list a {
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.group-links-list a:hover {
+  opacity: 0.75;
+  padding-left: 5px;
+}
+
+/* Circular Icon Button Row Settings */
+.social-icons-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-circular-btn {
+  width: 38px;
+  height: 38px;
+  background-color: #f4ede5; /* Clean floating design style context */
+  color: #5b060c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.social-circular-btn:hover {
+  transform: translateY(-2px);
+  background-color: #5b060c;
+  color: #ffffff;
+}
+
+/* Separator Line Context Bar Details */
+.footer-baseline-row {
+  border-top: 1px solid rgba(86, 66, 64, 0.1);
+  padding-top: 35px;
+  text-align: center;
+}
+
+.copyright-notice {
+  font-size: 0.88rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* --- Media Query for Mobile and Small Screens --- */
+@media (max-width: 768px) {
+  .site-main-footer {
+    padding: 50px 20px 30px 20px;
+  }
+
+  /* Grid breaks columns directly into uniform stack layouts */
+  .footer-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-bottom: 40px;
+  }
+
+  .brand-manifesto {
+    max-width: 100%; /* Spans gracefully on narrow layouts */
+  }
+
+  .group-header-title {
+    margin-bottom: 14px;
+  }
+
+  .group-links-list li {
+    margin-bottom: 10px;
+  }
+
+  /* Moves icon anchors cleanly over to the left side edge layout margin */
+  .social-icons-row {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,892 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-text-light: #564240;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-bright: #7c5800;
+  --color-text-muted: #5c544e;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #fff8f1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-40 {
+  width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+  border-bottom: 1px solid #f2ddcc;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 156px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+  
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+
+/* --- CART BANNER SECTION STYLES --- */
+.cart-banner-section {
+  background-color: #fffaf5; 
+  padding: 80px 0 60px 0;    
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.cart-banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;                /* Gap spacing between title and subheading text layers */
+  text-align: left;
+}
+
+/* Primary Page Header Configuration */
+.cart-banner-title {
+  font-family: 'Playfair Display', serif; /* Requested formal typography profile */
+  color: var(--color-secondary);                         /* Requested deep maroon luxury brand color */
+  font-size: 3rem;                       
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+/* Explanatory Subheading Paragraph */
+.cart-banner-subtitle {
+  font-family: 'Hanken Grotesk', sans-serif; /* Requested modern geometric sans font */
+  color: var(--color-text-light);                            /* Requested soft slate brown secondary text color */
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* --- SMALL SCREEN RESPONSIVE SCALING --- */
+@media (max-width: 768px) {
+  .cart-banner-section {
+    padding: 50px 0 40px 0; 
+  }
+
+  .cart-banner-content {
+    gap: 8px;
+    padding: 0 16px;       /* Fallback safe horizontal edge padding */
+  }
+
+  /* Fluid header scaling configuration to prevent unwanted breaking on mobile viewports */
+  .cart-banner-title {
+    font-size: 2.2rem;
+  }
+
+  .cart-banner-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
+
+/* --- ORDER CART INTERFACE SECTION STYLES --- */
+.order-management-section {
+  background-color: #fffaf5; /* Background palette matches image_1c134b.png */
+  padding: 40px 0 80px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Two-column structural alignment using css grid matrix tracking image properties */
+.order-layout-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.order-items-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* --- PRODUCT ITEM COMPONENT CARDS --- */
+.order-item-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(91, 6, 12, 0.02); /* Very soft elegant brand shadow */
+  box-sizing: border-box;
+}
+
+/* Top-Right Remove Context Corner Trigger Button Button */
+.btn-remove-item {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #a49694;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.btn-remove-item:hover {
+  color: #5b060c;
+}
+
+/* Hardcoded square boundaries exact layout mirroring 160px specifications */
+.item-thumbnail-box {
+  width: 130px;
+  height: 130px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #f7f7f7;
+}
+
+.item-thumbnail-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-details-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 4px;
+}
+
+.item-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 24px;
+}
+
+.item-title {
+  font-family: 'Playfair Display', serif;
+  color: #5b060c; /* Deep Crimson primary lettering theme */
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.item-subtitle {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #a49694; /* Soft neutral gray-brown secondary descriptive label */
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+/* Bottom elements horizontal alignment row tracking */
+.item-interactive-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* Rounded Capsule Pill Shape Quantity Counter System Component */
+.quantity-picker {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f5ece4; /* Warm neutral tinted button block base layer */
+  border-radius: 20px;
+  padding: 4px 14px;
+  gap: 16px;
+}
+
+.qty-btn {
+  background: none;
+  border: none;
+  color: #564240;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.qty-val {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #564240;
+  font-size: 0.95rem;
+  font-weight: 600;
+  min-width: 12px;
+  text-align: center;
+}
+
+/* Standalone Premium Price Matrix tags styles specs */
+.item-price-tag {
+  font-family: 'Playfair Display', serif;
+  color: #5b060c;
+  font-size: 1.35rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Elegant structural native currency symbol lettering marker styling */
+.currency-symbol {
+  font-family: system-ui, -apple-system, sans-serif; /* Preserves standard native rendering geometry */
+  font-size: 1.15rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+/* --- RIGHT SIDEBAR ORDER SUMMARY CARD COMPONENT --- */
+.order-summary-sidebar {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.summary-card-sticky-wrapper {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px 28px;
+  box-shadow: 0 6px 24px rgba(91, 6, 12, 0.03);
+}
+
+.summary-card-title {
+  font-family: 'Playfair Display', serif;
+  color: #5b060c;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 28px 0;
+}
+
+/* Breakdown rows tracking matrix system lines rules */
+.summary-breakdown-table {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f2e6dc;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.95rem;
+}
+
+.summary-row .label {
+  color: #a49694;
+}
+
+.summary-row .val {
+  color: #564240;
+  font-weight: 600;
+}
+
+.summary-row .status-complimentary {
+  color: #564240;
+  font-weight: 500;
+}
+
+/* Total block calculation interface row properties rules */
+.summary-total-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.summary-total-strip .total-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #5b060c;
+  letter-spacing: 0.5px;
+}
+
+.summary-total-strip .total-price-tag {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5b060c;
+}
+
+/* Brand Primary Maroon Capsule Proceed Button Trigger Element */
+.btn-proceed-checkout {
+  background-color: #5b060c; /* Deep brand iconic crimson maroon base */
+  color: #ffffff;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 30px; /* Fully curved action button configuration pill mapping */
+  box-shadow: 0 4px 14px rgba(91, 6, 12, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-bottom: 32px;
+}
+
+.btn-proceed-checkout:hover {
+  background-color: #420206;
+  transform: translateY(-1px);
+}
+
+.btn-proceed-checkout i {
+  font-size: 1rem;
+}
+
+/* Bottom Verification Quality Safety Labeling Block */
+.summary-security-footer {
+  border-top: 1px solid #f2e6dc;
+  padding-top: 24px;
+}
+
+.summary-security-footer .badge-header {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #9c845c; /* Muted antique heritage gold tone styling */
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.summary-security-footer .security-text {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #a49694;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- VIEWPORT RESPONSIVE SYSTEM ADAPTATION --- */
+@media (max-width: 992px) {
+  /* Break standard split grid system into a unified vertical block row column mapping stacking pattern */
+  .order-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .order-management-section {
+    padding: 24px 0 60px 0;
+  }
+
+  /* Compact padding metrics inside individual product cards for edge screen alignment safety */
+  .order-item-card {
+    padding: 16px;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .item-thumbnail-box {
+    width: 90px;
+    height: 90px; /* Scale down preview images cleanly across tight grids phone screens */
+  }
+
+  .item-title {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .item-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .item-interactive-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 12px;
+  }
+
+  /* Shift product card specific prices underneath quantity adjusters cleanly on phone rows views */
+  .item-price-tag {
+    font-size: 1.2rem;
+    align-self: flex-end;
+    margin-top: -24px;
+  }
+
+  .summary-card-sticky-wrapper {
+    padding: 24px 20px;
+  }
+
+  .summary-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .summary-total-strip .total-price-tag {
+    font-size: 1.6rem;
+  }
+}
+
+
+/* --- THOUGHTFUL GIFTS SECTION CORE STYLES --- */
+.thoughtful-gifts-section {
+  background-color: #fffaf5; /* Clean signature brand background foundation tone */
+  padding: 60px 0 80px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header row utility configuration layout */
+.gifts-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gifts-main-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary); /* Master deep maroon brand color */
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.gifts-subtitle {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light); /* Muted warm-slate secondary color description text */
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Elegant Text-Based Accent Action Link */
+.btn-view-all-gifts {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #9c845c; /* Sophisticated antique luxury gold text color */
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid #9c845c; /* Underline accent layer */
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-view-all-gifts:hover {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+/* --- PRODUCT ITEM COMPONENT CARDS --- */
+.gift-item-card {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+/* Precise image card box setup utilizing dimensions noted in image_1bf978.png (278px x 347.5px aspect scaling) */
+.gift-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 278 / 347.5;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.gift-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gift-item-card:hover .gift-image-wrapper img {
+  transform: scale(1.03); /* Soft macro zoom animation */
+}
+
+/* Float circular heart wishlist trigger button wrapper rule mapping image */
+.gift-wishlist-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: var(--color-text-light);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.gift-wishlist-btn:hover {
+  background-color: #ffffff;
+  color: var(--color-secondary);
+}
+
+/* Lower metadata text layouts tracking image properties */
+.gift-meta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gift-item-name {
+  font-family: 'Playfair Display', serif;
+  color: #1e1b17; /* Absolute neutral deep black item label tracking card details */
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.gift-item-price {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color:  var(--color-text-light);
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bdt-symbol {
+  font-family: system-ui, -apple-system, sans-serif;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* --- VIEWPORT RESPONSIVE REBALANCING SYSTEM --- */
+@media (max-width: 992px) {
+  /* Override .col-25 layout allocation behavior across mid-tier tablets directly into standard halves */
+  .col-25 {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  
+  .gifts-main-title {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .thoughtful-gifts-section {
+    padding: 40px 0 60px 0;
+  }
+
+  /* Structural stacking rebalance for compact phone layouts */
+  .gifts-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 28px;
+    padding: 0 12px;
+  }
+
+  /* Override columns into full-bleed display tracks for clean mobile alignment rules */
+  .col-25 {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 0 12px !important;
+  }
+
+  .gift-item-name {
+    font-size: 1.05rem;
+  }
+}
+
+/* --- LUXURY BRAND FOOTER CORE STYLES --- */
+.custom-brand-footer {
+  background-color: #e8e1da; /* Warm sandstone background color matching image_1b8882.png */
+  padding: 80px 40px 32px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Fluid 4-column balanced layout configuration mapping layout geometry */
+.footer-grid-wrapper {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.footer-grid-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Column 1 Logo Area Structure Dimensions Layout */
+.footer-logo-container {
+  max-width: 140px;
+  margin-bottom: 24px;
+}
+
+.footer-logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.brand-intro-paragraph {
+  color: var(--color-text-light); /* Soft warm muted slate-brown descriptive typography text color */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 260px;
+}
+
+/* Category Structural Headings Typographic Configurations */
+.footer-links-title {
+  color: var(--color-primary); /* High contrast matching brand signature dark maroon lettering tone */
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 28px 0;
+}
+
+/* List Items Stack Arrangement Spacing Metrics */
+.footer-links-stack {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-links-stack li a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links-stack li a:hover {
+  color: var(--color-secondary); 
+  padding-left: 5px;
+}
+
+/* Baseline Center Copyright Notice Meta Properties */
+.footer-copyright-ribbon {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright-metadata-text {
+  color: #7d6b69; /* Slightly softer muted hue balancing footer weight metrics */
+  font-size: 0.85rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* --- VIEWPORT RESPONSIVE SYSTEM RECONFIG --- */
+@media (max-width: 992px) {
+  /* Re-maps grid layout configuration track into double rows for tablet screens */
+  .footer-grid-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-brand-footer {
+    padding: 60px 24px 24px 24px;
+  }
+
+  /* Splits structural grid layout components into a single column line stack */
+  .footer-grid-wrapper {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .brand-intro-paragraph {
+    max-width: 100%;
+  }
+
+  .footer-links-title {
+    margin-bottom: 16px;
+  }
+
+  .footer-links-stack {
+    gap: 12px;
+  }
+
+  .footer-links-stack li a {
+    font-size: 0.9rem;
+  }
+
+  .footer-copyright-ribbon {
+    padding-top: 40px;
+  }
+}

@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setting</title>
+
+    <!-- swiper js link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- fontaswome-cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom-css -->
+    <link rel="stylesheet" href="./asset/CSS/style8.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <!-- Logo Container -->
+          <div class="logo">
+            <a href="#"><img src="./IMAGE/navlogo.png" alt="logo" /></a>
+          </div>
+
+          <!-- Center Navigation Links -->
+          <div class="nav-menu">
+            <ul class="nav-link">
+              <li><a href="#">RITUAL GUIDE</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">ARTISTS</a></li>
+              <li><a href="#">GIFTS</a></li>
+              <li><a href="#">PLANNING</a></li>
+            </ul>
+          </div>
+
+          <!-- NEW: Integrated Search Bar Section -->
+          <div class="nav-search-wrapper">
+            <form class="search-form" action="#" method="GET">
+              <span class="search-icon">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </span>
+              <input
+                type="text"
+                placeholder="Search rituals..."
+                class="search-input"
+                aria-label="Search rituals"
+              />
+            </form>
+          </div>
+
+          <!-- Right Utility Actions & Mobile Menu Toggle Button -->
+          <div class="nav-icons">
+            <a href="#" aria-label="Shopping Bag">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Favorites">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </a>
+            <!-- Active profile indicator matches bottom accent rule line from reference image -->
+            <a href="#" aria-label="Profile" class="profile-link active">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </a>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="settings-banner-section">
+        <div class="container">
+          <h1 class="settings-title">Account Settings</h1>
+          <p class="settings-subtitle">
+            Manage your luxury wedding ritual experience.
+          </p>
+        </div>
+      </section>
+
+      <section class="account-dashboard-section">
+        <div class="container dashboard-grid">
+          <!-- LEFT SIDEBAR: Navigation Menu -->
+          <aside class="dashboard-sidebar">
+            <nav class="sidebar-nav">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-table-cells-large"></i> Overview
+              </a>
+              <a href="#" class="sidebar-link">
+                <i class="fa-regular fa-clipboard-list"></i> Orders
+              </a>
+              <a href="#" class="sidebar-link">
+                <i class="fa-regular fa-heart"></i> Wishlist
+              </a>
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-location-dot"></i> Addresses
+              </a>
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-download"></i> Downloads
+              </a>
+              <!-- Active Settings Item matches the layout button capsule -->
+              <a href="#" class="sidebar-link active">
+                <i class="fa-solid fa-gear"></i> Settings
+              </a>
+              <hr class="sidebar-divider" />
+              <a href="#" class="sidebar-link logout-link">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout
+              </a>
+            </nav>
+          </aside>
+
+          <!-- RIGHT CONTENT AREA -->
+          <!-- <main class="dashboard-content">
+            
+            <div class="content-card info-card">
+              <div class="card-header">
+                <h2 class="card-main-title">Personal Information</h2>
+                <div class="header-badge-icon">
+                  <i class="fa-solid fa-id-card-clip"></i>
+                </div>
+              </div>
+
+              <form class="personal-info-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="legal-name">Legal Name</label>
+                    <input
+                      type="text"
+                      id="legal-name"
+                      value="Arunima Chatterjee"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email-address">Email Address</label>
+                    <input
+                      type="email"
+                      id="email-address"
+                      value="arunima.c@heritage.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="contact-number">Contact Number</label>
+                    <input
+                      type="text"
+                      id="contact-number"
+                      value="+880 1712-345678"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="wedding-date">Wedding Date</label>
+                    <input
+                      type="text"
+                      id="wedding-date"
+                      value="12/15/2024"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-update-profile">
+                  Update Profile
+                </button>
+              </form>
+            </div>
+
+           
+            <div class="status-cards-row">
+              
+              <div class="status-card milestone-card">
+                <span class="status-tag">NEXT MILESTONE</span>
+                <h3 class="milestone-title">Gaye Holud Setup</h3>
+                <div class="progress-bar-container">
+                  <div class="progress-bar-fill" style="width: 65%"></div>
+                </div>
+                <div class="progress-labels">
+                  <span class="completion-percent">65% Journey Complete</span>
+                  <span class="expected-date">Expected Dec 1</span>
+                </div>
+              </div>
+
+              <div class="status-card tier-card">
+                <div class="tier-icon-circle">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <h3 class="tier-title">Heritage Member</h3>
+                <p class="tier-subtitle">Verified Artisan Access</p>
+              </div>
+            </div>
+           </main>  -->
+
+          <div class="dashboard-content">
+            <!-- Top Card: Personal Information Form -->
+            <div class="content-card info-card">
+              <div class="card-header">
+                <h2 class="card-main-title">Personal Information</h2>
+                <div class="header-badge-icon">
+                  <i class="fa-solid fa-id-card-clip"></i>
+                </div>
+              </div>
+
+              <form class="personal-info-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="legal-name">Legal Name</label>
+                    <input
+                      type="text"
+                      id="legal-name"
+                      value="Arunima Chatterjee"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email-address">Email Address</label>
+                    <input
+                      type="email"
+                      id="email-address"
+                      value="arunima.c@heritage.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="contact-number">Contact Number</label>
+                    <input
+                      type="text"
+                      id="contact-number"
+                      value="+880 1712-345678"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="wedding-date">Wedding Date</label>
+                    <input
+                      type="text"
+                      id="wedding-date"
+                      value="12/15/2024"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-update-profile">
+                  Update Profile
+                </button>
+              </form>
+            </div>
+
+            <!-- Bottom Split Block: Next Milestone & Membership Status -->
+            <div class="status-cards-row">
+              <!-- Milestone Tracking Box -->
+              <div class="status-card milestone-card">
+                <span class="status-tag">NEXT MILESTONE</span>
+                <h3 class="milestone-title">Gaye Holud Setup</h3>
+                <div class="progress-bar-container">
+                  <div class="progress-bar-fill" style="width: 65%"></div>
+                </div>
+                <div class="progress-labels">
+                  <span class="completion-percent">65% Journey Complete</span>
+                  <span class="expected-date">Expected Dec 1</span>
+                </div>
+              </div>
+
+              <!-- Tier Membership Status Box -->
+              <div class="status-card tier-card">
+                <div class="tier-icon-circle">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <h3 class="tier-title">Heritage Member</h3>
+                <p class="tier-subtitle">Verified Artisan Access</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-main-footer">
+      <div class="container footer-layout-grid">
+        <div class="footer-brand-summary">
+          <h3 class="brand-footer-logo">Rituo</h3>
+          <p class="brand-manifesto">
+            Elevating Bengali wedding traditions through auspicious luxury and
+            handcrafted excellence.
+          </p>
+        </div>
+
+        <div class="footer-nav-group">
+          <h4 class="group-header-title">Explore</h4>
+          <ul class="group-links-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Artisans</a></li>
+            <li><a href="#">Editorial</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-group">
+          <h4 class="group-header-title">Support</h4>
+          <ul class="group-links-list">
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-connect-group">
+          <h4 class="group-header-title">Connect</h4>
+          <div class="social-icons-row">
+            <a href="#" class="social-circular-btn" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="social-circular-btn" aria-label="Pinterest">
+              <i class="fa-brands fa-pinterest-p"></i>
+            </a>
+            <a href="#" class="social-circular-btn" aria-label="Email Us">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-baseline-row">
+        <p class="copyright-notice">
+          &copy; 2024 Rituo. Every Ritual. Made Easy.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
