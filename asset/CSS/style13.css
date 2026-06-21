@@ -1,0 +1,892 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-text-light: #564240;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-bright: #7c5800;
+  --color-text-muted: #5c544e;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #fff8f1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+.col-40 {
+  width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-30 {
+  width: 30%;
+  flex: 0 0 30%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+  border-bottom: 1px solid #f2ddcc;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 156px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+  
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+
+/* --- ACCOUNT DOWNLOADS DASHBOARD LAYOUT MANAGEMENT --- */
+.account-dashboard-layout {
+  background-color: #fffaf5; /* Clean warm off-white underlying platform background context */
+  padding: 60px 0 100px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Master Grid Structure mapping Sidebar side-by-side with Content mainboards */
+.dashboard-grid-bridge {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px; /* Roomy separation margin across desktop display lines */
+}
+
+/* --- SIDEBAR PANEL SYSTEM (image_1ed780.png) --- */
+.account-navigation-sidebar {
+  width: 280px;
+  background-color: #fcf6f0;  /* Smooth inner card fill tint */
+  border-radius: 16px;        /* Clean signature micro border rounding curve */
+  padding: 32px 24px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.sidebar-account-heading {
+  font-family: 'Playfair Display', serif;
+  color: #5b060c;             /* Premium deep maroon brand identity text */
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(91, 6, 12, 0.08);
+}
+
+.sidebar-nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);             /* Soft desaturated charcoal secondary menu color */
+  font-size: 0.98rem;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-menu-link .link-icon {
+  font-size: 1.05rem;
+  width: 20px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* Hover Accent Properties for inactive standard nodes */
+.sidebar-menu-link:not(.active-panel-state):not(.logout-action-link):hover {
+  background-color: rgba(91, 6, 12, 0.04);
+  color: var(--color-secondary);
+}
+
+/* Strict Matching Active Target Component Rule Block */
+.sidebar-menu-link.active-panel-state {
+  background-color: #7a1f1f;  /* Deep brand signature crimson active capsule button */
+  color: #ffffff !important;
+}
+.sidebar-menu-link.active-panel-state .link-icon {
+  opacity: 1;
+}
+
+.sidebar-menu-separator {
+  height: 1px;
+  background-color: rgba(91, 6, 12, 0.08);
+  margin: 16px 0;
+}
+
+/* Specialized exit node label configuration token */
+.sidebar-menu-link.logout-action-link {
+  color: #ba1a1a;
+}
+.sidebar-menu-link.logout-action-link:hover {
+  background-color: #ffe8e8;
+}
+
+/* --- BANNER HEADER SYSTEM (image_1ed728.png) --- */
+.dashboard-content-workspace {
+  flex-grow: 1;
+}
+
+.digital-library-banner {
+  width: 100%;
+  max-width: 780px;          /* Preserves the elegant wide asymmetry of the original text blocks */
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.library-banner-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary);
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  letter-spacing: 0;
+}
+
+.library-banner-description {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  max-width: 85%;
+  margin: 0;
+}
+
+/* --- VIEWPORT RESPONSIVE SYSTEM TRANSITIONS --- */
+@media (max-width: 992px) {
+  .dashboard-grid-bridge {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Modifies layout structure into a high-utility scrolling action horizontal tab strip */
+  .account-navigation-sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sidebar-account-heading {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+  .sidebar-nav-menu {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    gap: 6px;
+    -webkit-overflow-scrolling: touch; /* Butter-smooth iOS inertia swiping */
+  }
+  
+  .sidebar-nav-menu::-webkit-scrollbar {
+    height: 4px;
+  }
+  .sidebar-nav-menu::-webkit-scrollbar-thumb {
+    background-color: rgba(91, 6, 12, 0.1);
+    border-radius: 4px;
+  }
+
+  .sidebar-menu-link {
+    padding: 10px 16px;
+    white-space: nowrap; /* Protects word labels from breaking into double lines on swiping */
+    flex-shrink: 0;
+  }
+
+  .sidebar-menu-separator {
+    display: none; /* Flattens structural spacer components out of horizontal layouts safely */
+  }
+}
+
+@media (max-width: 576px) {
+  .account-dashboard-layout {
+    padding: 32px 0 60px 0;
+  }
+
+  .library-banner-title {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .library-banner-description {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+}
+
+
+/* card div. style */
+
+/* .assets-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+} */
+
+.col-50 {
+  
+  padding: 16px; 
+  box-sizing: border-box;
+}
+
+/* Master Grid Card Base Element */
+.asset-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 35px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 24px rgba(91, 6, 12, 0.02);
+  border: 1px solid rgba(232, 225, 218, 0.4);
+  box-sizing: border-box;
+}
+
+/* Card Header Components */
+.asset-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.asset-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Soft Contextual Colors for Header Icons */
+.manual-bg { background-color: #fde9e9; color: var(--color-secondary); }
+.creative-bg { background-color: #fff3d3; color: var(--color-text-bright); }
+.security-bg { background-color: #ebe1da; color: var(--color-secondary); }
+.utility-bg { background-color: #fde9e9; color: var(--color-secondary); }
+
+/* Dynamic Badge Frameworks */
+.asset-badge {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge-manual { background-color: #fff2d0; color: #6b4b00; }
+.badge-creative { background-color: #ffd6d6; color: #822524; }
+.badge-security { background-color: #f1c5cac6; color: #5d0006; }
+.badge-utility { background-color: #ffefc7; color: #6b4b00; }
+
+/* Typography Formatting Rules */
+.asset-card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+
+.asset-title {
+  font-family: 'Playfair Display', serif;
+  color: #1e1b17;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+}
+
+.asset-description {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 18px 0;
+}
+
+.asset-meta-data {
+  display: flex;
+  gap: 16px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #a49694;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.asset-meta-data i {
+  margin-right: 4px;
+}
+
+/* Button UI Rules Layout matching image_1e6689.png */
+.asset-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+/* Primary Dark Maroon Button style */
+.asset-btn.btn-primary {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  border: 1px solid var(--color-secondary);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.asset-btn.btn-primary:hover {
+  background-color: #420408;
+  border-color: #420408;
+}
+
+/* Secondary Golden Border Button style */
+.asset-btn.btn-secondary {
+  background-color: transparent;
+  color: var(--color-text-bright);
+  border: 1px solid var(--color-text-bright);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.asset-btn.btn-secondary:hover {
+  background-color: rgba(161, 129, 72, 0.05);
+}
+
+/* --- RESPONSIVE WORKSPACE REBALANCING --- */
+@media (max-width: 992px) {
+  .col-50 {
+    width: 100%;
+    padding: 12px 16px;
+  }
+  
+  .asset-card {
+    padding: 24px;
+  }
+
+  .asset-title {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .download-assets-grid {
+    padding: 10px 0;
+  }
+
+  .asset-card {
+    padding: 20px;
+  }
+
+  .asset-title {
+    font-size: 1.25rem;
+  }
+  
+  .asset-description {
+    font-size: 0.88rem;
+  }
+}
+
+/* Expert CTA card style */
+
+.expert-cta-card {
+  background-color: #7a1f1f; /* Requested primary background tint */
+  border-radius: 20px;       /* Smoothly curved layout edges matching image_1d6f46.png */
+  padding: 56px 64px;
+  position: relative;
+  overflow: hidden;          /* Clean encapsulation layout bounds containment */
+  box-shadow: 0 10px 30px rgba(122, 31, 31, 0.12);
+  box-sizing: border-box;
+}
+
+/* Subtle geometric structural motif layer box in the top-right corner */
+.motif-overlay-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180px;
+  height: 100%;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%), 
+                    linear-gradient(-45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%);
+  background-size: 30px 30px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Flexbox Row Configuration Alignment */
+.expert-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.expert-text-content {
+  width: 65%;
+}
+
+.expert-action-content {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Typography Matrix Configurations */
+.expert-main-title {
+  font-family: 'Playfair Display', serif;
+  color: #ff8b85;            /* Requested heading and narrative ink color code token */
+  font-size: 2.35rem;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.2px;
+}
+
+.expert-description {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #ff8b85;            /* Synchronized uniform presentation label tint */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+  max-width: 85%;
+}
+
+/* High Contrast Accent Button Interface Rules */
+.expert-consult-btn {
+  display: inline-block;
+  background-color: #feb700; /* Requested button background code token */
+  color: #6b4b00;            /* Requested action label text ink code token */
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 16px 65px;
+  border-radius: 40px;       /* Distinct ultra-pill capsule layout edge lines geometry */
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.expert-consult-btn:hover {
+  background-color: #e5a400;
+  transform: translateY(-2px);
+}
+
+.expert-consult-btn:active {
+  transform: translateY(0);
+}
+
+/* --- VIEWPORT RESPONSIVE ARCHITECTURE SYSTEM --- */
+@media (max-width: 992px) {
+  .expert-cta-card {
+    padding: 44px 40px;
+  }
+
+  /* Splits rows down into stacked layout blocks across tighter viewports */
+  .expert-card-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .expert-text-content,
+  .expert-action-content {
+    width: 100%;
+  }
+
+  .expert-action-content {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .expert-consult-section {
+    padding: 24px 16px; /* Dynamic margin layout protection gutters */
+  }
+
+  .expert-cta-card {
+    padding: 36px 24px;
+    border-radius: 16px;
+  }
+
+  .expert-main-title {
+    font-size: 1.8rem;
+    line-height: 1.25;
+  }
+
+  .expert-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .expert-consult-btn {
+    width: 100%; /* Spans full width dynamically for optimal mobile touch target scaling */
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* footer style */
+
+
+.heritage-platform-footer {
+  background-color: #ebe1da; 
+  padding: 80px 0 40px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Master Grid Row Component Configuration */
+.footer-master-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(91, 6, 12, 0.08); /* Fine divider boundary accent matching active brand lines */
+}
+
+/* --- BRAND PANEL LAYOUT FRAMEWORK --- */
+.footer-brand-column {
+  width: 30%;
+  max-width: 320px;
+}
+
+.footer-brand-logo {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary);          
+   font-size: 2.1rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.5px;
+}
+
+.footer-brand-statement {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);          
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  max-width: 85%;
+}
+
+.footer-social-triggers {
+  display: flex;
+  gap: 6px;
+}
+
+.social-trigger-link {
+  color: var(--color-secondary);
+  font-size: 1.15rem;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.social-trigger-link:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  background-color: #efcdcd;
+
+}
+
+/* --- LINKS NAVIGATION MATRIX FRAMEWORK --- */
+.footer-links-matrix {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.footer-matrix-column {
+  flex: 1;
+}
+
+.footer-matrix-column.newsletter-capture-block {
+  flex: 1.5; /* Yields horizontal layout space prioritization to input structures */
+}
+
+.matrix-column-heading {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.matrix-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.matrix-links-list a {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.matrix-links-list a:hover {
+  color: var(--color-secondary);
+  padding-left: 5px;
+}
+
+/* --- PREMIUM CAPTURE FIELD COMPONENT SYSTEMS --- */
+.newsletter-helper-text {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);
+  font-size: 1rem;
+  margin: 0 0 16px 0;
+}
+
+.footer-inline-subscriber-form {
+  display: flex;
+  width: 100%;
+  max-width: 340px;
+  background: #f9f3eb;      /* Clean contrasting interior component text floor layer */
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(91, 6, 12, 0.15);
+}
+
+.subscriber-input-field {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  padding: 14px 18px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  outline: none;
+  width: 60%;
+}
+
+.subscriber-input-field::placeholder {
+  color: #a49694;
+  opacity: 0.8;
+}
+
+.subscriber-action-submit {
+  background-color: var(--color-secondary); /* High contrast actionable terminal node matching layout */
+  color: #ffffff;
+  border: none;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.subscriber-action-submit:hover {
+  background-color: #420408;
+}
+
+/* --- SYSTEM COPYRIGHT BASELINE FOOTNOTE --- */
+.footer-copyright-baseline {
+  padding-top: 32px;
+  text-align: center;
+}
+
+.footer-copyright-baseline p {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);
+  font-size: 1rem;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+/* --- VIEWPORT RESPONSIVE SYSTEM TRANSITIONS --- */
+@media (max-width: 992px) {
+  .footer-master-row {
+    flex-direction: column;
+    gap: 48px;
+    padding-bottom: 48px;
+  }
+
+  .footer-brand-column {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-links-matrix {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .heritage-platform-footer {
+    padding: 60px 0 32px 0;
+  }
+
+  /* Breaks matrix columns layout down cleanly to unified stacked arrays */
+  .footer-links-matrix {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .footer-matrix-column.newsletter-capture-block {
+    width: 100%;
+  }
+
+  .footer-inline-subscriber-form {
+    max-width: 100%; /* Expands entry inputs safely across portable screen limits */
+  }
+}

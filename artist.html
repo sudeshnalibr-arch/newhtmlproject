@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artists</title>
+
+    <!-- swiper js link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- fontaswome-cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom-css -->
+    <link rel="stylesheet" href="./asset/CSS/style11.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#"><img src="./IMAGE/navlogo.png" alt="logo" /></a>
+          </div>
+          <div class="nav-menu">
+            <ul class="nav-link">
+              <li><a href="#">RITUAL GUIDE</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">ARTISTS</a></li>
+              <li><a href="#">GIFTS</a></li>
+              <li><a href="#">PLANNING</a></li>
+            </ul>
+          </div>
+          <div class="nav-icons">
+            <a href="#" aria-label="Shopping Bag">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Favorites">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Profile">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- ARTISANS PAGE BANNER SECTION -->
+      <section class="artisans-banner-section">
+        <div class="container">
+          <div class="artisans-banner-content">
+            <h1 class="artisans-banner-title">Discover Our Artisans</h1>
+            <p class="artisans-banner-subtitle">
+              Connecting you with the master craftsmen of Bengal's heritage,
+              where every thread and every shape tells a story of generations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="artisans-gallery-section">
+        <div class="container">
+          <div class="artisans-filter-navbar">
+            <div class="filter-pills-group">
+              <button class="filter-pill-btn active">All Artisans</button>
+              <button class="filter-pill-btn">Brass-smiths</button>
+              <button class="filter-pill-btn">Weavers</button>
+              <button class="filter-pill-btn">Potters</button>
+              <button class="filter-pill-btn">Woodcarvers</button>
+              <button class="filter-pill-btn">Jewelers</button>
+            </div>
+            <div class="sort-action-trigger">
+              <button class="sort-dropdown-btn">
+                <i class="fa-solid fa-sliders"></i> Sort: Featured
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-33">
+              <div class="artisan-profile-card">
+                <div class="artisan-media-box">
+                  <img src="IMAGE/ARTIST/artist1.png" alt="Debendra Nath" />
+                  <span class="artisan-tag-badge gold-badge">
+                    <i class="fa-regular fa-circle-check"></i> Master Artisan
+                  </span>
+                </div>
+                <div class="artisan-info-content">
+                  <span class="craft-specialty-label"
+                    >WEAVERS OF SHANTIPUR</span
+                  >
+                  <h3 class="artisan-display-name">Debendra Nath</h3>
+                  <div class="artisan-location-pin">
+                    <i class="fa-solid fa-location-dot"></i> Nadia, West Bengal
+                  </div>
+
+                  <div class="card-action-footer-row">
+                    <div class="craft-swatches-preview">
+                      <span class="swatch-circle color-gold"></span>
+                      <span class="swatch-circle color-maroon"></span>
+                    </div>
+                    <a href="#" class="btn-view-artisan-shop">View Shop</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-33">
+              <div class="artisan-profile-card">
+                <div class="artisan-media-box">
+                  <img src="IMAGE/ARTIST/artist2.png" alt="Amal Karmakar" />
+                  <span class="artisan-tag-badge default-badge">
+                    <i class="fa-regular fa-star"></i> Top Rated
+                  </span>
+                </div>
+                <div class="artisan-info-content">
+                  <span class="craft-specialty-label"
+                    >BRASS-SMITHS OF BISHNUPUR</span
+                  >
+                  <h3 class="artisan-display-name">Amal Karmakar</h3>
+                  <div class="artisan-location-pin">
+                    <i class="fa-solid fa-location-dot"></i> Bankura, West
+                    Bengal
+                  </div>
+
+                  <div class="card-action-footer-row">
+                    <div class="craft-swatches-preview">
+                      <span class="swatch-circle color-brass"></span>
+                    </div>
+                    <a href="#" class="btn-view-artisan-shop">View Shop</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-33">
+              <div class="artisan-profile-card">
+                <div class="artisan-media-box">
+                  <img src="IMAGE/ARTIST/artist3.png" alt="Mala Pal" />
+                </div>
+                <div class="artisan-info-content">
+                  <span class="craft-specialty-label"
+                    >POTTERS OF KUMARTULI</span
+                  >
+                  <h3 class="artisan-display-name">Mala Pal</h3>
+                  <div class="artisan-location-pin">
+                    <i class="fa-solid fa-location-dot"></i> Kolkata, West
+                    Bengal
+                  </div>
+
+                  <div class="card-action-footer-row">
+                    <div class="craft-swatches-preview">
+                      <span class="swatch-circle color-clay"></span>
+                    </div>
+                    <a href="#" class="btn-view-artisan-shop">View Shop</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SITE ARTIST CREATION WORKSHOP FEATURE -->
+      <section class="artist-creation-section">
+        <div class="container">
+          <div class="row">
+            <!-- Wide Landscape Workshop Focus Feature (70% Grid Column) -->
+            <div class="col-70">
+              <div class="creation-horizontal-card">
+                <div class="creation-media-side">
+                  <img
+                    src="IMAGE/ARTIST/woodcarver.png"
+                    alt="Shyamlal Sutradhar Woodwork"
+                  />
+                </div>
+                <div class="creation-text-side">
+                  <span class="creation-category-accent"
+                    >WOODCARVERS OF BURDWAN</span
+                  >
+                  <h2 class="creation-artisan-name">Shyamlal Sutradhar</h2>
+                  <p class="creation-description">
+                    Specializing in ritual wedding trunks (Sindur Kouto) and
+                    ornate bridal furniture, bringing ancient motifs to
+                    contemporary home spaces.
+                  </p>
+                  <div class="creation-action-wrapper">
+                    <a href="#" class="btn-enter-workshop">
+                      Enter Workshop <span class="arrow-icon">&rarr;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Compact Portrait Shop Card (30% Grid Column) -->
+            <div class="col-33 col-30-override">
+              <div class="creation-portrait-card">
+                <div class="portrait-card-media">
+                  <img
+                    src="IMAGE/ARTIST/containers.png"
+                    alt="Rupa Sen Jewelry"
+                  />
+                </div>
+                <div class="portrait-card-body">
+                  <span class="creation-category-accent"
+                    >FILIGREE JEWELERS</span
+                  >
+                  <h3 class="portrait-artisan-name">Rupa Sen</h3>
+                  <div class="portrait-location-pin">
+                    <i class="fa-solid fa-location-dot"></i> Murshidabad, West
+                    Bengal
+                  </div>
+                  <div class="portrait-footer-row">
+                    <div class="swatch-preview-circle">
+                      <span class="color-swatch-element"></span>
+                    </div>
+                    <a href="#" class="btn-portrait-view-shop">View Shop</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rituo-quality-section">
+        <div class="container">
+          <div class="quality-flex-container">
+            <div class="quality-badge-column">
+              <div class="outer-dashed-circle">
+                <div class="inner-badge-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <path d="m9 11 2 2 4-4" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="quality-text-column">
+              <h2 class="quality-main-title">The Rituo Quality Promise</h2>
+              <p class="quality-narrative-paragraph">
+                Every artisan on our platform undergoes a rigorous vetting
+                process. We ensure fair wages, ethical sourcing of materials,
+                and the preservation of authentic traditional techniques. When
+                you purchase through Rituo, you are directly supporting the
+                livelihood of master craftsmen and the survival of Bengal's
+                cultural heritage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-brand-footer">
+      <div class="container">
+        <div class="footer-row-layout">
+          <div class="footer-column brand-summary-column">
+            <div class="footer-logo-wrapper">
+              <img
+                src="IMAGE/navlogo.png"
+                alt="Rituo Logo"
+                class="footer-brand-logo"
+              />
+            </div>
+            <p class="footer-brand-statement">
+              Curating the finest ritual crafts for the modern heritage
+              lifestyle.
+            </p>
+            <div class="footer-social-sharing-links">
+              <a href="#" aria-label="Share Website"
+                ><i class="fa-solid fa-share-nodes"></i
+              ></a>
+              <a href="#" aria-label="Email Us"
+                ><i class="fa-regular fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-column navigation-links-column">
+            <h4 class="footer-column-heading">Marketplace</h4>
+            <ul class="footer-navigation-list">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#" class="active-footer-link">Artisans</a></li>
+              <li><a href="#">Shipping</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column navigation-links-column">
+            <h4 class="footer-column-heading">Legal</h4>
+            <ul class="footer-navigation-list">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column newsletter-journal-column">
+            <h4 class="footer-column-heading">Journal</h4>
+            <p class="newsletter-caption-text">
+              Receive stories from the workshops and seasonal ritual guides.
+            </p>
+            <form
+              class="footer-newsletter-form"
+              onsubmit="event.preventDefault()"
+            >
+              <input
+                type="email"
+                placeholder="Email Address"
+                class="newsletter-input-field"
+                required
+              />
+              <button type="submit" class="newsletter-submit-btn">JOIN</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-baseline-ribbon">
+          <p class="footer-copyright-notice">
+            &copy; 2024 Rituo. Every Ritual. Made Easy.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

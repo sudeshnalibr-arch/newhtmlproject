@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Address</title>
+
+    <!-- swiper js link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- fontaswome-cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom-css -->
+    <link rel="stylesheet" href="./asset/CSS/style14.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#"><img src="./IMAGE/navlogo.png" alt="logo" /></a>
+          </div>
+          <div class="nav-menu">
+            <ul class="nav-link">
+              <li><a href="#">RITUAL GUIDE</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">ARTISTS</a></li>
+              <li><a href="#">GIFTS</a></li>
+              <li><a href="#">PLANNING</a></li>
+            </ul>
+          </div>
+          <div class="nav-icons">
+            <button class="utility-action-trigger" aria-label="Search Catalog">
+              <svg
+                class="utility-icon-vector"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+            <a href="#" aria-label="Shopping Bag">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Favorites">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Profile">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="dashboard-addresses-banner">
+        <div class="container">
+          <div class="addresses-banner-inner">
+            <nav class="banner-breadcrumb-trail" aria-label="Breadcrumb">
+              <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                  <a href="/account">MY ACCOUNT</a>
+                </li>
+                <li class="breadcrumb-item active-trail" aria-current="page">
+                  ADDRESS
+                </li>
+              </ol>
+            </nav>
+
+            <div class="addresses-header-content">
+              <h1 class="addresses-page-title">Saved Addresses</h1>
+              <p class="addresses-page-subtitle">
+                Manage your delivery locations for a seamless checkout
+                experience during your upcoming rituals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="account-workspace-section">
+        <div class="container">
+          <div class="account-layout-grid">
+            <!-- LEFT PART: ACCOUNT NAVIGATION SIDEBAR -->
+            <aside class="account-sidebar-navigation">
+              <ul class="sidebar-menu-list">
+                <li class="menu-item">
+                  <a href="/account" class="menu-link">
+                    <i class="fa-solid fa-grid-2"></i> Overview
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="/account/orders" class="menu-link">
+                    <i class="fa-solid fa-box-archive"></i> Orders
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="/account/wishlist" class="menu-link">
+                    <i class="fa-regular fa-heart"></i> Wishlist
+                  </a>
+                </li>
+                <!-- Highlighted Active Tab from image_8639c0.png -->
+                <li class="menu-item active-tab">
+                  <a href="/account/addresses" class="menu-link">
+                    <i class="fa-solid fa-location-dot"></i> Addresses
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="/account/downloads" class="menu-link">
+                    <i class="fa-solid fa-download"></i> Downloads
+                  </a>
+                </li>
+
+                <li class="menu-divider"></li>
+
+                <li class="menu-item">
+                  <a href="/account/settings" class="menu-link">
+                    <i class="fa-solid fa-gear"></i> Settings
+                  </a>
+                </li>
+                <li class="menu-item logout-item">
+                  <a href="/logout" class="menu-link">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                  </a>
+                </li>
+              </ul>
+            </aside>
+
+            <!-- RIGHT PART: ADDRESS MANAGEMENT CARDS DIV -->
+            <div class="address-cards-workspace">
+              <div class="address-cards-grid">
+                <!-- Card 1: Add New Address Anchor Box -->
+                <div class="address-card creation-dashed-box">
+                  <button class="add-address-trigger-btn">
+                    <span class="plus-icon-holder"
+                      ><i class="fa-solid fa-plus"></i
+                    ></span>
+                    <span class="btn-label-text">Add New Address</span>
+                  </button>
+                </div>
+
+                <!-- Card 2: Saved Home Address -->
+                <div class="address-card formal-address-box">
+                  <div class="address-card-body">
+                    <h3 class="address-type-heading">
+                      <i class="fa-solid fa-house"></i> Home
+                    </h3>
+                    <div class="address-details-block">
+                      <strong class="recipient-name">Ananya Chatterjee</strong>
+                      <p class="address-lines">
+                        12/A Park Mansions<br />
+                        Park Street, Kolkata<br />
+                        West Bengal, 700016<br />
+                        India
+                      </p>
+                      <p class="contact-number">
+                        <i class="fa-solid fa-phone"></i> +91 98300 12345
+                      </p>
+                    </div>
+                  </div>
+                  <div class="address-card-actions">
+                    <a href="#" class="action-link edit-trigger"
+                      ><i class="fa-solid fa-pen"></i> Edit</a
+                    >
+                    <button class="action-link remove-trigger">
+                      <i class="fa-regular fa-trash-can"></i> Remove
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 3: Saved Office Address -->
+                <div class="address-card formal-address-box">
+                  <div class="address-card-body">
+                    <h3 class="address-type-heading">
+                      <i class="fa-solid fa-building"></i> Office
+                    </h3>
+                    <div class="address-details-block">
+                      <strong class="recipient-name">Ananya Chatterjee</strong>
+                      <p class="address-lines">
+                        Rituo Artisans Hub, Studio 4<br />
+                        Sector V, Salt Lake<br />
+                        Kolkata, West Bengal 700091<br />
+                        India
+                      </p>
+                      <p class="contact-number">
+                        <i class="fa-solid fa-phone"></i> +91 98300 54321
+                      </p>
+                    </div>
+                  </div>
+                  <div class="address-card-actions">
+                    <a href="#" class="action-link edit-trigger"
+                      ><i class="fa-solid fa-pen"></i> Edit</a
+                    >
+                    <button class="action-link remove-trigger">
+                      <i class="fa-regular fa-trash-can"></i> Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--  FOOTER SECTION -->
+    <footer class="alt-heritage-footer">
+      <div class="container footer-container-1320">
+        <div class="alt-footer-master-row">
+          <!-- Brand & Mission Summary Column -->
+          <div class="alt-footer-brand-column">
+            <div class="alt-footer-logo-wrap">
+              <img
+                src="IMAGE/navlogo.png"
+                alt="Rituo Logo"
+                class="alt-footer-logo-img"
+              />
+            </div>
+            <p class="alt-footer-mission-statement">
+              Crafting heritage into modern experiences. From hand-loomed
+              textiles to sacred ritual curated collections.
+            </p>
+            <!-- Specialized Minimal Interaction Actions Array -->
+            <div class="alt-footer-socials-deck">
+              <a
+                href="#"
+                class="alt-social-icon-btn"
+                aria-label="Share Content Infrastructure"
+                ><i class="fa-solid fa-share-nodes"></i
+              ></a>
+              <a
+                href="#"
+                class="alt-social-icon-btn"
+                aria-label="Send Direct Mail Message"
+                ><i class="fa-regular fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Links Navigation Matrix Grid Block -->
+          <div class="alt-footer-links-grid">
+            <!-- Column 1: Navigation Vectors -->
+            <div class="alt-matrix-column">
+              <h3 class="alt-matrix-title">Discover</h3>
+              <ul class="alt-matrix-links">
+                <li><a href="#">Ritual Guide</a></li>
+                <li><a href="#">Artisans</a></li>
+                <li><a href="#">Gift Registry</a></li>
+                <li><a href="#">Our Story</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 2: Operation Targets -->
+            <div class="alt-matrix-column">
+              <h3 class="alt-matrix-title">Support</h3>
+              <ul class="alt-matrix-links">
+                <li><a href="#">Shipping Info</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: High Contrast Newsletter Channel Capture -->
+            <div class="alt-matrix-column alt-newsletter-block">
+              <h3 class="alt-matrix-title">Join Rituo</h3>
+              <p class="alt-newsletter-prompt">
+                Be the first to know about new artisan launches.
+              </p>
+
+              <!-- Modern Minimalistic Context Action Entry Input Form -->
+              <form
+                class="alt-newsletter-input-form"
+                onsubmit="event.preventDefault()"
+              >
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="alt-newsletter-field"
+                  required
+                  aria-label="Newsletter Email Capture Input Field"
+                />
+                <button
+                  type="submit"
+                  class="alt-newsletter-submit-arrow"
+                  aria-label="Submit Mail Registration"
+                >
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layout Base System Legal Copyright Note -->
+        <div class="alt-footer-bottom-baseline">
+          <p>&copy; 2024 Rituo. Every Ritual. Made Easy.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

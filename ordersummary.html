@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Summary</title>
+
+    <!-- fontaswome-cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--  Establish a fast connection to Google Fonts servers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- specific project typography profiles cleanly -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom-css -->
+    <link rel="stylesheet" href="./asset/CSS/style12.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#"><img src="./IMAGE/navlogo.png" alt="logo" /></a>
+          </div>
+          <div class="nav-menu">
+            <ul class="nav-link">
+              <li><a href="#">RITUAL GUIDE</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">ARTISTS</a></li>
+              <li><a href="#">GIFTS</a></li>
+              <li><a href="#">PLANNING</a></li>
+            </ul>
+          </div>
+          <div class="nav-icons">
+            <a href="#" aria-label="Shopping Bag">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Favorites">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Profile">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Banner Section -->
+      <section class="order-success-banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-60">
+              <div class="order-banner-text-content">
+                <div class="status-badge-pill">
+                  <span class="status-icon">&#x2713;</span> TRANSACTION
+                  SUCCESSFUL
+                </div>
+
+                <h1 class="order-banner-title">
+                  An <span>Auspicious Beginning</span> to your journey.
+                </h1>
+
+                <p class="order-banner-description">
+                  Your order has been blessed and recorded. We are preparing
+                  your ritual essentials with the same devotion that inspires
+                  your upcoming celebrations.
+                </p>
+
+                <div class="order-action-button-group">
+                  <a href="#" class="btn-track-order">
+                    Track Order <span class="action-arrow">&rarr;</span>
+                  </a>
+                  <a href="#" class="btn-continue-shopping">
+                    Continue Shopping
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-40">
+              <div class="order-banner-image-wrapper">
+                <div class="decorative-backdrop-ring"></div>
+                <img
+                  src="IMAGE/ORDERSUMMARY/ordersummary-banner.png"
+                  alt="Ritual elements and marigold setup"
+                  class="order-banner-hero-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Order Card Section -->
+      <section class="order-details-cards-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-33">
+              <div class="order-info-card">
+                <div class="order-card-icon-box">
+                  <i class="fa-solid fa-hashtag"></i>
+                </div>
+                <div class="order-card-body">
+                  <span class="order-card-label">ORDER ID</span>
+                  <h3 class="order-card-value">RITU-78429-BNGL</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-33">
+              <div class="order-info-card">
+                <div class="order-card-icon-box">
+                  <i class="fa-solid fa-truck"></i>
+                </div>
+                <div class="order-card-body">
+                  <span class="order-card-label">ESTIMATED ARRIVAL</span>
+                  <h3 class="order-card-value">October 14th - 16th, 2024</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-33">
+              <div class="order-info-card">
+                <div class="order-card-icon-box">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="order-card-body">
+                  <span class="order-card-label">SHIPPING TO</span>
+                  <h3 class="order-card-value">Dhaka, Bangladesh</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ORDER BILLING SUMMARY SECTION -->
+      <section class="order-summary-module">
+        <div class="container container-1320">
+          <!-- Header Title Bar Row -->
+          <div class="summary-title-bar">
+            <h2 class="summary-section-heading">Order Summary</h2>
+            <span class="summary-items-count">4 ITEMS TOTAL</span>
+          </div>
+
+          <!-- Main Section Split Flex Workspace -->
+          <div class="summary-workspace-split">
+            <!-- Left Column: Purchased Items List Stack -->
+            <div class="summary-items-stack-column">
+              <!-- Product Item 1 Card -->
+              <div class="summary-product-item-card">
+                <div class="product-thumbnail-frame">
+                  <img
+                    src="IMAGE/ORDERSUMMARY/ordersummary-icon1.png"
+                    alt="Vintage Crimson Jamdari Shari"
+                  />
+                </div>
+                <div class="product-description-details">
+                  <h3 class="product-display-title">
+                    Vintage Crimson Jamdari Shari
+                  </h3>
+                  <p class="product-metadata-subtext">
+                    Hand-woven Muslin &bull; Crimson Red
+                  </p>
+                </div>
+                <div class="product-price-quantity-matrix">
+                  <span class="product-item-price">&#x09F3;42,500</span>
+                  <span class="product-item-quantity">Qty: 1</span>
+                </div>
+              </div>
+
+              <!-- Product Item 2 Card -->
+              <div class="summary-product-item-card">
+                <div class="product-thumbnail-frame">
+                  <img
+                    src="IMAGE/ORDERSUMMARY/ordersummary-icon2.png"
+                    alt="Artisan Brass Puja Set"
+                  />
+                </div>
+                <div class="product-description-details">
+                  <h3 class="product-display-title">Artisan Brass Puja Set</h3>
+                  <p class="product-metadata-subtext">
+                    Panchpradip &bull; 5-wick Design
+                  </p>
+                </div>
+                <div class="product-price-quantity-matrix">
+                  <span class="product-item-price">&#x09F3;8,200</span>
+                  <span class="product-item-quantity">Qty: 2</span>
+                </div>
+              </div>
+
+              <!-- Product Item 3 Card -->
+              <div class="summary-product-item-card">
+                <div class="product-thumbnail-frame">
+                  <img
+                    src="IMAGE/ORDERSUMMARY/ordersummary-icon3.png"
+                    alt="Golden Filigree 'Alpona' Necklace"
+                  />
+                </div>
+                <div class="product-description-details">
+                  <h3 class="product-display-title">
+                    Golden Filigree 'Alpona' Necklace
+                  </h3>
+                  <p class="product-metadata-subtext">
+                    22K Gold Plated &bull; Traditional Motif
+                  </p>
+                </div>
+                <div class="product-price-quantity-matrix">
+                  <span class="product-item-price">&#x09F3;18,900</span>
+                  <span class="product-item-quantity">Qty: 1</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Ledger Payment Details Breakdown Box -->
+            <div class="summary-billing-ledger-column">
+              <div class="billing-details-invoice-box">
+                <h3 class="ledger-box-heading">Payment Details</h3>
+
+                <div class="ledger-line-item-row">
+                  <span class="ledger-item-label">Subtotal</span>
+                  <span class="ledger-item-value">&#x09F3;69,600</span>
+                </div>
+
+                <div class="ledger-line-item-row">
+                  <span class="ledger-item-label">Artisanal Packaging</span>
+                  <span class="ledger-item-value">&#x09F3;450</span>
+                </div>
+
+                <div class="ledger-line-item-row">
+                  <span class="ledger-item-label">Shipping</span>
+                  <span class="ledger-item-value highlight-gold-text"
+                    >Complimentary</span
+                  >
+                </div>
+
+                <div class="ledger-divider-line"></div>
+
+                <div class="ledger-line-item-row total-paid-highlight-row">
+                  <span class="ledger-total-label">Total Paid</span>
+                  <span class="ledger-total-value">&#x09F3;70,050</span>
+                </div>
+
+                <!-- Social Heritage Vetting Message Note -->
+                <div class="heritage-impact-alert-box">
+                  <span class="impact-alert-icon">&#x1F6E1;</span>
+                  <p class="impact-alert-text">
+                    This purchase supports local weavers in the Tangail and
+                    Sonargaon regions. Thank you for preserving heritage.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RITUO COLLECTIVE JOIN SECTION -->
+      <section class="join-collective-section">
+        <div class="container">
+          <!-- Hero Capsule CTA Card Background -->
+          <div class="collective-cta-card">
+            <!-- Ambient organic corner backdrop decorations -->
+            <div class="ambient-overlay-blob top-right"></div>
+            <div class="ambient-overlay-blob bottom-left"></div>
+
+            <div class="collective-card-row">
+              <!-- Left Column: Narrative Headline & Value Proposition -->
+              <div class="collective-text-content">
+                <h2 class="collective-main-title">Join the Rituo Collective</h2>
+                <p class="collective-description">
+                  Receive curated guides on wedding rituals, artisan stories,
+                  and exclusive early access to our seasonal collections.
+                </p>
+              </div>
+
+              <!-- Right Column: Capsule Form Input Elements -->
+              <div class="collective-form-content">
+                <form
+                  class="collective-signup-form"
+                  onsubmit="event.preventDefault()"
+                >
+                  <div class="capsule-input-group">
+                    <input
+                      type="email"
+                      placeholder="Your email address"
+                      class="capsule-email-field"
+                      required
+                    />
+                    <button type="submit" class="capsule-submit-btn">
+                      Join
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--- FOOTER NAVIGATION SECTION -->
+    <footer class="site-global-footer">
+      <div class="container container-1320">
+        <div class="footer-primary-grid-row">
+          <!-- Column 1: Core Brand Identity Frame & Address -->
+          <div class="footer-identity-column">
+            <a href="#" class="footer-brand-logo-anchor">
+              <img
+                src="IMAGE/navlogo.png"
+                alt="Rituo Brand Logo"
+                class="footer-brand-logo-img"
+              />
+            </a>
+            <p class="footer-brand-bio">
+              Celebrating the sacred rituals of life with handcrafted excellence
+              and modern heritage.
+            </p>
+            <!-- <div class="footer-social-media-bar">
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Pinterest"
+                ><i class="fa-brands fa-pinterest-p"></i
+              ></a>
+            </div> -->
+          </div>
+
+          <!-- Column 2: Quick Links Directory -->
+          <div class="footer-links-column">
+            <h4 class="footer-column-heading">Company</h4>
+            <ul class="footer-links-list">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Artisans</a></li>
+              <li><a href="#">Editorial</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Corporate Policy Directory -->
+          <div class="footer-links-column">
+            <h4 class="footer-column-heading">Support</h4>
+            <ul class="footer-links-list">
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Legal Details -->
+          <div class="footer-links-column">
+            <h4 class="footer-column-heading">Legal</h4>
+            <ul class="footer-links-list">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Secondary Bottom Horizontal Row -->
+        <div class="footer-legal-bar-row">
+          <p class="footer-copyright-text">
+            &copy;2024 Rituo. Every Ritual. Made Easy.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

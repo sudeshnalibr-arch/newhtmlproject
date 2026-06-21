@@ -1,0 +1,1052 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-text-light: #564240;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-bright: #7c5800;
+  --color-text-muted: #5c544e;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #fff8f1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-30 {
+  width: 30%;
+  flex: 0 0 30%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+  border-bottom: 1px solid #f2ddcc;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 156px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+  
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+/* --- ARTISANS BANNER SECTION STYLES --- */
+.artisans-banner-section {
+  background-color: #fffaf5; /* Warm premium off-white background matching image_84b407.png */
+  padding: 100px 0 60px 0;   /* Balanced vertical padding to match the luxury aesthetic */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Centered structural text wrapper layout */
+.artisans-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 780px;         /* Limits line-length for optimal editorial readability */
+  margin: 0 auto;
+  gap: 16px;                /* Spacing between the main heading and the paragraph text */
+}
+
+/* Primary Page Header Configuration */
+.artisans-banner-title {
+  font-family: 'Playfair Display', serif; 
+  color: var(--color-secondary);                         
+  font-size: 4rem;                        
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -1.28px;
+}
+
+/* Explanatory Subheading Paragraph */
+.artisans-banner-subtitle {
+  font-family: 'Hanken Grotesk', sans-serif; 
+  color: var(--color-text-light);                            
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- SMALL SCREEN RESPONSIVE SCALING --- */
+@media (max-width: 768px) {
+  .artisans-banner-section {
+    padding: 60px 0 40px 0; 
+  }
+
+  .artisans-banner-content {
+    gap: 12px;
+    padding: 0 20px;       
+  }
+
+  /* Fluid typography scaling config for small viewports */
+  .artisans-banner-title {
+    font-size: 2.5rem;
+  }
+
+  .artisans-banner-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* --- ARTISANS GALLERY CORE SYSTEM STYLES --- */
+.artisans-gallery-section {
+  background-color: #fffaf5; /* Clean premium warm off-white background block */
+  padding: 40px 0 80px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- HORIZONTAL FILTER NAVIGATION BAR --- */
+.artisans-filter-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+.filter-pills-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-pill-btn {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  background-color: #eee7df; /* Soft neutral sandstone button background */
+  border: none;
+  padding: 10px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-pill-btn:hover {
+  background-color: #e3d5c9;
+}
+
+/* Active Maroon Pill State Mapping */
+.filter-pill-btn.active {
+  background-color: var(--color-secondary); /* Deep iconic brand maroon */
+  color: #ffffff;
+}
+
+/* Sort Action Component Box Trigger */
+.sort-dropdown-btn {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  background: none;
+  border: none;
+  border-bottom: 1.5px solid var(--color-secondary);
+  padding: 4px 0 6px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- ARTISAN ITEM CARD COMPONENT --- */
+.artisan-profile-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(91, 6, 12, 0.02);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+}
+
+/* Upper Media Frame with Absolute Pill Overlays */
+.artisan-media-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 380 / 360; /* Perfectly balances landscape/portrait geometry from the image */
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.artisan-media-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.artisan-profile-card:hover .artisan-media-box img {
+  transform: scale(1.03);
+}
+
+/* Pill badge styling floating over media assets */
+.artisan-tag-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.artisan-tag-badge.gold-badge {
+  background-color: rgba(156, 132, 92, 0.95); /* Semi-transparent luxury gold tint */
+  color: #ffffff;
+}
+
+.artisan-tag-badge.default-badge {
+  background-color: rgba(255, 255, 255, 0.92);
+  color: var(--color-text-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Interior Description Content Panel */
+.artisan-info-content {
+  padding: 24px 24px 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.craft-specialty-label {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-bright); /* Heritage brand gold accent tone color styling */
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.artisan-display-name {
+  font-family: 'Playfair Display', serif;
+  color: #1e1b17;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 6px 0;
+}
+
+.artisan-location-pin {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light); /* Soft slate gray location pointer text alignment marker */
+  font-size: 0.88rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.artisan-location-pin i {
+  color: var(--color-secondary); /* High contrast brand crimson location pin marker icon asset color */
+}
+
+/* Card Action Base Row Structure Layout */
+.card-action-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* Circle Material Swatches Component Group styling */
+.craft-swatches-preview {
+  display: flex;
+  gap: 6px;
+}
+
+.swatch-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: inline-block;
+}
+
+/* Hardcoded reference colors corresponding exactly to image asset metadata swatches */
+.swatch-circle.color-gold { background: linear-gradient(135deg, #d4af37, #aa7c11); }
+.swatch-circle.color-maroon { background-color: #5b060c; }
+.swatch-circle.color-brass { background: linear-gradient(135deg, #e1b16a, #b07e3a); }
+.swatch-circle.color-clay { background-color: #c08a6e; }
+
+/* Elegant White Rounded Rectangle Outline Redirect Link Button */
+.btn-view-artisan-shop {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-bright);
+  background-color: #ffffff;
+  border: 1.5px solid var(--color-text-bright);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-view-artisan-shop:hover {
+  background-color: #9c845c;
+  color: #ffffff;
+}
+
+/* --- VIEWPORT RESPONSIVE REBALANCING SYSTEM --- */
+@media (max-width: 992px) {
+  /* Safely converts .col-33 grid item sizing rules down into split halves across tablets */
+  .col-33 {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .artisans-filter-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .filter-pills-group {
+    gap: 8px;
+  }
+
+  .filter-pill-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .artisans-gallery-section {
+    padding: 32px 0 60px 0;
+  }
+
+  /* Forces grid layout segments into full width cards layout rules across phone frames */
+  .col-33 {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 0 16px !important;
+  }
+
+  .artisan-info-content {
+    padding: 20px;
+  }
+
+  .artisan-display-name {
+    font-size: 1.45rem;
+  }
+}
+
+
+/* --- ARTIST CREATION SECTION BASE STYLES --- */
+.artist-creation-section {
+  background-color: #fffaf5; /* Clean brand off-white foundation color mapped from image_83cfa2.png */
+  padding: 60px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Framework alignment fallback adjustments */
+.col-30-override {
+  width: 30% !important;
+  flex: 0 0 30% !important;
+  max-width: 30% !important;
+}
+
+/* --- LEFT SIDE: 70% WIDE HORIZONTAL FEATURE CARD --- */
+.creation-horizontal-card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(91, 6, 12, 0.02);
+  width: 100%;
+  height: 100%; /* Ensures horizontal container auto-matches right side card flow height */
+  box-sizing: border-box;
+}
+
+.creation-media-side {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.creation-media-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.creation-text-side {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Shared Typographic Accents */
+.creation-category-accent {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-bright); /* Core heritage antique gold */
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  line-height: 1.8;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.creation-artisan-name {
+  font-family: 'Playfair Display', serif;
+  color: #1e1b17;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+}
+
+.creation-description {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light); /* Slate charcoal body typography tint */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 28px 0;
+}
+
+/* Solid Maroon Round Action Pill Button Elements */
+.btn-enter-workshop {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: var(--color-secondary); /* Deep custom corporate maroon shade */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 25px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-enter-workshop:hover {
+  background-color: #420408;
+}
+
+.arrow-icon {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.btn-enter-workshop:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* --- RIGHT SIDE: 30% STANDALONE PORTRAIT SHOP CARD --- */
+.creation-portrait-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(91, 6, 12, 0.02);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.portrait-card-media {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Balanced layout layout block geometry */
+  overflow: hidden;
+}
+
+.portrait-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portrait-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.portrait-artisan-name {
+  font-family: 'Playfair Display', serif;
+  color: #1e1b17;
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.portrait-location-pin {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);
+  font-size: 0.88rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.portrait-location-pin i {
+  color: var(--color-secondary);
+}
+
+/* Card Action Base Row Structure Layout */
+.portrait-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.swatch-preview-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: radial-gradient(circle, #2c3e50 0%, #0f171e 100%); /* Represents dark obsidian jewelry display layout block */
+  display: inline-block;
+}
+
+/* Elegant Rounded White Outline Redirect Link Button */
+.btn-portrait-view-shop {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-bright);
+  background-color: #ffffff;
+  border: 1.5px solid var(--color-text-bright);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-portrait-view-shop:hover {
+  background-color: #9c845c;
+  color: #ffffff;
+}
+
+/* --- VIEWPORT RESPONSIVE REBALANCING SYSTEM --- */
+@media (max-width: 992px) {
+  /* Safely collapses structural layout rules into a clean full width column matrix track stack */
+  .col-70, 
+  .col-30-override {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 0 16px !important;
+    margin-bottom: 32px;
+  }
+
+  .creation-horizontal-card {
+    height: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  /* Transforms the landscape card inner layout into vertical blocks for mobile phone screens */
+  .creation-horizontal-card {
+    flex-direction: column;
+  }
+
+  .creation-media-side,
+  .creation-text-side {
+    width: 100%;
+  }
+
+  .creation-media-side {
+    aspect-ratio: 4 / 3;
+  }
+
+  .creation-text-side {
+    padding: 24px;
+  }
+
+  .creation-artisan-name {
+    font-size: 1.85rem;
+  }
+}
+
+
+/* --- THE RITUO QUALITY PROMISE CORE STYLES --- */
+.rituo-quality-section {
+  background-color: #f9f3eb; /* Requested background foundation tone */
+  padding: 80px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Horizontal asymmetric flex alignment container */
+.quality-flex-container {
+  display: flex;
+  align-items: center;
+  gap: 64px;                 /* Generous horizontal breathing room between badge and copy */
+  max-width: 1100px;         /* Keeps paragraph length within comfortable readability limits */
+  margin: 0 auto;
+}
+
+/* --- LEFT SIDE: GEOMETRIC HERITAGE ACCENT BADGE --- */
+.quality-badge-column {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Perfectly circular layout echoing the luxury seal look in image_83507e.png */
+.outer-dashed-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #ede2d5;  /* Subtle darker contrast sandstone backing tone */
+  border: 2px dashed #9c845c; /* Core heritage antique gold accents line wrapper */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.inner-badge-icon {
+  width: 48px;
+  height: 48px;
+  color: #9c845c;            /* Antique gold icon tracking seal details */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-badge-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* --- RIGHT SIDE: TYPOGRAPHY LAYOUT TEXT BLOCK --- */
+.quality-text-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quality-main-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary);            /* Iconic deep brand maroon */
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.quality-narrative-paragraph {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);            /* Soft warm slate descriptive typography color */
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* --- RESPONSIVE SMALL SCREEN TRANSITIONS --- */
+@media (max-width: 992px) {
+  .rituo-quality-section {
+    padding: 60px 24px;      /* Generous edge padding protection safe-zones */
+  }
+
+  .quality-flex-container {
+    gap: 40px;
+  }
+
+  .quality-main-title {
+    font-size: 2.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Shifts asymmetric layout structure into a clean centered mobile column stack */
+  .quality-flex-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .outer-dashed-circle {
+    width: 140px;            /* Comfortably scales down the badge circle geometry for smaller screens */
+    height: 140px;
+  }
+
+  .inner-badge-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .quality-main-title {
+    font-size: 1.85rem;
+  }
+
+  .quality-narrative-paragraph {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+}
+
+/* --- BRAND FOOTER CORE SYSTEM DESIGN --- */
+.site-brand-footer {
+  background-color: #e8e1da; /* Distinct warm sandstone background hex color matched from image_82f624.png */
+  padding: 80px 0 32px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Master row layout flex configuration inside the pre-defined 1320px container */
+.footer-row-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Column Width Ratios */
+.brand-summary-column { width: 28%; }
+.navigation-links-column { width: 16%; }
+.newsletter-journal-column { width: 32%; }
+
+/* Brand Column Element Properties */
+.footer-logo-wrapper {
+  max-width: 140px;
+  margin-bottom: 24px;
+}
+
+.footer-brand-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-brand-statement {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #564240; /* Soft slate-brown descriptive typography tone */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+.footer-social-sharing-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social-sharing-links a {
+  color: #5b060c; /* High-contrast signature brand maroon icon color */
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-social-sharing-links a:hover {
+  opacity: 0.75;
+}
+
+/* Typography Column Structural Headings */
+.footer-column-heading {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #5b060c; /* Signature brand deep dark maroon lettering */
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+}
+
+/* Navigation Links Vertical Framework Lists */
+.footer-navigation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-navigation-list li a {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #564240;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.footer-navigation-list li a:hover {
+  color: #5b060c;
+}
+
+/* Antique Gold Highlight State for Active Page Location (Artisans Link) */
+.footer-navigation-list li a.active-footer-link {
+  color: #9c845c; /* Gold text marker accent from image metadata */
+  font-weight: 600;
+}
+
+/* Journal Newsletter Subscription Group Elements */
+.newsletter-caption-text {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #564240;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+/* Inline Newsletter Form Box Setup */
+.footer-newsletter-form {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid var(--color-secondary); /* Crisp maroon borders wrapping input element fields */
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.newsletter-input-field {
+  flex: 1;
+  background: transparent;
+  border: none;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.92rem;
+  color: #564240;
+  padding: 12px 16px;
+  outline: none;
+}
+
+.newsletter-input-field::placeholder {
+  color: #a49694; /* Soft placeholder grey text color signature tone */
+}
+
+.newsletter-submit-btn {
+  background: transparent;
+  border: none;
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #5b060c;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.newsletter-submit-btn:hover {
+  opacity: 0.7;
+}
+
+/* Copyright Row Bottom Metadata Rules */
+.footer-baseline-ribbon {
+  margin-top: 64px;
+  border-top: 1px solid rgba(91, 6, 12, 0.06); /* Ultra light matching accent division ruler bar */
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-copyright-notice {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #7d6b69; /* Soft balanced footer copyright note shade text layout */
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* --- VIEWPORT RESPONSIVE RECONFIG SYSTEM --- */
+@media (max-width: 992px) {
+  /* Wraps row metrics into a double-row block pattern on tablet interfaces */
+  .footer-row-layout {
+    flex-wrap: wrap;
+    gap: 48px 4%;
+  }
+
+  .brand-summary-column { width: 46%; }
+  .newsletter-journal-column { width: 46%; }
+  .navigation-links-column { width: 21%; }
+}
+
+@media (max-width: 650px) {
+  .site-brand-footer {
+    padding: 60px 16px 24px 16px; /* Enhanced localized edge protection buffers */
+  }
+
+  /* Compresses structural layout targets down to clean singular columns lines */
+  .footer-row-layout {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .brand-summary-column,
+  .navigation-links-column,
+  .newsletter-journal-column {
+    width: 100% !important;
+  }
+
+  .footer-column-heading {
+    margin-bottom: 16px;
+  }
+
+  .footer-navigation-list {
+    gap: 12px;
+  }
+
+  .footer-baseline-ribbon {
+    margin-top: 48px;
+    padding-top: 24px;
+  }
+}

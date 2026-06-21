@@ -1,0 +1,1238 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-bg: #faf6f0; /* Soft warm ivory cream background */
+  --color-primary: #722020; /* Deep wine/maroon */
+  --color-secondary: #5B060C;
+  --color-text-light: #564240;
+  --color-accent: #9a7b3e; /* Muted gold */
+  --color-text-dark: #2b2520; /* Soft charcoal black */
+  --color-text-bright: #7c5800;
+  --color-text-muted: #5c544e;
+
+  --color-glow: rgba(243, 165, 63, 0.45);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #fff8f1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+ul {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col-60 {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+.col-40 {
+  width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+.col-30 {
+  width: 30%;
+  flex: 0 0 30%;
+  padding: 0 15px;
+}
+.col-70 {
+  width: 70%;
+  flex: 0 0 70%;
+  padding: 0 15px;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1320px;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1386px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background: transparent;
+  /* position: absolute; */
+  z-index: 99;
+  border-bottom: 1px solid #f2ddcc;
+}
+.navbar .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 156px;
+  width: 100%;
+  display: block;
+}
+
+.navbar .nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dark);
+}
+
+.nav-link a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: var(--color-secondary);
+  
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+/* ---  BANNER SECTION STYLES --- */
+.order-success-banner {
+  background-color: #fffaf5; /* Clean brand premium warm off-white background */
+  padding: 80px 0 100px 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* --- LEFT SIDE: TYPOGRAPHY AND CONTENT LAYOUT PANEL --- */
+.order-banner-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 40px;
+  height: 100%;
+  justify-content: center;
+}
+
+/* Status Badge Container Config */
+.status-badge-pill {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: #ffdea8;    /* Requested custom alert backdrop hex tint */
+  color: #271900;               /* Requested deep contrast alert typography tint */
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(39, 25, 0, 0.04);
+}
+
+.status-icon {
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+/* Primary Page Header Configuration */
+.order-banner-title {
+  font-family: 'Playfair Display', serif; 
+  color: var(--color-secondary);                       
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.5px;
+}
+
+/* Scripted italic styling match for editorial flavor */
+.order-banner-title span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Explanatory Subheading Paragraph Copy */
+.order-banner-description {
+  font-family: 'Hanken Grotesk', sans-serif; /* Requested modern geometric sans font */
+  color: var(--color-text-light);                            /* Requested soft slate brown secondary text color */
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0 0 40px 0;
+  max-width: 520px;
+}
+
+/* Button Group Alignment Rules */
+.order-action-button-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Solid Crimson Round Action Pill Button */
+.btn-track-order {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: var(--color-secondary); /* Brand signature deep corporate crimson */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 28px;
+  box-shadow: 0 4px 16px rgba(91, 6, 12, 0.15);
+  transition: background-color 0.2s ease;
+}
+
+.btn-track-order:hover {
+  background-color: #420408;
+}
+
+.action-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.btn-track-order:hover .action-arrow {
+  transform: translateX(4px);
+}
+
+/* Secondary Golden Sandstone Circular Outline Toggle Link Button */
+.btn-continue-shopping {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-bright); /* Core heritage antique gold token theme */
+  background-color: transparent;
+  border: 1.5px solid var(--color-text-bright);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 13px 32px;
+  border-radius: 28px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-continue-shopping:hover {
+  background-color: var(--color-text-bright);
+  color: #ffffff;
+}
+
+/* --- RIGHT SIDE: FEATURE HERO VISUAL COVER FRAME --- */
+.order-banner-image-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modern soft-corner frame containing the hero product visual asset */
+.order-banner-hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 2;
+}
+
+/* Geometric backdrop circle ornament overlapping from bottom right corner */
+.decorative-backdrop-ring {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 8px solid #ffdea8; 
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- VIEWPORT RESPONSIVE REBALANCING SYSTEM --- */
+@media (max-width: 992px) {
+  .order-success-banner {
+    padding: 60px 0 80px 0;
+  }
+
+  /* Automatically updates pre-defined structural columns layout tracks into vertical stacks */
+  .col-60, 
+  .col-40 {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  .order-banner-text-content {
+    padding-right: 0;
+    margin-bottom: 48px;
+  }
+
+  /* Dynamic fluid layout adjustments for medium tablets viewports */
+  .order-banner-title {
+    font-size: 2.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .order-success-banner {
+    padding: 40px 0 60px 0;
+  }
+
+  .status-badge-pill {
+    margin-bottom: 20px;
+  }
+
+  /* Fluid typography drop scaling rules tracking smart phone frameworks */
+  .order-banner-title {
+    font-size: 2.15rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .order-banner-description {
+    font-size: 0.98rem;
+    line-height: 1.55;
+    margin-bottom: 32px;
+  }
+
+  /* Convert interactive path links into structural individual columns across touch zones */
+  .order-action-button-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-track-order,
+  .btn-continue-shopping {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 12px 24px;
+  }
+
+  .decorative-backdrop-ring {
+    display: none; /* Safely hides background artifact to prevent overflow tracking rules breakout */
+  }
+}
+
+
+/* --- ORDER CARD SECTION STYLES --- */
+.order-details-cards-section {
+  background-color: #fffaf5; /* Background foundation canvas color matching order page flow */
+  padding: 40px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Individual Content Card Block Configuration */
+.order-info-card {
+  background-color: #f9f3eb;  /* Requested custom card background token */
+  border-radius: 16px;       /* Sleek soft rounded corner geometry */
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;                 /* Clean vertical spacing track separating icon and text block */
+  height: 100%;              /* Equalizes card heights perfectly inside row layouts */
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(91, 6, 12, 0.03);
+}
+
+/* Font Awesome Custom Icon Wrapper Frame */
+.order-card-icon-box {
+  color: var(--color-text-bright);            /* Fine antique heritage gold brand icon tone */
+  font-size: 1.35rem;         /* Balanced graphical proportions */
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 32px;
+}
+
+/* Card Typography Hierarchy System */
+.order-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-card-label {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);            /* Muted slate-taupe label text tint */
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.order-card-value {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-secondary);            /* Distinct high-contrast brand signature maroon */
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* --- VIEWPORT RESPONSIVE SYSTEM REBALANCING --- */
+@media (max-width: 992px) {
+  /* Safely converts three-column split tracks into individual full-width rows */
+  .col-33 {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 0 16px !important;
+    margin-bottom: 20px; /* Separates the cards cleanly as they stack */
+  }
+
+  .col-33:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .order-details-cards-section {
+    padding: 24px 0;
+  }
+
+  .order-info-card {
+    padding: 24px; /* Slightly tighter internal safe margins on small phones */
+    gap: 12px;
+  }
+
+  .order-card-value {
+    font-size: 1.1rem; /* Scaled down slightly to prevent layout text overflows */
+  }
+}
+
+/* --- ORDER SUMMARY SECTION STYLE --- */
+.order-summary-module {
+  background-color: #fffaf5; /* Premium off-white base layer template */
+  padding: 40px 0 80px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Base Structural Container Constraint Override Safety */
+.container-1320 {
+  
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* Title Section Heading Panel */
+.summary-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(91, 6, 12, 0.08);
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+.summary-section-heading {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-secondary); 
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.summary-items-count {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light); 
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+/* Master Grid Column Split Allocation Assembly */
+.summary-workspace-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.summary-items-stack-column {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.summary-billing-ledger-column {
+  width: 35%;
+}
+
+/* --- PRODUCT CARD STYLING RULES --- */
+.summary-product-item-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(91, 6, 12, 0.015);
+  box-sizing: border-box;
+}
+
+.product-thumbnail-frame {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  flex-shrink: 0;
+}
+
+.product-thumbnail-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-description-details {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.product-display-title {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #1e1b17;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.product-metadata-subtext {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light); /* Elegant desaturated summary description text shade */
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.product-price-quantity-matrix {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.product-item-price {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-secondary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.product-item-quantity {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* --- RIGHT SIDE LEDGER SUMMARY CARD STYLING --- */
+.billing-details-invoice-box {
+  background-color: #ffffff;
+  border: 1px solid rgba(232, 225, 218, 0.6); /* Soft subtle perimeter line filter box alignment */
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(91, 6, 12, 0.015);
+  box-sizing: border-box;
+}
+
+.ledger-box-heading {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-secondary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 28px 0;
+}
+
+.ledger-line-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.ledger-item-label {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.ledger-item-value {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Accentuated Styling Rules for Complementary Delivery Metrics */
+.ledger-item-value.highlight-gold-text {
+  color: var(--color-text-bright); /* Antique gold highlight matching complimentary markers */
+  font-weight: 700;
+}
+
+.ledger-divider-line {
+  height: 1px;
+  background-color: rgba(232, 225, 218, 0.8);
+  margin: 20px 0;
+}
+
+/* Invoice Total Focus Row Settings */
+.total-paid-highlight-row {
+  margin-bottom: 28px;
+}
+
+.ledger-total-label {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-secondary);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.ledger-total-value {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-secondary);
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+/* Bottom Light Muted Sandstone Callout Alert Box component info frame */
+.heritage-impact-alert-box {
+  background-color: #ffe5e7;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px dashed rgba(232, 225, 218, 0.6);
+}
+
+.impact-alert-icon {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+
+.impact-alert-text {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* --- VIEWPORT RESPONSIVE RECONSTRUCTION SYSTEM --- */
+@media (max-width: 992px) {
+  /* Folds wide flex split system column modules cleanly into grouped vertical tracks */
+  .summary-workspace-split {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .summary-items-stack-column,
+  .summary-billing-ledger-column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .order-summary-module {
+    padding: 24px 0 60px 0;
+  }
+
+  .summary-section-heading {
+    font-size: 1.75rem;
+  }
+
+  /* Internal adjustments mapping mobile phone viewport item flow lines */
+  .summary-product-item-card {
+    padding: 16px;
+    position: relative;
+    align-items: flex-start;
+  }
+
+  .product-thumbnail-frame {
+    width: 64px;
+    height: 64px;
+  }
+
+  .product-description-details {
+    padding: 0 0 0 16px;
+    padding-right: 70px; /* Reserves clear whitespace tracking area block over floating prices */
+  }
+
+  .product-display-title {
+    font-size: 0.98rem;
+    line-height: 1.3;
+  }
+
+  .product-metadata-subtext {
+    font-size: 0.82rem;
+  }
+
+  /* Shifts product price matrices into absolute bottom elements for clean responsive alignment */
+  .product-price-quantity-matrix {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .product-item-price {
+    font-size: 1rem;
+  }
+
+  /* Ledger panel content interior optimization tweaks */
+  .billing-details-invoice-box {
+    padding: 20px;
+  }
+
+  .ledger-total-label {
+    font-size: 1.15rem;
+  }
+
+  .ledger-total-value {
+    font-size: 1.25rem;
+  }
+}
+
+
+/* --- JOIN COLLECTIVE BANNER MODULE STYLES --- */
+.join-collective-section {
+  background-color: #fffaf5; /* Clean warm off-white layout background context */
+  padding: 60px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Base Master Section Card Container Grid */
+.collective-cta-card {
+  background-color: #7a1f1f; /* Rich, signature deep brand maroon core fill */
+  border-radius: 24px;       /* Beautifully curved structural soft corners */
+  padding: 64px 80px;
+  position: relative;
+  overflow: hidden;          /* Crops the internal ambient visual artwork cleanly */
+  box-shadow: 0 12px 40px rgba(114, 28, 30, 0.08);
+  box-sizing: border-box;
+}
+
+/* --- INTERIOR ARTWORK ACCENT LAYERS --- */
+.ambient-overlay-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.12;
+}
+.ambient-overlay-blob.top-right {
+  top: -60px;
+  right: -40px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, #ffffff 0%, transparent 80%);
+}
+.ambient-overlay-blob.bottom-left {
+  bottom: -80px;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #ffb300 0%, transparent 70%);
+}
+
+/* --- FLEXROW GRID SPLIT ARRANGEMENT --- */
+.collective-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  position: relative;
+  z-index: 3; /* Positions text stacks layered cleanly above background vectors */
+}
+
+.collective-text-content {
+  width: 55%;
+}
+
+.collective-form-content {
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* --- TYPOGRAPHY ARSENAL RULES --- */
+.collective-main-title {
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.2px;
+}
+
+.collective-description {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #ff8b85; /* Semi-transparent warm cream narrative tone */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 85%;
+}
+
+/* --- INTEGRATED CAPSULE REGISTRATION FORM --- */
+.collective-signup-form {
+  width: 100%;
+  max-width: 420px;
+}
+
+.capsule-input-group {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.06); /* Highly transparent subtle glass backing overlay */
+  border: 1px solid rgba(255, 255, 255, 0.25);  /* Clean white container halo line */
+  border-radius: 30px;                          /* Authentic continuous capsule pill geometry shape */
+  /* padding: 4px; */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.capsule-email-field {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #ffffff;
+  font-size: 0.95rem;
+  padding: 12px 20px;
+  width: 100%;
+}
+
+.capsule-email-field::placeholder {
+  color: rgba(255, 255, 255, 0.388);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Distinct high-contrast accent yellow-gold submission node */
+.capsule-submit-btn {
+  background-color: #feb700; /* Rich marigold yellow matched token hue */
+  border: none;
+  outline: none;
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #6b4b00;            /* Rich contrast dark brown typography ink link */
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  padding: 16px 32px;
+  border-radius: 0 26px 26px 0;      /* Pill shape inner synchronization alignment curve */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.capsule-submit-btn:hover {
+  background-color: #ffa000;
+}
+
+.capsule-submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* --- VIEWPORT RESPONSIVE ARCHITECTURE SYSTEM --- */
+@media (max-width: 992px) {
+  .collective-cta-card {
+    padding: 48px; /* Restructured balanced inner dynamic cushion */
+  }
+
+  /* Drops row split frameworks into vertical stack blocks */
+  .collective-card-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .collective-text-content,
+  .collective-form-content {
+    width: 100%;
+  }
+
+  .collective-form-content {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .join-collective-section {
+    padding: 40px 16px; /* Enhanced outmost screen safety buffer tracks */
+  }
+
+  .collective-cta-card {
+    padding: 36px 24px;
+    border-radius: 16px; /* Slightly tighter curves across cellular displays */
+  }
+
+  .collective-main-title {
+    font-size: 1.85rem;
+    line-height: 1.25;
+  }
+
+  .collective-description {
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  /* Ensures form block system elements dynamically flex comfortably across tight grid rails */
+  .capsule-input-group {
+    flex-direction: row; /* Preserves modern integrated premium horizontal look */
+  }
+
+  .capsule-email-field {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .capsule-submit-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* footer  */
+
+/* --- FOOTER LAYOUT STYLE--- */
+.site-global-footer {
+  background-color: #ebe1da; /* Requested premium warm earth tone backdrop */
+  padding: 80px 0 32px 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Structural Layout Size Container Rules */
+.container-1320 {
+  
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* Master Flexible Column Row System */
+.footer-primary-grid-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(91, 6, 12, 0.08); /* Clean brand-aligned hairline divider rule */
+}
+
+/* --- COLUMN 1 BRAND IDENTITY CONFIGURATIONS --- */
+.footer-identity-column {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-brand-logo-anchor {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.footer-brand-logo-img {
+  height: 48px; /* Clean proportional logo constraints scaling */
+  width: auto;
+  display: block;
+}
+
+.footer-brand-bio {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--color-text-light); /* Soft slate charcoal text accent */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  max-width: 70%;
+}
+
+/* Social Media Channels Flex Row */
+.footer-social-media-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-social-media-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(91, 6, 12, 0.05);
+  color: var(--color-secondary); 
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.footer-social-media-bar a:hover {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+/* --- COLUMNS 2, 3, 4 DIRECTORY LINKS CONFIGURATIONS --- */
+.footer-links-column {
+  width: 20%;
+}
+
+.footer-column-heading {
+  
+  color: var(--color-secondary); /* Heritage primary maroon color token alignment */
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin: 0 0 24px 0;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-links-list a {
+  
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links-list a:hover {
+  color: var(--color-secondary);
+  padding-left: 5px; /* Subtle responsive micro-interaction indicator */
+}
+
+/* Contact Details Info Tracking Rules Block */
+.contact-info-column {
+  width: 24%;
+}
+
+.footer-contact-item {
+  
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-contact-item i {
+  color: #9c845c; /* Antique gold element markers icon accents */
+  margin-top: 3px;
+  font-size: 0.9rem;
+  width: 16px;
+  text-align: center;
+}
+
+/* --- FOOTER BOTTOM --- */
+.footer-legal-bar-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.footer-copyright-text {
+  
+  color: var(--color-text-light); /* Soft desaturated secondary taupe gray color alignment */
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* .footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-legal-links a {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #7d6b69;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s ease;
+}
+
+.footer-legal-links a:hover {
+  color: #5b060c;
+} */
+
+/* --- VIEWPORT RESPONSIVE SYSTEM REBALANCING --- */
+@media (max-width: 992px) {
+  .site-global-footer {
+    padding: 60px 0 32px 0;
+  }
+
+  /* Splits primary directory blocks down into a staggered 2-column balanced grid row arrangement */
+  .footer-primary-grid-row {
+    flex-wrap: wrap;
+    gap: 40px 0;
+    padding-bottom: 48px;
+  }
+
+  .footer-identity-column {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .footer-identity-column .footer-brand-bio {
+    max-width: 560px;
+  }
+
+  .footer-links-column {
+    width: 50%;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  
+  .contact-info-column {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .site-global-footer {
+    padding: 48px 0 24px 0;
+  }
+
+  /* Flattens the entire footer map into centralized full-width stacked layouts */
+  .footer-primary-grid-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 36px;
+  }
+
+  .footer-identity-column {
+    align-items: center;
+  }
+
+  .footer-links-column,
+  .contact-info-column {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .footer-column-heading {
+    margin-bottom: 16px;
+  }
+
+  .footer-contact-item {
+    justify-content: center;
+  }
+
+  /* Realigns secondary legal block partitions cleanly vertically */
+  .footer-legal-bar-row {
+    flex-direction: column-reverse;
+    gap: 16px;
+    text-align: center;
+    padding-top: 24px;
+  }
+
+  .footer-legal-links {
+    justify-content: center;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download</title>
+
+    <!-- fontaswome-cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--  Establish a fast connection to Google Fonts servers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- specific project typography profiles cleanly -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom-css -->
+    <link rel="stylesheet" href="./asset/CSS/style13.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#"><img src="./IMAGE/navlogo.png" alt="logo" /></a>
+          </div>
+          <div class="nav-menu">
+            <ul class="nav-link">
+              <li><a href="#">RITUAL GUIDE</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">ARTISTS</a></li>
+              <li><a href="#">GIFTS</a></li>
+              <li><a href="#">PLANNING</a></li>
+            </ul>
+          </div>
+          <div class="nav-icons">
+            <a href="#" aria-label="Shopping Bag">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Favorites">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Profile">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="account-dashboard-layout">
+        <div class="container">
+          <div class="dashboard-grid-bridge">
+            <aside class="account-navigation-sidebar">
+              <h3 class="sidebar-account-heading">Account</h3>
+              <nav class="sidebar-nav-menu">
+                <a href="#" class="sidebar-menu-link">
+                  <i class="fa-solid fa-border-all link-icon"></i>
+                  <span class="link-label">Overview</span>
+                </a>
+                <a href="#" class="sidebar-menu-link">
+                  <i class="fa-solid fa-cart-shopping link-icon"></i>
+                  <span class="link-label">Orders</span>
+                </a>
+                <a href="#" class="sidebar-menu-link">
+                  <i class="fa-regular fa-heart link-icon"></i>
+                  <span class="link-label">Wishlist</span>
+                </a>
+                <a href="#" class="sidebar-menu-link">
+                  <i class="fa-solid fa-location-dot link-icon"></i>
+                  <span class="link-label">Addresses</span>
+                </a>
+                <a href="#" class="sidebar-menu-link active-panel-state">
+                  <i class="fa-solid fa-download link-icon"></i>
+                  <span class="link-label">Downloads</span>
+                </a>
+                <a href="#" class="sidebar-menu-link">
+                  <i class="fa-solid fa-gear link-icon"></i>
+                  <span class="link-label">Settings</span>
+                </a>
+
+                <div class="sidebar-menu-separator"></div>
+
+                <a href="#" class="sidebar-menu-link logout-action-link">
+                  <i class="fa-solid fa-arrow-right-from-bracket link-icon"></i>
+                  <span class="link-label">Logout</span>
+                </a>
+              </nav>
+            </aside>
+
+            <div class="dashboard-content-workspace">
+              <!-- banner div. -->
+              <div class="digital-library-banner">
+                <h1 class="library-banner-title">Digital Library</h1>
+                <p class="library-banner-description">
+                  Access your purchased ritual guides, digital invitations, and
+                  certificates of authenticity. These resources are crafted to
+                  help you navigate your heritage with grace and precision.
+                </p>
+              </div>
+
+              <!-- card div. -->
+              <div class="row">
+                <!-- Card 1: Ultimate Bengali Wedding Ritual Guide -->
+                <div class="col-50">
+                  <div class="asset-card">
+                    <div class="asset-card-header">
+                      <div class="asset-icon-box manual-bg">
+                        <i class="fa-solid fa-book-open"></i>
+                      </div>
+                      <span class="asset-badge badge-manual">MANUAL</span>
+                    </div>
+                    <div class="asset-card-body">
+                      <h3 class="asset-title">
+                        The Ultimate Bengali Wedding Ritual Guide (PDF)
+                      </h3>
+                      <p class="asset-description">
+                        A comprehensive 50-page guide covering everything from
+                        Bor Jatri to Bou Bhaat, with checklists and cultural
+                        context.
+                      </p>
+                      <div class="asset-meta-data">
+                        <span><i class="fa-regular fa-file-pdf"></i> PDF</span>
+                        <span
+                          ><i class="fa-solid fa-hard-drive"></i> 12.4 MB</span
+                        >
+                      </div>
+                    </div>
+                    <div class="asset-card-footer">
+                      <a href="#" class="asset-btn btn-primary"
+                        ><i class="fa-solid fa-download"></i> Download Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2: Bespoke Digital Invitation Template -->
+                <div class="col-50">
+                  <div class="asset-card">
+                    <div class="asset-card-header">
+                      <div class="asset-icon-box creative-bg">
+                        <i class="fa-solid fa-palette"></i>
+                      </div>
+                      <span class="asset-badge badge-creative">CREATIVE</span>
+                    </div>
+                    <div class="asset-card-body">
+                      <h3 class="asset-title">
+                        Bespoke Digital Invitation Template
+                      </h3>
+                      <p class="asset-description">
+                        Fully layered assets for Adobe Photoshop and
+                        Illustrator. Includes traditional motifs and heritage
+                        typography settings.
+                      </p>
+                      <div class="asset-meta-data">
+                        <span
+                          ><i class="fa-regular fa-image"></i> PSD / AI</span
+                        >
+                        <span
+                          ><i class="fa-solid fa-hard-drive"></i> 85.0 MB</span
+                        >
+                      </div>
+                    </div>
+                    <div class="asset-card-footer">
+                      <a href="#" class="asset-btn btn-primary"
+                        ><i class="fa-solid fa-download"></i> Download Assets</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3: Heirloom Jamdani Certificate -->
+                <div class="col-50">
+                  <div class="asset-card">
+                    <div class="asset-card-header">
+                      <div class="asset-icon-box security-bg">
+                        <i class="fa-solid fa-award"></i>
+                      </div>
+                      <span class="asset-badge badge-security">SECURITY</span>
+                    </div>
+                    <div class="asset-card-body">
+                      <h3 class="asset-title">
+                        Heirloom Jamdani - Certificate of Authenticity
+                      </h3>
+                      <p class="asset-description">
+                        Official digital copy of the artisan certification for
+                        your Jamdani order. Includes weaver identification and
+                        loom history.
+                      </p>
+                      <div class="asset-meta-data">
+                        <span><i class="fa-regular fa-file-pdf"></i> PDF</span>
+                        <span
+                          ><i class="fa-solid fa-hard-drive"></i> 2.1 MB</span
+                        >
+                      </div>
+                    </div>
+                    <div class="asset-card-footer">
+                      <a href="#" class="asset-btn btn-secondary"
+                        ><i class="fa-solid fa-print"></i> Print Certificate</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4: Puja Samagri Checklist -->
+                <div class="col-50">
+                  <div class="asset-card">
+                    <div class="asset-card-header">
+                      <div class="asset-icon-box utility-bg">
+                        <i class="fa-solid fa-list-check"></i>
+                      </div>
+                      <span class="asset-badge badge-utility">UTILITY</span>
+                    </div>
+                    <div class="asset-card-body">
+                      <h3 class="asset-title">Puja Samagri Checklist</h3>
+                      <p class="asset-description">
+                        A printable high-resolution checklist to ensure every
+                        sacred item is prepared for the ritual morning. Includes
+                        sanskrit names.
+                      </p>
+                      <div class="asset-meta-data">
+                        <span><i class="fa-regular fa-image"></i> JPG</span>
+                        <span
+                          ><i class="fa-solid fa-hard-drive"></i> 4.8 MB</span
+                        >
+                      </div>
+                    </div>
+                    <div class="asset-card-footer">
+                      <a href="#" class="asset-btn btn-primary"
+                        ><i class="fa-solid fa-download"></i> Download
+                        Checklist</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="expert-cta-card">
+                <!-- Geometric motif artwork overlay shadow in top-right -->
+                <div class="motif-overlay-accent"></div>
+
+                <div class="expert-card-row">
+                  <!-- Left Side: Narrative Messaging -->
+                  <div class="expert-text-content">
+                    <!-- <h2 class="expert-main-title">Need a custom ritual guide?</h2> -->
+                    <p class="expert-description">
+                      Our artisan planning team can create bespoke digital
+                      collections tailored to your family's specific ancestral
+                      traditions.
+                    </p>
+                  </div>
+
+                  <!-- Right Side: High Contrast Action Node -->
+                  <div class="expert-action-content">
+                    <a href="#" class="expert-consult-btn"
+                      >Consult an <br />Expert</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="heritage-platform-footer">
+      <div class="container">
+        <div class="footer-master-row">
+          <div class="footer-brand-column">
+            <h2 class="footer-brand-logo">Rituo</h2>
+            <p class="footer-brand-statement">
+              Curating the sacred essence of Bengali heritage through artisanal
+              craftsmanship and thoughtful modern design.
+            </p>
+            <div class="footer-social-triggers">
+              <a href="#" class="social-trigger-link" aria-label="Web Network"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+              <a href="#" class="social-trigger-link" aria-label="Share Content"
+                ><i class="fa-solid fa-share-nodes"></i
+              ></a>
+              <a
+                href="#"
+                class="social-trigger-link"
+                aria-label="Favorites Shelf"
+                ><i class="fa-regular fa-heart"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-links-matrix">
+            <div class="footer-matrix-column">
+              <h3 class="matrix-column-heading">Company</h3>
+              <ul class="matrix-links-list">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Artisans</a></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Journal</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-matrix-column">
+              <h3 class="matrix-column-heading">Support</h3>
+              <ul class="matrix-links-list">
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-matrix-column newsletter-capture-block">
+              <h3 class="matrix-column-heading">Newsletter</h3>
+              <p class="newsletter-helper-text">
+                Join our inner circle for heritage updates.
+              </p>
+
+              <form
+                class="footer-inline-subscriber-form"
+                onsubmit="event.preventDefault()"
+              >
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="subscriber-input-field"
+                  required
+                  aria-label="Email Address Submission Box"
+                />
+                <button type="submit" class="subscriber-action-submit">
+                  Join
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-copyright-baseline">
+          <p>&copy; 2024 Rituo. Every Ritual. Made Easy.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
